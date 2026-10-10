@@ -96,9 +96,9 @@ Fresh 2026 work that is already drawing attention.
 - [🔥 10 to Watch (2026)](#to-watch)
 - **🧭 Background**
   - [📚 Surveys & Position Papers (58)](#surveys)
-  - [🏗️ Agent Architectures & Frameworks (51)](#architectures)
+  - [🏗️ Agent Architectures & Frameworks (52)](#architectures)
 - **🧱 Part I: Core Components**
-  - [🧠 Planning & Reasoning (51)](#planning)
+  - [🧠 Planning & Reasoning (52)](#planning)
   - [💾 Memory (56)](#memory)
   - [🔧 Tool Use (46)](#tools)
   - [🤝 Multi-Agent Systems (51)](#multi-agent)
@@ -182,11 +182,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ Agent Architectures & Frameworks (51)
+### 🏗️ Agent Architectures & Frameworks (52)
 *Corresponds to §2 (Background) and the running examples throughout.*
 
 <details>
-<summary><b>Show 51 papers</b></summary>
+<summary><b>Show 52 papers</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *Only peer-reviewed-adjacent empirical study of the widely-influential (but paper-less) AutoGPT autonomous-agent design pattern.* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *The standard reference benchmark for measuring general single-agent capability across heterogeneous environments.* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -248,11 +248,11 @@ Fresh 2026 work that is already drawing attention.
 ## 🧱 Part I: Core Components
 
 <a id="planning"></a>
-### 🧠 Planning & Reasoning (51)
+### 🧠 Planning & Reasoning (52)
 *Corresponds to §4 (Planning and Reasoning).*
 
 <details>
-<summary><b>Show 51 papers</b></summary>
+<summary><b>Show 52 papers</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *The foundational technique underlying virtually all LLM-agent reasoning/planning modules; the starting point for the whole CoT/ToT/ReAct lineage.*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *Standard inference-time ensembling/verification strategy widely reused inside agent reasoning and planning pipelines.*
