@@ -98,8 +98,8 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
   - [📚 サーベイとポジションペーパー (58)](#surveys)
   - [🏗️ エージェントのアーキテクチャとフレームワーク (51)](#architectures)
 - **🧱 第1部：中核となる構成要素**
-  - [🧠 計画と推論 (51)](#planning)
-  - [💾 メモリ (56)](#memory)
+  - [🧠 計画と推論 (52)](#planning)
+  - [💾 メモリ (57)](#memory)
   - [🔧 ツール利用 (46)](#tools)
   - [🤝 マルチエージェントシステム (51)](#multi-agent)
 - **🌍 第2部：環境と応用のなかのエージェント**
@@ -247,11 +247,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 ## 🧱 第1部：中核となる構成要素
 
 <a id="planning"></a>
-### 🧠 計画と推論 (51)
+### 🧠 計画と推論 (52)
 *サーベイの§4（計画と推論）に対応します。*
 
 <details>
-<summary><b>51本の論文を表示</b></summary>
+<summary><b>52本の論文を表示</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *ほぼすべてのLLMエージェントの推論・計画モジュールの土台にある基礎技術で、CoT、ToT、ReActと続く系譜全体の出発点である。*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *推論時のensembleと検証の標準的な戦略で、エージェントの推論・計画のパイプラインのなかで広く再利用されている。*
@@ -289,6 +289,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs](https://arxiv.org/abs/2602.21198)** (Hong et al., arXiv 2026) - *Embodiedエージェントのための、reflectionを伴うテスト時の計画。一つのエピソードのなかで、自らの試行錯誤から学ぶ。* [[code](https://github.com/Reflective-Test-Time-Planning/Reflective-Test-Time-Planning)]
 - **[Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation](https://arxiv.org/abs/2607.09600)** (Zhou et al., arXiv 2026) - *オークション方式のorchestrationフレームワークAgoraを提案する。推論のステップを取引できる品目として扱い、専門モデルやツールが、生のconfidenceではなく補正した能力に応じてそれに入札する。*
 - **[Training the Orchestrator: A Supervised Approach to End-to-End PDDL Planning with LLM Agents](https://arxiv.org/abs/2606.21740)** (Mangannavar et al., arXiv 2026) - *HALOを提案する。QLoRAで調整した小さなorchestratorの方策を、11 のPDDLドメインにわたり、検証器が認めた計画改良のtrajectoryで教師あり学習させる。*
+- **[Environmental Feedback Modeling Matters: Rethinking Feedback Treatment in Agentic Hindsight Self-Distillation](https://arxiv.org/abs/2610.11384)** (Guo et al., arXiv 2026) - *報酬信号を使わず、ツールの出力と実行結果だけでエージェントを学習させ、観測した環境の応答を一つずつ二通りに使う。モデルは履歴と行動からその応答を予測するよう学習し、その応答を事後の情報として受け取ったモデルのEMAコピーを教師にして、応答を見ずに行動しなければならない方策をdistillationで学習させる。Qwen3-8Bではτ-bench Retailの成功率が 43.2% で、報酬で学習したGRPOの 39.1%、SDPOの 36.8% を上回り、AppWorldのtask goal completionは 35.71 で、両手法の 32.14 と 25.00 を上回る。予測の損失を外すと、4BモデルのRetail成功率は 38.7% から 29.4% に下がる。使ったbackboneはどちらも小さなQwen3モデルである。*
 - **[Retrospective Progress-Aware Self-Refinement for LLM Agent Training](https://arxiv.org/abs/2606.14302)** (Ma et al., arXiv 2026) - *先に進めてからreflectionするrolloutの枠組み、ReProを提案する。LLMエージェントがオンラインで行動を実行し、その後、完了したtrajectoryと判明した結果をもとに、ステップごとの進み具合を振り返って評価し直す。*
 - **[LiTS: A Modular Framework for LLM Tree Search](https://arxiv.org/abs/2603.00631)** (Li et al., arXiv 2026) - *LiTSは、LLMのtree searchを再利用可能なPolicy、Transition、RewardModelの部品に分解するPythonフレームワークで、MCTSやBFSのようなアルゴリズムに対応する。MATH500、Crosswords、MapEvalで評価している。* [[code](https://github.com/xinzhel/lits-llm)]
 - **[Localizing and Correcting Errors for LLM-based Planners](https://arxiv.org/abs/2602.00276)** (Kumar et al., arXiv 2026) - *Localized In-Context Learning（L-ICL）を提案する。LLMが生成した計画のなかで制約違反の箇所を特定し、失敗したステップに最小限の修正例を差し込む。*
@@ -310,11 +311,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="memory"></a>
-### 💾 メモリ (56)
+### 💾 メモリ (57)
 *サーベイの§5（メモリ）に対応します。*
 
 <details>
-<summary><b>56本の論文を表示</b></summary>
+<summary><b>57本の論文を表示</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *トリプレット形式で構造化した読み書き型メモリの初期の設計で、影響も大きい。のちのグラフやKGにもとづくエージェントメモリの先駆けとなった。*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *心理学に裏づけられた（人間の記憶に着想を得た）忘却と定着の仕組みを、LLMエージェントのメモリに持ち込んだ最初期のシステムの一つである。* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -373,6 +374,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents](https://arxiv.org/abs/2609.01852)** (Hu et al., arXiv 2026) - *メモリが唯一の情報源である場合と、信頼できるツールが正しい値を持っている場合を分け、失敗を混乱ではなく過信として読み解く。メモリしか頼れないとき、モデルは 0.92 から 1.00 の割合で古い保存値から答える。罠を仕掛けた条件での害は能力に左右され、Qwen3のサイズ系列では、古いメモを最新のように見せかけると、大きなモデルほど性能が大きく落ちる。*
 - **[Dual-Layer Agentic Memory with Fast Write Routing and Slow Consolidation](https://arxiv.org/abs/2608.22215)** (Li et al., arXiv 2026) - *メモリへの書き込みを毎回、スキップ・新規書き込み・更新の三択にし、1.7B から 8B のcascadeで決める。冗長なメモリを最大 68% 削りつつ、escalationは入力の半分未満にとどめ、すべてを保持した場合のexact matchの 98% 超を保つ。*
 - **[Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents](https://arxiv.org/abs/2609.23986)** (Jiang et al., arXiv 2026) - *メモリの型付け、ルーティング、グラフの探索、停止の判断をJevに任せ、LLMは返ってきた結果の推論にだけ使う。LoCoMoのメモリを最速のbaselineより 6.6 倍速く構築し、スコアは 0.700 に対して 0.777 だった。その差の大半は敵対的な質問から生まれている。* [[code](https://github.com/libingzheren/Jev-Mem)]
+- **[From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning](https://arxiv.org/abs/2610.11373)** (Liu et al., arXiv 2026) - *重みを固定したLLMを一連のタスクに順に適応させる。プロンプト最適化が一つのプロンプトを持つのに対し、複数のプロンプトをrepertoireとして持つ。更新は、そのプロンプトがすでに扱えている事例でスコアの 90% 以上を保つ場合にだけそのプロンプトに取り込み、そうでなければ他のプロンプトで試し、どのプロンプトにも取り込めなければ新しいプロンプトとして追加する。入力ごとにLLMのselectorがプロンプトを選ぶ。ToolUse、FinQA、SciKE-Bioの順に学習し、Qwen3-8Bが回答してGPT-5.6-Lunaが更新を書く場合、最後のタスクを学習したあとのFinQAの正解率は 1.56 ポイント下がり、GEPAは 25.10 ポイント、ACEは 9.43 ポイント下がる。エージェントでの実験は一つだけで、Continual Learning Benchの六つの環境で最小限のscaffoldを使っている。平均スコアはQwen3-8Bで 18.0（GEPAは 9.5）、GPT-5.6-Lunaで 36.3（GEPAは 29.5）である。*
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -826,10 +828,11 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 このリストはコミュニティの手で保守されています。論文の提案、確認、説明文の執筆に協力してくださったすべての方に感謝します。
 
 <details>
-<summary><b>15人のコントリビューターを表示</b></summary>
+<summary><b>16人のコントリビューターを表示</b></summary>
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | 「計画と推論」に、報酬なしで環境からのフィードバックだけでエージェントを学習させるSELF、「メモリ」に、重みを固定したLLMの継続学習のために複数のプロンプトを持つEFRE（[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)） |
 | <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | 「評価とベンチマーク」に、実運用のエージェントのtraceからベンチマークを作るTraceDance（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。第一著者本人による投稿 |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | 「サーベイとポジションペーパー」に、公開GitHubプロジェクトでのJevの使われ方を分析したJev in the Wild（[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)） |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | 「計画と推論」に、小さなcriticモデルで大きなコーディングエージェントを導くSteer, Don't Solve（[#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)）、「ツール利用」に、検証器なしで学習するエージェントのためのrubricベースのcredit assignmentであるDRACO（[#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)）。いずれも第一著者本人による投稿 |
@@ -857,6 +860,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-10-12**: SELFを「計画と推論」に、EFREを「メモリ」に追加しました（[@markovchain-builder](https://github.com/markovchain-builder)、[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)）。SELFは報酬なしでエージェントを学習させる手法で、Qwen3-8Bではτ-bench Retailで 43.2% に達し、報酬で学習したGRPOは 39.1% でした。534 本から 536 本になりました。
 - **2026-10-03**: 第一著者の[@ZhishanQ](https://github.com/ZhishanQ)が送ってくれたTraceDanceを「評価とベンチマーク」に追加しました（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。実際のエージェントのセッションからテストを作る論文で、先に進む前に確認が必要な事例では、九つのフロンティアLLMの合格率は 8.1% でした。533 本から 534 本になりました。
 - **2026-09-30**: 公開GitHubプロジェクト 2,170 件でのJevの使われ方を分析したJev in the Wildを「サーベイとポジションペーパー」に追加しました（[@Gavin-M34](https://github.com/Gavin-M34)、[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)）。532 本から 533 本になりました。
 - **2026-09-24**: ブラジル・ポルトガル語版とスペイン語版を追加しました。GitBook のオンラインブックもこの 2 つの言語で読めます。

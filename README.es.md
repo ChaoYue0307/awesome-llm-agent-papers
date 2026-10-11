@@ -98,8 +98,8 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
   - [📚 Revisiones y artículos de posición (58)](#surveys)
   - [🏗️ Arquitecturas y frameworks de agentes (51)](#architectures)
 - **🧱 Parte I: Componentes principales**
-  - [🧠 Planificación y razonamiento (51)](#planning)
-  - [💾 Memoria (56)](#memory)
+  - [🧠 Planificación y razonamiento (52)](#planning)
+  - [💾 Memoria (57)](#memory)
   - [🔧 Uso de herramientas (46)](#tools)
   - [🤝 Sistemas multiagente (51)](#multi-agent)
 - **🌍 Parte II: Agentes en entornos y aplicaciones**
@@ -247,11 +247,11 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 ## 🧱 Parte I: Componentes principales
 
 <a id="planning"></a>
-### 🧠 Planificación y razonamiento (51)
+### 🧠 Planificación y razonamiento (52)
 *En la revisión: §4 (Planificación y razonamiento).*
 
 <details>
-<summary><b>Mostrar 51 artículos</b></summary>
+<summary><b>Mostrar 52 artículos</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *La técnica fundacional en la que se basan prácticamente todos los módulos de razonamiento y planificación de los agentes LLM; el punto de partida de toda la línea CoT/ToT/ReAct.*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *Estrategia estándar de ensemble y verificación en tiempo de inferencia, muy reutilizada dentro de los pipelines de razonamiento y planificación de agentes.*
@@ -289,6 +289,7 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 - **[Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs](https://arxiv.org/abs/2602.21198)** (Hong et al., arXiv 2026) - *Planificación reflexiva en tiempo de prueba para agentes embodied, que aprende de sus propios ensayos y errores dentro de un mismo episodio.* [[code](https://github.com/Reflective-Test-Time-Planning/Reflective-Test-Time-Planning)]
 - **[Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation](https://arxiv.org/abs/2607.09600)** (Zhou et al., arXiv 2026) - *Propone Agora, un framework de orquestación basado en subastas en el que los pasos de razonamiento se tratan como bienes negociables y los modelos expertos y las herramientas pujan por ellos según su competencia corregida y no según su confidence bruta.*
 - **[Training the Orchestrator: A Supervised Approach to End-to-End PDDL Planning with LLM Agents](https://arxiv.org/abs/2606.21740)** (Mangannavar et al., arXiv 2026) - *Presenta HALO, que entrena de forma supervisada una pequeña política de orchestrator ajustada con QLoRA sobre trajectories de refinamiento de planes certificadas por un verificador, en 11 dominios PDDL.*
+- **[Environmental Feedback Modeling Matters: Rethinking Feedback Treatment in Agentic Hindsight Self-Distillation](https://arxiv.org/abs/2610.11384)** (Guo et al., arXiv 2026) - *Entrena agentes con las salidas de las herramientas y los resultados de ejecución, sin señal de recompensa, y usa cada respuesta observada del entorno de dos maneras: el modelo aprende a predecirla a partir del historial y de la acción, y una copia EMA del modelo, que recibe la respuesta como información posterior, hace de maestro en la distillation hacia la política, que tiene que actuar sin ella. Con Qwen3-8B alcanza un 43,2% de éxito en τ-bench Retail, frente al 39,1% de GRPO entrenado con recompensas y al 36,8% de SDPO, y 35,71 en task goal completion de AppWorld, frente a 32,14 y 25,00; sin la pérdida de predicción, el éxito del modelo 4B en Retail baja del 38,7% al 29,4%. Los dos modelos usados son Qwen3 pequeños.*
 - **[Retrospective Progress-Aware Self-Refinement for LLM Agent Training](https://arxiv.org/abs/2606.14302)** (Ma et al., arXiv 2026) - *Presenta RePro, un framework de rollouts en el que primero se avanza y luego se reflexiona: un agente LLM ejecuta acciones en línea y después reevalúa de forma retrospectiva su progreso paso a paso, condicionado a la trajectory completa y al resultado conocido.*
 - **[LiTS: A Modular Framework for LLM Tree Search](https://arxiv.org/abs/2603.00631)** (Li et al., arXiv 2026) - *LiTS es un framework de Python que descompone la tree search con LLM en componentes reutilizables (Policy, Transition y RewardModel) compatibles con algoritmos como MCTS y BFS, y se evalúa en MATH500, Crosswords y MapEval.* [[code](https://github.com/xinzhel/lits-llm)]
 - **[Localizing and Correcting Errors for LLM-based Planners](https://arxiv.org/abs/2602.00276)** (Kumar et al., arXiv 2026) - *Propone Localized In-Context Learning (L-ICL), que localiza las violaciones de restricciones en los planes generados por LLM e inserta ejemplos correctivos mínimos para los pasos que fallan.*
@@ -310,11 +311,11 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 <sub><a href="#contents">↑ Volver al índice</a></sub>
 
 <a id="memory"></a>
-### 💾 Memoria (56)
+### 💾 Memoria (57)
 *En la revisión: §5 (Memoria).*
 
 <details>
-<summary><b>Mostrar 56 artículos</b></summary>
+<summary><b>Mostrar 57 artículos</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *Diseño temprano e influyente de memoria de lectura y escritura estructurada en tripletas, precursor de los sistemas de memoria de agentes basados en grafos y en grafos de conocimiento.*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *Uno de los primeros sistemas que llevó a la memoria de los agentes LLM un mecanismo de olvido y consolidación con base psicológica, inspirado en la memoria humana.* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -373,6 +374,7 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 - **[The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents](https://arxiv.org/abs/2609.01852)** (Hu et al., arXiv 2026) - *Separa el caso en que la memoria es la única fuente del caso en que una herramienta de referencia tiene el valor correcto, e interpreta el fallo como un exceso de confianza y no como confusión: cuando solo tienen la memoria, los modelos responden con un valor guardado obsoleto con una frecuencia de entre 0,92 y 1,00. En la condición trampa, el daño depende de la capacidad: en una serie de tamaños de Qwen3, los modelos más grandes son los que más empeoran cuando una nota obsoleta se presenta como actual.*
 - **[Dual-Layer Agentic Memory with Fast Write Routing and Slow Consolidation](https://arxiv.org/abs/2608.22215)** (Li et al., arXiv 2026) - *Convierte cada escritura en memoria en una decisión entre tres opciones (omitir, escribir algo nuevo, actualizar) que toma una cascade de modelos de 1,7B a 8B. Poda hasta el 68% de la memoria redundante, con escalation en menos de la mitad de las entradas, y conserva más del 98% del exact match que se obtiene guardándolo todo.*
 - **[Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents](https://arxiv.org/abs/2609.23986)** (Jiang et al., arXiv 2026) - *Deja en manos de Jev la tipificación de la memoria, el enrutamiento, el recorrido del grafo y la decisión de parar, y solo llama al LLM para razonar sobre lo que se recupera. Construye la memoria de LoCoMo 6,6 veces más rápido que el baseline más rápido y obtiene 0,777 frente a 0,700; la mayor parte de esa diferencia viene de las preguntas adversariales.* [[code](https://github.com/libingzheren/Jev-Mem)]
+- **[From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning](https://arxiv.org/abs/2610.11373)** (Liu et al., arXiv 2026) - *Adapta un LLM congelado a una secuencia de tareas manteniendo un repertorio de prompts, mientras que la optimización de prompts mantiene uno solo: una actualización se incorpora a un prompt solo si este conserva al menos el 90% de su puntuación en los ejemplos que ya resuelve; si no, se prueba en los demás prompts y, si ninguno puede admitirla, se convierte en un prompt nuevo. Un selector LLM elige el prompt para cada entrada. En una secuencia ToolUse, FinQA y SciKE-Bio, con Qwen3-8B respondiendo y GPT-5.6-Luna redactando las actualizaciones, la exactitud en FinQA baja 1,56 puntos tras la última tarea, frente a 25,10 con GEPA y 9,43 con ACE. La única prueba con agentes usa un scaffold mínimo en seis entornos de Continual Learning Bench: la media es 18,0 frente a 9,5 de GEPA con Qwen3-8B y 36,3 frente a 29,5 con GPT-5.6-Luna.*
 </details>
 
 <sub><a href="#contents">↑ Volver al índice</a></sub>
@@ -826,10 +828,11 @@ La mayoría de los idiomas a los que está traducida esta lista no son mi lengua
 Esta lista la mantiene la comunidad. Gracias a todas las personas que han sugerido, verificado o anotado un artículo:
 
 <details>
-<summary><b>Mostrar 15 colaboradores</b></summary>
+<summary><b>Mostrar 16 colaboradores</b></summary>
 
 | | Colaborador | Contribución |
 |---|---|---|
+| <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | SELF, entrenamiento de agentes con la respuesta del entorno y sin recompensas, en Planificación y razonamiento; EFRE, un repertorio de prompts para el aprendizaje continuo con un LLM congelado, en Memoria ([#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)) |
 | <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | TraceDance, benchmarks construidos a partir de trazas reales de agentes en producción, enviado por su primer autor, en Evaluación y benchmarks ([#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)) |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | Jev in the Wild, un estudio de cómo usan Jev los proyectos públicos de GitHub, en Revisiones y artículos de posición ([#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)) |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | Steer, Don't Solve, un modelo crítico pequeño que guía a un agente de programación más grande, en Planificación y razonamiento ([#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)); DRACO, asignación de crédito basada en rubrics para agentes entrenados sin verificador, en Uso de herramientas ([#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)). Enviados por su primer autor |
@@ -857,6 +860,7 @@ Publicado bajo la [licencia MIT](LICENSE).
 
 ## 🗓️ Actualizaciones
 
+- **2026-10-12**: SELF se añadió a Planificación y razonamiento y EFRE a Memoria ([@markovchain-builder](https://github.com/markovchain-builder), [#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)). SELF entrena agentes sin recompensas y, con Qwen3-8B, alcanza un 43,2% en τ-bench Retail, frente al 39,1% de GRPO entrenado con recompensas. De 534 a 536.
 - **2026-10-03**: TraceDance se añadió a Evaluación y benchmarks, enviado por su primer autor ([@ZhishanQ](https://github.com/ZhishanQ), [#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)). Construye pruebas a partir de sesiones reales de agentes, y en ellas nueve LLM de frontera aprueban el 8,1% de los casos que piden una comprobación antes de continuar. De 533 a 534.
 - **2026-09-30**: Jev in the Wild, un estudio de cómo usan Jev 2170 proyectos públicos de GitHub, se añadió a Revisiones y artículos de posición ([@Gavin-M34](https://github.com/Gavin-M34), [#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)). De 532 a 533.
 - **2026-09-24**: La lista y el libro en línea de GitBook ya están disponibles también en portugués de Brasil y en español.

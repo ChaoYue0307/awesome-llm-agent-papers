@@ -96,10 +96,10 @@ Fresh 2026 work that is already drawing attention.
 - [🔥 10 to Watch (2026)](#to-watch)
 - **🧭 Background**
   - [📚 Surveys & Position Papers (58)](#surveys)
-  - [🏗️ Agent Architectures & Frameworks (52)](#architectures)
+  - [🏗️ Agent Architectures & Frameworks (51)](#architectures)
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (52)](#planning)
-  - [💾 Memory (56)](#memory)
+  - [💾 Memory (57)](#memory)
   - [🔧 Tool Use (46)](#tools)
   - [🤝 Multi-Agent Systems (51)](#multi-agent)
 - **🌍 Part II: Agents in Context**
@@ -182,11 +182,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ Agent Architectures & Frameworks (52)
+### 🏗️ Agent Architectures & Frameworks (51)
 *Corresponds to §2 (Background) and the running examples throughout.*
 
 <details>
-<summary><b>Show 52 papers</b></summary>
+<summary><b>Show 51 papers</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *Only peer-reviewed-adjacent empirical study of the widely-influential (but paper-less) AutoGPT autonomous-agent design pattern.* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *The standard reference benchmark for measuring general single-agent capability across heterogeneous environments.* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -224,7 +224,6 @@ Fresh 2026 work that is already drawing attention.
 - **[SEAGym: An Evaluation Environment for Self-Evolving LLM Agents](https://arxiv.org/abs/2606.17546)** (Zheng et al., arXiv 2026) - *Introduces SEAGym, an evaluation environment for self-evolving LLM agents that measures agent-harness modifications across training, validation, held-out test, replay, and cost dimensions rather than a single task score.*
 - **[Harness-MU: A Safe, Governed, and Effective Harness for Multi-User LLM Agents](https://arxiv.org/abs/2606.21856)** (Fan et al., arXiv 2026) - *Proposes Harness-MU, a model-agnostic, zero-tuning harness that enforces multi-principal access control for LLM agents through deterministic execution hooks rather than model-internal safeguards.* [[code](https://github.com/YuanJrShiuan/Harness-MulUser)]
 - **[Co-Evolving Skill Generation and Policy Optimization](https://arxiv.org/abs/2606.08755)** (Zhang et al., arXiv 2026) - *Proposes an online framework for skill-augmented language agents that estimates each candidate skill's context-dependent marginal utility via matched comparison groups (retrieved skills with and without the candidate) to filter out ineffective or harmful skills before they are stored, within the standard rollout budget, and trains the policy itself to generate skills.*
-- **[From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning](https://arxiv.org/abs/2610.11373)** (Liu et al., arXiv 2026) - *Evolves a repertoire of functions for continual task adaptation, reducing forgetting without updating model parameters.*
 - **[DemoEvolve: Overcoming Sparse Feedback in Agentic Harness Evolution with Demonstrations](https://arxiv.org/abs/2605.24539)** (Che et al., arXiv 2026) - *DemoEvolve uses human expert demonstration trajectories to guide the search in agentic harness evolution, addressing sparse-reward instability in complex stochastic environments like Balatro where self-practice alone struggles.*
 - **[Self-Evolving Software Agents](https://arxiv.org/abs/2604.27264)** (Robol et al., arXiv 2026) - *Proposes an architecture combining BDI (Belief-Desire-Intention) reasoning with large language models in which an automated evolution module elicits new requirements from experience and synthesizes corresponding design and code.*
 - **[Codified Context: Infrastructure for AI Agents in a Complex Codebase](https://arxiv.org/abs/2602.20478)** (Vasilopoulos et al., arXiv 2026) - *Proposes a three-component infrastructure (a conventions constitution, 19 specialized agents, and a knowledge base of 34 specification documents) to give LLM coding assistants persistent context.* [[code](https://github.com/arisvas4/codified-context-infrastructure)]
@@ -290,7 +289,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs](https://arxiv.org/abs/2602.21198)** (Hong et al., arXiv 2026) - *Reflective test-time planning for embodied agents that learns from its own trials and errors within a single episode.* [[code](https://github.com/Reflective-Test-Time-Planning/Reflective-Test-Time-Planning)]
 - **[Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation](https://arxiv.org/abs/2607.09600)** (Zhou et al., arXiv 2026) - *Proposes Agora, an auction-based orchestration framework in which reasoning steps are treated as tradeable items and expert models and tools bid on them according to rectified competence rather than raw confidence.*
 - **[Training the Orchestrator: A Supervised Approach to End-to-End PDDL Planning with LLM Agents](https://arxiv.org/abs/2606.21740)** (Mangannavar et al., arXiv 2026) - *Introduces HALO, which supervises a small QLoRA-tuned orchestrator policy on verifier-certified plan-refinement trajectories across 11 PDDL domains.*
-- **[Environmental Feedback Modeling Matters: Rethinking Feedback Treatment in Agentic Hindsight Self-Distillation](https://arxiv.org/abs/2610.11384)** (Guo et al., arXiv 2026) - *Jointly optimizes environmental feedback modeling and hindsight self-distillation to improve language agents in interactive environments.*
+- **[Environmental Feedback Modeling Matters: Rethinking Feedback Treatment in Agentic Hindsight Self-Distillation](https://arxiv.org/abs/2610.11384)** (Guo et al., arXiv 2026) - *Trains agents on tool outputs and execution results with no reward signal, using each observed environment response twice: the model learns to predict it from the history and the action, and an EMA copy of the model, given the response as hindsight, is distilled into the policy that has to act without it; with Qwen3-8B it reaches 43.2% success on τ-bench Retail against 39.1% for GRPO trained on rewards and 36.8% for SDPO, and 35.71 against 32.14 and 25.00 on AppWorld task goal completion, and without the prediction loss the 4B model's Retail success drops from 38.7% to 29.4%; both backbones are small Qwen3 models.*
 - **[Retrospective Progress-Aware Self-Refinement for LLM Agent Training](https://arxiv.org/abs/2606.14302)** (Ma et al., arXiv 2026) - *Introduces RePro, a forward-then-reflect rollout framework in which an LLM agent executes actions online and then retrospectively reassesses its step-wise progress conditioned on the completed trajectory and known outcome.*
 - **[LiTS: A Modular Framework for LLM Tree Search](https://arxiv.org/abs/2603.00631)** (Li et al., arXiv 2026) - *LiTS is a Python framework that decomposes LLM tree search into reusable Policy, Transition, and RewardModel components supporting algorithms like MCTS and BFS, evaluated across MATH500, Crosswords, and MapEval.* [[code](https://github.com/xinzhel/lits-llm)]
 - **[Localizing and Correcting Errors for LLM-based Planners](https://arxiv.org/abs/2602.00276)** (Kumar et al., arXiv 2026) - *Proposes Localized In-Context Learning (L-ICL), which localizes constraint violations in LLM-generated plans and injects minimal corrective examples for failing steps.*
@@ -312,11 +311,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="memory"></a>
-### 💾 Memory (56)
+### 💾 Memory (57)
 *Corresponds to §5 (Memory).*
 
 <details>
-<summary><b>Show 56 papers</b></summary>
+<summary><b>Show 57 papers</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *Early and influential structured/triplet-based read-write memory design, a precursor to graph- and KG-based agent memory systems.*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *One of the first systems to bring a psychologically grounded (human-memory-inspired) forgetting/consolidation mechanism into LLM agent memory.* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -375,6 +374,7 @@ Fresh 2026 work that is already drawing attention.
 - **[The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents](https://arxiv.org/abs/2609.01852)** (Hu et al., arXiv 2026) - *Separates the case where memory is the only source from the case where an authoritative tool holds the right value, and reads the failure as over-trust rather than confusion: models answer from a stale stored value 0.92 to 1.00 of the time when memory is all they have, and the harm under the trap condition is capability-gated, with the larger models in a Qwen3 size series collapsing hardest once a stale note is dressed up as current.*
 - **[Dual-Layer Agentic Memory with Fast Write Routing and Slow Consolidation](https://arxiv.org/abs/2608.22215)** (Li et al., arXiv 2026) - *Turns each memory write into a three-way choice (skip, write new, update) made by a 1.7B-to-8B cascade, pruning up to 68% of redundant memory while escalating under half the inputs and keeping over 98% of full-retention exact match.*
 - **[Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents](https://arxiv.org/abs/2609.23986)** (Jiang et al., arXiv 2026) - *Hands memory typing, routing, graph traversal and stopping to Jev and calls the LLM only to reason over what comes back, building LoCoMo memory 6.6x faster than the fastest baseline and scoring 0.777 against 0.700; most of that margin comes from the adversarial questions.* [[code](https://github.com/libingzheren/Jev-Mem)]
+- **[From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning](https://arxiv.org/abs/2610.11373)** (Liu et al., arXiv 2026) - *Adapts a frozen LLM to a sequence of tasks by keeping a repertoire of prompts where prompt optimization keeps one: an update goes into a prompt only if the prompt then keeps at least 90% of its score on the examples it already handles, is otherwise tried on the other prompts, and becomes a new prompt when none can take it, with an LLM selector choosing a prompt for each input; on a ToolUse, FinQA and SciKE-Bio sequence, with Qwen3-8B answering and GPT-5.6-Luna writing the updates, FinQA accuracy falls 1.56 points after the last task against 25.10 for GEPA and 9.43 for ACE, and in the one agent test, a minimal scaffold on six Continual Learning Bench environments, it averages 18.0 against 9.5 for GEPA with Qwen3-8B and 36.3 against 29.5 with GPT-5.6-Luna.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -828,10 +828,11 @@ Most of the languages this list is translated into aren't my first language. If 
 This list is community-maintained. Thanks to everyone who has suggested, verified, or annotated a paper:
 
 <details>
-<summary><b>Show 15 contributors</b></summary>
+<summary><b>Show 16 contributors</b></summary>
 
 | | Contributor | Contributed |
 |---|---|---|
+| <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | SELF, agent training from environment feedback without rewards, in Planning & Reasoning; EFRE, a repertoire of prompts for continual learning with a frozen LLM, in Memory ([#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)) |
 | <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | TraceDance, benchmarks built from real agent deployment traces, submitted by its first author, in Evaluation & Benchmarks ([#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)) |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | Jev in the Wild, a study of how public GitHub projects use Jev, in Surveys & Position Papers ([#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)) |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | Steer, Don't Solve, a small critic model that steers a larger coding agent, in Planning & Reasoning ([#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)); DRACO, rubric-based credit assignment for agents trained without a verifier, in Tool Use ([#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)). Submitted by their first author |
@@ -859,6 +860,7 @@ Released under the [MIT License](LICENSE).
 
 ## 🗓️ Updates
 
+- **2026-10-12**: SELF added to Planning & Reasoning and EFRE to Memory ([@markovchain-builder](https://github.com/markovchain-builder), [#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)). SELF trains agents without rewards, and with Qwen3-8B it reaches 43.2% on τ-bench Retail against 39.1% for GRPO trained on rewards. 534 to 536.
 - **2026-10-03**: TraceDance added to Evaluation & Benchmarks by its first author ([@ZhishanQ](https://github.com/ZhishanQ), [#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)). It builds tests from real agent sessions, and on them nine frontier LLMs pass 8.1% of the cases that call for a check before continuing. 533 to 534.
 - **2026-09-30**: Jev in the Wild, a study of how 2,170 public GitHub projects use Jev, added to Surveys & Position Papers ([@Gavin-M34](https://github.com/Gavin-M34), [#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)). 532 to 533.
 - **2026-09-24**: The list and the online book on GitBook are now also available in Brazilian Portuguese and Spanish.

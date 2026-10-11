@@ -98,8 +98,8 @@
   - [📚 综述与立场论文 (58)](#surveys)
   - [🏗️ 智能体架构与框架 (51)](#architectures)
 - **🧱 第一部分：核心组成**
-  - [🧠 规划与推理 (51)](#planning)
-  - [💾 记忆 (56)](#memory)
+  - [🧠 规划与推理 (52)](#planning)
+  - [💾 记忆 (57)](#memory)
   - [🔧 工具使用 (46)](#tools)
   - [🤝 多智能体系统 (51)](#multi-agent)
 - **🌍 第二部分：环境与应用中的智能体**
@@ -247,11 +247,11 @@
 ## 🧱 第一部分：核心组成
 
 <a id="planning"></a>
-### 🧠 规划与推理 (51)
+### 🧠 规划与推理 (52)
 *对应综述 §4（规划与推理）。*
 
 <details>
-<summary><b>展开 51 篇论文</b></summary>
+<summary><b>展开 52 篇论文</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *几乎所有 LLM 智能体推理与规划模块背后的基础技术，也是整个 CoT/ToT/ReAct 谱系的起点。*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *标准的推理阶段 ensemble 与验证策略，在智能体的推理和规划流水线中广泛复用。*
@@ -289,6 +289,7 @@
 - **[Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs](https://arxiv.org/abs/2602.21198)** (Hong et al., arXiv 2026) - *面向 embodied 智能体、带 reflection 的测试时规划，能在单个 episode 内从自己的试错中学习。* [[code](https://github.com/Reflective-Test-Time-Planning/Reflective-Test-Time-Planning)]
 - **[Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation](https://arxiv.org/abs/2607.09600)** (Zhou et al., arXiv 2026) - *提出基于拍卖的编排框架 Agora：它把推理步骤当作可交易的物品，让专家模型和工具按修正后的能力而不是原始 confidence 来竞价。*
 - **[Training the Orchestrator: A Supervised Approach to End-to-End PDDL Planning with LLM Agents](https://arxiv.org/abs/2606.21740)** (Mangannavar et al., arXiv 2026) - *HALO 在 11 个 PDDL 领域中，用经验证器认证的计划改进 trajectory，监督训练一个用 QLoRA 调优的小型 orchestrator 策略。*
+- **[Environmental Feedback Modeling Matters: Rethinking Feedback Treatment in Agentic Hindsight Self-Distillation](https://arxiv.org/abs/2610.11384)** (Guo et al., arXiv 2026) - *不用奖励信号，只凭工具输出和执行结果训练智能体，并把观测到的每条环境反馈用在两处：模型学习根据历史和行动预测这条反馈；模型的 EMA 副本拿到这条反馈作为事后信息，充当教师，通过 distillation 训练必须在看不到反馈的情况下行动的策略。使用 Qwen3-8B 时，τ-bench Retail 成功率为 43.2%，用奖励训练的 GRPO 为 39.1%，SDPO 为 36.8%；AppWorld 的 task goal completion 为 35.71，后两者分别为 32.14 和 25.00。去掉预测损失后，4B 模型的 Retail 成功率从 38.7% 降到 29.4%。两个骨干都是小型 Qwen3 模型。*
 - **[Retrospective Progress-Aware Self-Refinement for LLM Agent Training](https://arxiv.org/abs/2606.14302)** (Ma et al., arXiv 2026) - *提出 RePro，一种“先执行、后回看”的 rollout 框架：LLM 智能体先在线执行行动，再结合已完成的 trajectory 和已知结果，回头重新评估每一步的进展。*
 - **[LiTS: A Modular Framework for LLM Tree Search](https://arxiv.org/abs/2603.00631)** (Li et al., arXiv 2026) - *LiTS 是一个 Python 框架，把 LLM tree search 拆成可复用的 Policy、Transition 和 RewardModel 组件，支持 MCTS、BFS 等算法，并在 MATH500、Crosswords 和 MapEval 上做了评估。* [[code](https://github.com/xinzhel/lits-llm)]
 - **[Localizing and Correcting Errors for LLM-based Planners](https://arxiv.org/abs/2602.00276)** (Kumar et al., arXiv 2026) - *提出 Localized In-Context Learning（L-ICL）：定位 LLM 生成的计划中违反约束的地方，并为出错的步骤注入最少量的纠正示例。*
@@ -310,11 +311,11 @@
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="memory"></a>
-### 💾 记忆 (56)
+### 💾 记忆 (57)
 *对应综述 §5（记忆）。*
 
 <details>
-<summary><b>展开 56 篇论文</b></summary>
+<summary><b>展开 57 篇论文</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *早期且影响很大的读写记忆设计，以三元组形式做结构化存储，是后来基于图和知识图谱的智能体记忆系统的前身。*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *最早把有心理学依据的遗忘与巩固机制（受人类记忆启发）引入 LLM 智能体记忆的系统之一。* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -373,6 +374,7 @@
 - **[The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents](https://arxiv.org/abs/2609.01852)** (Hu et al., arXiv 2026) - *把“记忆是唯一来源”和“有权威工具掌握正确值”两种情况分开，把失败解读为过度信任而不是混淆：只能依靠记忆时，模型有 0.92 到 1.00 的比例照着过时的存储值回答；陷阱条件下的危害取决于模型能力，一旦把过时的笔记伪装成最新信息，Qwen3 同系列中越大的模型崩得越厉害。*
 - **[Dual-Layer Agentic Memory with Fast Write Routing and Slow Consolidation](https://arxiv.org/abs/2608.22215)** (Li et al., arXiv 2026) - *把每次记忆写入变成三选一（跳过、新写、更新），由 1.7B 到 8B 的 cascade 来决定：最多剪掉 68% 的冗余记忆，转交出去的输入不到一半，同时保住全量保留时 98% 以上的 exact match。*
 - **[Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents](https://arxiv.org/abs/2609.23986)** (Jiang et al., arXiv 2026) - *把记忆分类、路由、图遍历和停止判断交给 Jev，只在需要对取回的内容做推理时才调用 LLM：构建 LoCoMo 记忆的速度是最快 baseline 的 6.6 倍，得分 0.777 对 0.700；领先的部分大多来自对抗性问题。* [[code](https://github.com/libingzheren/Jev-Mem)]
+- **[From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning](https://arxiv.org/abs/2610.11373)** (Liu et al., arXiv 2026) - *让冻结的 LLM 依次适应一系列任务。提示优化只维护一个提示，这里维护一组提示（repertoire）：一次更新只有在该提示在它已能处理的样例上保持至少 90% 的得分时才写入该提示，否则在其他提示上尝试，其他提示也都不能接受时就新建一个提示；每个输入由 LLM selector 选择提示。在 ToolUse、FinQA、SciKE-Bio 的任务序列上，由 Qwen3-8B 作答、GPT-5.6-Luna 撰写更新时，学完最后一个任务后 FinQA 准确率下降 1.56 个百分点，GEPA 下降 25.10 个百分点，ACE 下降 9.43 个百分点。智能体实验只有一项，在 Continual Learning Bench 的六个环境上用一个最简 scaffold 完成：使用 Qwen3-8B 时平均得分为 18.0，GEPA 为 9.5；使用 GPT-5.6-Luna 时为 36.3，GEPA 为 29.5。*
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -826,10 +828,11 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
 
 <details>
-<summary><b>展开 15 位贡献者</b></summary>
+<summary><b>展开 16 位贡献者</b></summary>
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | SELF：不用奖励、凭环境反馈训练智能体，收入规划与推理；EFRE：为冻结 LLM 的持续学习维护一组提示，收入记忆（[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)） |
 | <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | TraceDance：用真实智能体部署 trace 构建基准，收入评估与基准（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。由第一作者本人提交 |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | Jev in the Wild：分析公开 GitHub 项目如何使用 Jev，收入综述与立场论文（[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)） |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | Steer, Don't Solve：用小型 critic 模型引导更大的编码智能体，收入规划与推理（[#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)）；DRACO：为不借助 verifier 训练的智能体提供基于 rubric 的 credit assignment，收入工具使用（[#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)）。两篇均由第一作者本人提交 |
@@ -857,6 +860,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-10-12**: 新增 SELF 和 EFRE，分别收入规划与推理和记忆（[@markovchain-builder](https://github.com/markovchain-builder)，[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)）。SELF 不用奖励训练智能体，使用 Qwen3-8B 时在 τ-bench Retail 上达到 43.2%，用奖励训练的 GRPO 为 39.1%。从 534 篇增至 536 篇。
 - **2026-10-03**: 新增 TraceDance，由第一作者 [@ZhishanQ](https://github.com/ZhishanQ) 提交，收入评估与基准（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。它用真实的智能体会话构建测试；在需要先做检查再继续的实例上，九个前沿 LLM 的通过率只有 8.1%。从 533 篇增至 534 篇。
 - **2026-09-30**: 新增 Jev in the Wild，分析 2,170 个公开 GitHub 项目如何使用 Jev，收入综述与立场论文（[@Gavin-M34](https://github.com/Gavin-M34)，[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)）。从 532 篇增至 533 篇。
 - **2026-09-24**: 新增巴西葡萄牙语版和西班牙语版，GitBook 上的在线电子书也有这两种语言的版本。

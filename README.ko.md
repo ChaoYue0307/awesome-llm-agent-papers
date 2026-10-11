@@ -98,8 +98,8 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
   - [📚 서베이와 포지션 페이퍼 (58)](#surveys)
   - [🏗️ 에이전트 아키텍처와 프레임워크 (51)](#architectures)
 - **🧱 제1부: 핵심 구성 요소**
-  - [🧠 계획과 추론 (51)](#planning)
-  - [💾 메모리 (56)](#memory)
+  - [🧠 계획과 추론 (52)](#planning)
+  - [💾 메모리 (57)](#memory)
   - [🔧 도구 사용 (46)](#tools)
   - [🤝 다중 에이전트 시스템 (51)](#multi-agent)
 - **🌍 제2부: 환경과 응용 속의 에이전트**
@@ -247,11 +247,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 ## 🧱 제1부: 핵심 구성 요소
 
 <a id="planning"></a>
-### 🧠 계획과 추론 (51)
+### 🧠 계획과 추론 (52)
 *서베이 §4(계획과 추론)에 해당합니다.*
 
 <details>
-<summary><b>논문 51편 보기</b></summary>
+<summary><b>논문 52편 보기</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *사실상 모든 LLM 에이전트 추론·계획 모듈의 바탕에 있는 기초 기법이자, CoT/ToT/ReAct 계보 전체의 출발점이다.*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *에이전트의 추론·계획 파이프라인 안에서 널리 재사용되는 표준 추론 시점 ensemble·검증 전략이다.*
@@ -289,6 +289,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs](https://arxiv.org/abs/2602.21198)** (Hong et al., arXiv 2026) - *Embodied 에이전트를 위한 reflection 기반 테스트 시점 계획으로, 한 에피소드 안에서 스스로 겪은 시행착오로부터 배운다.* [[code](https://github.com/Reflective-Test-Time-Planning/Reflective-Test-Time-Planning)]
 - **[Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation](https://arxiv.org/abs/2607.09600)** (Zhou et al., arXiv 2026) - *경매 기반 orchestration 프레임워크 Agora를 제안한다. 추론 단계를 거래할 수 있는 품목으로 다루고, 전문 모델과 도구가 보정하지 않은 confidence가 아니라 보정한 역량에 따라 입찰한다.*
 - **[Training the Orchestrator: A Supervised Approach to End-to-End PDDL Planning with LLM Agents](https://arxiv.org/abs/2606.21740)** (Mangannavar et al., arXiv 2026) - *HALO를 소개한다. PDDL 도메인 11개에서 검증기가 인증한 계획 개선 trajectory를 모아, QLoRA로 튜닝한 작은 orchestrator 정책을 지도 학습으로 가르친다.*
+- **[Environmental Feedback Modeling Matters: Rethinking Feedback Treatment in Agentic Hindsight Self-Distillation](https://arxiv.org/abs/2610.11384)** (Guo et al., arXiv 2026) - *보상 신호 없이 도구 출력과 실행 결과만으로 에이전트를 학습시키면서, 관측한 환경 응답을 하나씩 두 가지 용도로 쓴다. 모델은 이력과 행동에서 그 응답을 예측하도록 학습하고, 그 응답을 사후 정보로 받은 모델의 EMA 사본을 교사로 삼아, 응답을 보지 못한 채 행동해야 하는 정책을 distillation으로 학습시킨다. Qwen3-8B에서 τ-bench Retail 성공률은 43.2%로 보상으로 학습한 GRPO의 39.1%, SDPO의 36.8%보다 높고, AppWorld task goal completion은 35.71로 두 방법의 32.14, 25.00보다 높다. 예측 손실을 빼면 4B 모델의 Retail 성공률이 38.7%에서 29.4%로 떨어진다. 백본은 둘 다 작은 Qwen3 모델이다.*
 - **[Retrospective Progress-Aware Self-Refinement for LLM Agent Training](https://arxiv.org/abs/2606.14302)** (Ma et al., arXiv 2026) - *먼저 실행하고 나중에 되돌아보는 rollout 프레임워크 RePro를 소개한다. LLM 에이전트가 온라인으로 행동을 실행한 뒤, 완료된 trajectory와 알려진 결과를 바탕으로 단계별 진척을 되짚어 다시 평가한다.*
 - **[LiTS: A Modular Framework for LLM Tree Search](https://arxiv.org/abs/2603.00631)** (Li et al., arXiv 2026) - *LiTS는 LLM tree search를 재사용 가능한 Policy, Transition, RewardModel 구성 요소로 나누는 Python 프레임워크로, MCTS와 BFS 같은 알고리즘을 지원하며 MATH500, Crosswords, MapEval에서 평가했다.* [[code](https://github.com/xinzhel/lits-llm)]
 - **[Localizing and Correcting Errors for LLM-based Planners](https://arxiv.org/abs/2602.00276)** (Kumar et al., arXiv 2026) - *Localized In-Context Learning(L-ICL)을 제안한다. LLM이 생성한 계획에서 제약 위반 지점을 찾아내고, 실패하는 단계에 최소한의 교정 예시를 넣는다.*
@@ -310,11 +311,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
 
 <a id="memory"></a>
-### 💾 메모리 (56)
+### 💾 메모리 (57)
 *서베이 §5(메모리)에 해당합니다.*
 
 <details>
-<summary><b>논문 56편 보기</b></summary>
+<summary><b>논문 57편 보기</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *Triplet 기반의 구조화된 읽기·쓰기 메모리를 일찍 내놓아 영향력이 컸던 설계로, 이후 그래프·KG 기반 에이전트 메모리 시스템의 전신이 되었다.*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *심리학에 근거한(사람의 기억에서 착안한) 망각·공고화 메커니즘을 LLM 에이전트 메모리에 처음 들여온 시스템 가운데 하나이다.* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -373,6 +374,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents](https://arxiv.org/abs/2609.01852)** (Hu et al., arXiv 2026) - *메모리가 유일한 출처인 경우와 권위 있는 도구가 올바른 값을 가진 경우를 나누고, 실패의 원인을 혼동이 아니라 과신으로 해석한다. 메모리밖에 없을 때 모델은 0.92에서 1.00의 비율로 낡은 저장값에 기대 답한다. 함정 조건의 피해는 능력에 따라 갈려서, Qwen3 크기 계열 가운데 큰 모델일수록 낡은 노트를 최신 정보처럼 꾸며 놓았을 때 성능이 더 크게 떨어진다.*
 - **[Dual-Layer Agentic Memory with Fast Write Routing and Slow Consolidation](https://arxiv.org/abs/2608.22215)** (Li et al., arXiv 2026) - *메모리 쓰기를 매번 세 갈래 선택(건너뛰기, 새로 쓰기, 갱신)으로 바꾸고, 1.7B에서 8B로 이어지는 cascade가 이 선택을 맡는다. 중복 메모리를 최대 68% 걷어 내면서 입력의 절반 미만만 escalation하고, 전부 남길 때의 exact match를 98% 넘게 유지한다.*
 - **[Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents](https://arxiv.org/abs/2609.23986)** (Jiang et al., arXiv 2026) - *메모리 유형 분류, 라우팅, 그래프 탐색, 멈출 시점 판단을 Jev에 맡기고, LLM은 돌아온 결과를 두고 추론할 때만 부른다. 가장 빠른 baseline보다 LoCoMo 메모리를 6.6배 빨리 구축하고 0.777 대 0.700으로 앞서는데, 그 차이의 대부분은 적대적 질문에서 나온다.* [[code](https://github.com/libingzheren/Jev-Mem)]
+- **[From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning](https://arxiv.org/abs/2610.11373)** (Liu et al., arXiv 2026) - *고정된 LLM을 여러 과제에 차례로 적응시킬 때, 프롬프트 최적화처럼 프롬프트 하나를 두는 대신 프롬프트 여러 개로 된 repertoire를 둔다. 갱신은 그 프롬프트가 이미 처리하던 예시에서 점수를 90% 이상 유지할 때만 그 프롬프트에 반영하고, 그렇지 않으면 다른 프롬프트에 시도하며, 받아들이는 프롬프트가 없으면 새 프롬프트로 추가한다. 입력마다 LLM selector가 프롬프트를 고른다. ToolUse, FinQA, SciKE-Bio 순서로 학습하고 Qwen3-8B가 답하며 GPT-5.6-Luna가 갱신을 쓸 때, 마지막 과제를 학습한 뒤 FinQA 정확도는 1.56포인트 떨어지고, GEPA는 25.10포인트, ACE는 9.43포인트 떨어진다. 에이전트 실험은 하나뿐이며 Continual Learning Bench 환경 여섯 개에서 최소한의 scaffold로 수행했다. 평균 점수는 Qwen3-8B에서 18.0(GEPA 9.5), GPT-5.6-Luna에서 36.3(GEPA 29.5)이다.*
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -826,10 +828,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 15명 보기</b></summary>
+<summary><b>기여자 16명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | 계획과 추론 절에 보상 없이 환경 피드백으로 에이전트를 학습시키는 SELF, 메모리 절에 고정된 LLM의 지속 학습을 위해 프롬프트 여러 개를 두는 EFRE 추가([#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)) |
 | <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | 평가와 벤치마크 절에 실제 에이전트 배포 trace로 벤치마크를 만드는 TraceDance 추가([#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)). 제1저자가 직접 제출 |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | 서베이와 포지션 페이퍼 절에 공개 GitHub 프로젝트가 Jev를 어떻게 쓰는지 분석한 Jev in the Wild 추가([#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)) |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | 계획과 추론 절에 작은 critic 모델로 더 큰 코딩 에이전트를 이끄는 Steer, Don't Solve([#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)), 도구 사용 절에 검증기 없이 학습하는 에이전트를 위한 rubric 기반 credit assignment인 DRACO([#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)) 추가. 제1저자가 직접 제출 |
@@ -857,6 +860,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-10-12**: SELF를 계획과 추론 절에, EFRE를 메모리 절에 추가했습니다([@markovchain-builder](https://github.com/markovchain-builder), [#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)). SELF는 보상 없이 에이전트를 학습시키는 방법으로, Qwen3-8B에서 τ-bench Retail 성공률이 43.2%이고 보상으로 학습한 GRPO는 39.1%입니다. 534편에서 536편으로 늘었습니다.
 - **2026-10-03**: 제1저자 [@ZhishanQ](https://github.com/ZhishanQ)가 보내 준 TraceDance를 평가와 벤치마크 절에 추가했습니다([#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)). 실제 에이전트 세션으로 테스트를 만드는 논문인데, 다음 단계로 넘어가기 전에 확인이 필요한 사례에서 frontier LLM 아홉 개의 통과율은 8.1%였습니다. 533편에서 534편으로 늘었습니다.
 - **2026-09-30**: 공개 GitHub 프로젝트 2,170개가 Jev를 어떻게 쓰는지 분석한 Jev in the Wild를 서베이와 포지션 페이퍼 절에 추가했습니다([@Gavin-M34](https://github.com/Gavin-M34), [#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)). 532편에서 533편으로 늘었습니다.
 - **2026-09-24**: 브라질 포르투갈어판과 스페인어판을 추가했습니다. GitBook 온라인 책도 두 언어로 읽을 수 있습니다.
