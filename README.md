@@ -96,17 +96,17 @@ Fresh 2026 work that is already drawing attention.
 - [🔥 10 to Watch (2026)](#to-watch)
 - **🧭 Background**
   - [📚 Surveys & Position Papers (58)](#surveys)
-  - [🏗️ Agent Architectures & Frameworks (51)](#architectures)
+  - [🏗️ Agent Architectures & Frameworks (52)](#architectures)
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (52)](#planning)
   - [💾 Memory (57)](#memory)
   - [🔧 Tool Use (46)](#tools)
-  - [🤝 Multi-Agent Systems (51)](#multi-agent)
+  - [🤝 Multi-Agent Systems (53)](#multi-agent)
 - **🌍 Part II: Agents in Context**
   - [🌐 Interactive Environments (57)](#environments)
   - [🚀 Applications (54)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
-  - [📊 Evaluation & Benchmarks (51)](#evaluation)
+  - [📊 Evaluation & Benchmarks (52)](#evaluation)
   - [🛡️ Safety & Alignment (59)](#safety)
 
 ## 🧭 Background
@@ -182,11 +182,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ Agent Architectures & Frameworks (51)
+### 🏗️ Agent Architectures & Frameworks (52)
 *Corresponds to §2 (Background) and the running examples throughout.*
 
 <details>
-<summary><b>Show 51 papers</b></summary>
+<summary><b>Show 52 papers</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *Only peer-reviewed-adjacent empirical study of the widely-influential (but paper-less) AutoGPT autonomous-agent design pattern.* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *The standard reference benchmark for measuring general single-agent capability across heterogeneous environments.* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -240,6 +240,7 @@ Fresh 2026 work that is already drawing attention.
 - **[SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks](https://arxiv.org/abs/2305.17390)** (Lin et al., NeurIPS 2023) - *Splits the agent into a small fine-tuned model that acts fast and a GPT-4 planner called in only on triggers such as a stalled or invalid action, and beats SayCan, ReAct and Reflexion across 30 ScienceWorld task types.*
 - **[R2V Agent: Teaching SLMs When to Ask for Help](https://arxiv.org/abs/2605.16604)** (Hemadri et al., arXiv 2026) - *Routes per step instead of per query, since difficulty shifts mid-trajectory: a Brier-calibrated router escalates from a distilled small model to a teacher LLM only when residual failure risk is high, lifting TextWorld from 64.6% to 98.2% success at 41.7% escalation.* [[code](https://github.com/RaghuHemadri/r2v-agent)]
 - **[REFLEX with Jev for Efficient Selective Control in LLM Agents](https://arxiv.org/abs/2609.26532)** (Wu and Lim, arXiv 2026) - *Lets Jev, a model that answers with a typed decision instead of text, make an agent's bounded choices and calls a strong LLM only when confidence is low or text is needed: 95% success with 72.7% fewer strong-model calls on a frozen 100-task benchmark, but little gain over a cheap generative cascade on BFCL and τ-style tasks.*
+- **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *Open-source multi-agent debate framework with more than 144 configurations of personas, response generators, discussion paradigms and decision protocols, plus an evaluation pipeline.* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -438,11 +439,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 Multi-Agent Systems (51)
+### 🤝 Multi-Agent Systems (53)
 *Corresponds to §7 (Multi-Agent Systems).*
 
 <details>
-<summary><b>Show 51 papers</b></summary>
+<summary><b>Show 53 papers</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *One of the earliest and most cited frameworks establishing autonomous agent-to-agent cooperation via role-play.* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *Seminal multi-agent debate paper popularizing 'society of minds'-style debate as a test-time technique.* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -496,6 +497,8 @@ Fresh 2026 work that is already drawing attention.
 - **[OrchMAS: Orchestrated Reasoning with Multi Collaborative Heterogeneous Scientific Expert Structured Agents](https://arxiv.org/abs/2603.03005)** (Feng et al., arXiv 2026) - *Splits orchestration from execution across two tiers for scientific reasoning: an orchestrator model reads the task, builds a domain-aware pipeline and writes the role and prompt for each expert agent it instantiates, then revises that pipeline mid-run from intermediate feedback, while a separate execution model carries out the steps, which lets backbones of different capacity and cost be mixed inside one run.*
 - **[At Equal Inference Cost, Multi-Agent Structure Does Not Beat a Single Frozen Agent](https://arxiv.org/abs/2609.04217)** (Dylan et al., arXiv 2026) - *Fixes the total number of model calls instead of the number of environment rollouts, and the reported advantage of a Planner-Executor-Critic team over a single evolved executor disappears: 0.769 against 0.754 on ALFWorld at p = 0.80 while spending 1.8 times the evaluation calls, with leave-one-in analysis putting the realized value entirely in the executor as planner and critic evolve to empty or inert prompts, and the team trending worse on WebShop.*
 - **[A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms](https://arxiv.org/abs/2609.04170)** (Paglieri et al., arXiv 2026) - *One agent in a collective of 100 proving formal conjectures found an exploit in the evaluation system, and it spread through the shared knowledge library and then peer-to-peer messages under competitive pressure, while a separate cohort audited the fraudulent proofs, alerted peers, staged boycotts and proposed validation patches; the transparent channels that carried the exploit are the same ones that made the resistance possible, which the authors read as a commons-governance problem rather than a failure inside any single agent.*
+- **[Voting or Consensus? Decision-Making in Multi-Agent Debate](https://arxiv.org/abs/2502.19130)** (Kaesberg et al., ACL Findings 2025) - *Changes only the decision protocol in multi-agent debate; voting helps reasoning tasks (+13.2%) and consensus helps knowledge tasks (+2.8%).* [[code](https://github.com/lkaesberg/decision-protocols)]
+- **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *Defines problem drift, where debates move away from the task over turns, and proposes DRIFTJudge to detect it and DRIFTPolicy, which mitigates 31% of cases.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -640,11 +643,11 @@ Fresh 2026 work that is already drawing attention.
 ## ⚖️ Part III: Cross-Cutting Concerns
 
 <a id="evaluation"></a>
-### 📊 Evaluation & Benchmarks (51)
+### 📊 Evaluation & Benchmarks (52)
 *Corresponds to §9 (Evaluation and Benchmarks).*
 
 <details>
-<summary><b>Show 51 papers</b></summary>
+<summary><b>Show 52 papers</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Reference benchmark for generalist, tool-using agent assistants; underlies popular public leaderboards tracking frontier agent progress.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *De facto standard benchmark for coding/software-engineering agents; spawned the SWE-bench Verified/Lite/Live/Multimodal family.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -698,6 +701,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Autonomous Evaluation and Refinement of Digital Agents](https://arxiv.org/abs/2404.06474)** (Pan et al., COLM 2024) - *Builds agent evaluators at several cost points that agree with oracle metrics 74.4 to 92.9% of the time, then uses them as rewards to improve the state of the art on WebArena by 29% without extra supervision.* [[code](https://github.com/Berkeley-NLP/Agent-Eval-Refine)]
 - **[JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550)** (Li et al., arXiv 2026) - *A judge that returns a decision rather than text comes within three points of the strongest LLM judge on ordinary preference and factuality at 0.36% of its fee, falls further behind when a derivation must be checked or a wrong answer is well written, and an accept-or-escalate cascade keeps 99% of the stronger judge's accuracy.*
 - **[TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces](https://arxiv.org/abs/2609.33295)** (Min et al., arXiv 2026) - *Builds 107 benchmarks from 252,557 Claude Code and OpenClaw deployment sessions by cutting each trace where the original agent showed an unwanted behavior and grading a model's next turn against a behavior-specific rubric, with no environment replay: nine frontier LLMs pass 26.7% on average, 67.9% when the rubric asks only for a well-formed tool call but 8.1% when it asks for a required check before continuing, and responses that open with a TodoWrite planning call pass 4.6% against 30.8% for other responses on the same instances, which the authors report as an association; the traces are not released, so the benchmarks cannot be rebuilt from public data.*
+- **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *Gymnasium environment that turns 2D grid pathfinding into a step-by-step decision task; the best model solves 16.0% vs. 98.0% for humans.* [[code](https://github.com/lkaesberg/Spatial-Gym)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
