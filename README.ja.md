@@ -95,28 +95,28 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - [⭐ スターターキット](#starter-kit)
 - [🔥 注目の10本 (2026)](#to-watch)
 - **🧭 背景**
-  - [📚 サーベイとポジションペーパー (58)](#surveys)
-  - [🏗️ エージェントのアーキテクチャとフレームワーク (51)](#architectures)
+  - [📚 サーベイとポジションペーパー (61)](#surveys)
+  - [🏗️ エージェントのアーキテクチャとフレームワーク (55)](#architectures)
 - **🧱 第1部：中核となる構成要素**
-  - [🧠 計画と推論 (52)](#planning)
-  - [💾 メモリ (57)](#memory)
-  - [🔧 ツール利用 (46)](#tools)
-  - [🤝 マルチエージェントシステム (51)](#multi-agent)
+  - [🧠 計画と推論 (55)](#planning)
+  - [💾 メモリ (60)](#memory)
+  - [🔧 ツール利用 (49)](#tools)
+  - [🤝 マルチエージェントシステム (56)](#multi-agent)
 - **🌍 第2部：環境と応用のなかのエージェント**
-  - [🌐 インタラクティブ環境 (57)](#environments)
-  - [🚀 応用分野 (54)](#applications)
+  - [🌐 インタラクティブ環境 (60)](#environments)
+  - [🚀 応用分野 (57)](#applications)
 - **⚖️ 第3部：横断的な課題**
-  - [📊 評価とベンチマーク (51)](#evaluation)
-  - [🛡️ 安全性とアライメント (59)](#safety)
+  - [📊 評価とベンチマーク (55)](#evaluation)
+  - [🛡️ 安全性とアライメント (62)](#safety)
 
 ## 🧭 背景
 
 <a id="surveys"></a>
-### 📚 サーベイとポジションペーパー (58)
+### 📚 サーベイとポジションペーパー (61)
 *サーベイの§1-§3（序論、背景、分類体系）に対応します。*
 
 <details>
-<summary><b>58本の論文を表示</b></summary>
+<summary><b>61本の論文を表示</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *LLMエージェントの総合サーベイの定番で、引用数も最も多い。* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *Wang et al. 2023と並んで分野の土台を築いた、二大総合サーベイの一つ。* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -177,16 +177,19 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Terminal Agents: A Survey of AI Agents in Command-Line Environments](https://arxiv.org/abs/2608.20485)** (Bin et al., arXiv 2026) - *タスクの領域ではなくターミナルを整理の軸に据える。対象は、タスクを前に進めるループがコマンドの実行とテキストのフィードバックを通じて回るエージェントで、アーキテクチャ、能力の獲得、評価にわたって、七つの次元からなる能力プロファイルの上に位置づける。条件を固定した独自の診断では、ベンチマークの系統ごとに見えるプロセスのシグナルが異なり、条件をそろえたシステム比較の結果もベンチマークしだいで変わった。そのため、どの結果についても、単一の構成要素のおかげだとは言い切りにくい。*
 - **[Autonomous Research Agents: A Survey of AI Scientists and the Verification Gap](https://arxiv.org/abs/2608.05179)** (Ding et al., arXiv 2026) - *スクリーニングした 125 のAIサイエンティストのシステムのうち 26 を七つの監査の観点で分類し、ボトルネックが能力から検証可能性へ移ったことを示す。実行できる 24 のシステムのうち 83% はコードを公開しているが、シードや実行トレースを公開しているのは 38% だけで、新規性の検証を少しでも報告しているのも 38% にとどまる。クローズドループの九つのシステムのうち七つは機械的な再実行で、外部で検証されたループ内のoracleはコーパスのどこにも見当たらない。*
 - **[Jev in the Wild: A Data-Driven Analysis of the Jev Model's Functionality, Applications and Ecosystem](https://arxiv.org/abs/2609.30216)** (Ling et al., arXiv 2026) - *Jevの公開から一週間後に、Jevを使う公開GitHubプロジェクト 2,170 件を集めて分類し、Jevが行動を選ぶよりも入力を判定するためにずっと多く使われていることを示す。属性の判定は 77% のプロジェクトに、行動選択は 31% に見られるが、インターフェースエージェントとシミュレーション・制御のプロジェクトでは行動選択がラベルの約半分を占める。routingとインターフェースエージェントのプロジェクトは全体の 19.6% だが、スターの 63% を集めている。どのリポジトリを含めるかと各プロジェクトのラベルはLLMエージェントが決め、二つ目のエージェントが確認しており、人手のラベルとの比較は報告されていない。*
+- **[Why Agentic Workflows Fail: A Taxonomy Derived from Literature and Empirical Data](https://arxiv.org/abs/2610.17418)** (Li et al., arXiv 2026) - *エージェントのworkflowの失敗を四つの軸で分類する。責任の所在（エージェント、外部システム、その両方）、65 種類のうちどの仕組みか、workflowのどの段階か、エージェントのどの能力か、である。この体系を、論文から集めた失敗記録 397 件と、229 のリポジトリのGitHubのissueとpull requestから集めた 1,196 件に適用した。GitHubの失敗は実行中の操作の段階に集中して記録の 64.8% を占め、論文では 14.1% だった。そのうち 61% は、外部APIの障害のようにエージェントの責任ではない。その後の論文の記録 69 件のうち 68 件が既存の類型に収まった。なお、件数は発生頻度の推定値ではない。*
+- **[Distilling Agentic Systems: A Roadmap across Models, Artifacts, and Harnesses](https://arxiv.org/abs/2609.36630)** (Luo et al., arXiv 2026) - *distillationの範囲を教師モデルから教師エージェントへ広げ、学生が学んだことをどこに保持するかで文献を整理する。重み、メモリやskillやツールのような再利用できる成果物、workflowやルーティングや検証を通じた実行harness、そしてそれらをまたぐ場合であり、最後の場合には、テキストのworkflowを制御器にコンパイルする、成果物を強制されるルールに変える、といった経路が含まれる。転移したという主張それぞれに内在的、因果的、end-to-endの三種類の証拠を求め、どの保持先も一般に優れているわけではないと結論づける。ただし各手法は、主な保持先一つだけに分類されている。*
+- **[Agentic Societies Need a Social Harness](https://arxiv.org/abs/2609.17527)** (Chugh et al., arXiv 2026) - *異なる人の代理として動くエージェントには、各自のharnessの上に、エージェント同士のメッセージを扱う社会的なharnessが必要だと主張する。根拠として、大学の会議日程を調整するOpenClawエージェントを使い、全員がGPT-5.4の構成と、一体だけClaude Opus 4.8の構成を比べる。設定ごとに十回実行すると、相手ごとにセッションを分けた場合、混合構成はTAが二人以上いるグループ会議をすべて失敗し、セッションを共有するとTAが七人のときの成功率が 0% から 90% に上がった。エージェントがそのまま伝えた虚偽のキャンセルの主張は、GPT-5.4の実行の 100% で通った。検証可能な身元から社会制度まで五層の構造を提案しているが、実装もコストの測定もしていない。*
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ エージェントのアーキテクチャとフレームワーク (51)
+### 🏗️ エージェントのアーキテクチャとフレームワーク (55)
 *サーベイの§2（背景）と、全体を通して使う例に対応します。*
 
 <details>
-<summary><b>51本の論文を表示</b></summary>
+<summary><b>55本の論文を表示</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *影響力は大きいのに論文のなかったAutoGPT型の自律エージェントの設計パターンを、査読に近い水準で実証的に調べた唯一の研究。* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *種類の異なる環境にまたがって、単一エージェントの汎用的な能力を測るための標準的なベンチマーク。* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -240,6 +243,10 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks](https://arxiv.org/abs/2305.17390)** (Lin et al., NeurIPS 2023) - *エージェントを、素早く行動するファインチューニング済みの小さなモデルと、行動が行き詰まったり無効だったりといったきっかけがあるときだけ呼ばれるGPT-4のplannerに分ける。ScienceWorldの 30 種類のタスクで、SayCan、ReAct、Reflexionを上回った。*
 - **[R2V Agent: Teaching SLMs When to Ask for Help](https://arxiv.org/abs/2605.16604)** (Hemadri et al., arXiv 2026) - *難しさはtrajectoryの途中で変わるため、クエリ単位ではなくステップ単位でルーティングする。Brierスコアでcalibrationしたrouterが、残る失敗のリスクが高いときだけ、distillationで作った小さなモデルから教師のLLMへescalationする。TextWorldでの成功率を 64.6% から 98.2% に高め、escalationの割合は 41.7% だった。* [[code](https://github.com/RaghuHemadri/r2v-agent)]
 - **[REFLEX with Jev for Efficient Selective Control in LLM Agents](https://arxiv.org/abs/2609.26532)** (Wu and Lim, arXiv 2026) - *テキストの代わりに型付きの決定を返すモデルJevに、エージェントの限られた選択を任せ、confidenceが低いときやテキストが必要なときだけ強いLLMを呼ぶ。固定した 100 タスクのベンチマークで成功率 95% を保ちつつ強いモデルの呼び出しを 72.7% 減らしたが、BFCLやτ系のタスクでは安価な生成型cascadeと比べてほとんど改善がない。*
+- **[What Does a Harness Buy? Tokens, Mostly](https://arxiv.org/abs/2610.04433)** (Liu and Han, arXiv 2026) - *五つのモデルをClaude Code、mini-SWE-agent、OpenCodeでそれぞれ動かしてSWE-bench Verifiedを解かせ、同じ設定を再実行して実行ごとのノイズの大きさを測る。447 件のタスクでは、ここで動かした二つのQwenモデルのどちらでも、Claude Codeとmini-SWE-agentは 5 ポイント以内で同等だった。最も難しい 45 件では、harnessを替えるとタスクの 13% で結果が入れ替わり、これは再実行したときと同じ割合である。ノイズを上回った効果は、OpenCodeが最大 9 ポイント下回ったことだけだった。一方、タスクあたりのコストは最大で三倍違い、その差は固定の前置きプロンプトの大きさで決まる。Claude Codeでは 16k トークン、mini-SWE-agentでは千トークン未満である。ベンチマークは一つだけである。* [[code](https://github.com/YangzeLiu/what-does-a-harness-buy)]
+- **[When Sub-Agents Work in Parallel: The Promises and Pitfalls of Dynamic Concurrency in Long-Horizon Coding Tasks](https://arxiv.org/abs/2610.10263)** (Li et al., arXiv 2026) - *Codex（GPT-5.4）、Claude Code（Claude Opus 5）、Kimi Code（Kimi K3）に組み込まれた動的な並行実行、つまりメインのエージェントが実行中に並列のサブエージェントを起動するかどうかを自分で決める機能を、354 件のコーディングタスクでオンとオフに切り替えて比べる。合格率は 11.9 ポイントの低下から 2.3 ポイントの上昇までの幅で動き、トークン使用量は 1.41 倍から 3.31 倍に増えた。Claude CodeはSWE-bench Verifiedで 83.0% から 59.0% に下がったが、long-horizonのLoopsBenchでは 7.1% から 21.4% に上がった。注釈をつけた 804 件の失敗のうち 33.2% は、共有状態とマージの問題だった。各設定はタスクごとに一回しか実行していない。*
+- **[Ask Your Advisor: Learning When to Consult Stronger Models in Agentic Systems](https://arxiv.org/abs/2610.13870)** (Sowietzki et al., arXiv 2026) - *安い実行モデルがいつ強い助言モデルに相談すべきかを学習する。workflowの各接点で、簡潔な状態抽象をもとに黙るか相談するかを選び、コストを差し引いた結果に対するMonte Carlo制御で学習する。Magentic-Oneでgemini-3-flash-previewが実行し、gemini-3.1-pro-previewが助言する設定では、SWE-bench Verified-Miniで $22.09 をかけて 48.0% に達し、実行モデルだけでは 18.0%、助言モデルだけでは $45.90 で 62.0% だった。RouteLLM（$25.03 で 30.0%）や、同程度の回数で無作為に相談する方法（28.0%）を上回ったが、Terminal-Benchではヒューリスティックと同じ 34.7% にとどまった。モデルの組は一つ、フレームワークも一つで、テストセットは 50 タスクである。* [[code](https://github.com/Pasl4/ARIA)]
+- **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *persona、応答生成器、議論のパラダイム、意思決定プロトコルを組み合わせた 144 通り以上の構成と評価パイプラインを備えた、オープンソースのマルチエージェント討論フレームワーク。* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -247,11 +254,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 ## 🧱 第1部：中核となる構成要素
 
 <a id="planning"></a>
-### 🧠 計画と推論 (52)
+### 🧠 計画と推論 (55)
 *サーベイの§4（計画と推論）に対応します。*
 
 <details>
-<summary><b>52本の論文を表示</b></summary>
+<summary><b>55本の論文を表示</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *ほぼすべてのLLMエージェントの推論・計画モジュールの土台にある基礎技術で、CoT、ToT、ReActと続く系譜全体の出発点である。*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *推論時のensembleと検証の標準的な戦略で、エージェントの推論・計画のパイプラインのなかで広く再利用されている。*
@@ -306,16 +313,19 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Steer, Don't Solve: Training Small Critic Models for Large Code Agents](https://arxiv.org/abs/2606.21811)** (Gandhi et al., arXiv 2026) - *SFTとDPOで4Bと8Bのcriticモデルを学習し、コーディングエージェントのtrajectoryにある誤りを見つけさせ、推論時に数ステップごとに大まかな指針を与える。行動そのものは生成しない。このcriticは、より大きな六つのエージェントのSWE-bench Verifiedでの解決率を高め、GLM-4.7-Flash-30B-A3Bでは 16.0 ポイント、GPT-OSS-120Bでは 14.4 ポイント上げた。エージェントが少ないステップで終えられる場合は、誘導を加えても全体の費用が下がり、GPT-OSS-20Bでは例ごとの費用が $0.07 から $0.03 になった。* [[code](https://github.com/shubhamrgandhi/critic-training)]
 - **[Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners (KnowNo)](https://arxiv.org/abs/2307.01928)** (Ren et al., CoRL 2023) - *LLMのplannerが出す次のステップの候補にconformal predictionを適用し、閾値を越えて残るステップが複数あるときだけ、ロボットが人に助けを求めるようにする。タスクの達成に統計的な保証を与えつつ、人の手助けを最小限に抑える。*
 - **[Real-Time Detection and Repair of LLM Agent Failures](https://arxiv.org/abs/2608.02464)** (Dubey, arXiv 2026) - *エージェント本体より費用がかかる、ステップごとのLLMによる判定をやめる。代わりに、ステップごとに約 200 マイクロ秒のテレメトリ監視と、決定的な再計算チェックを使う。問題を検出した実行はロールバックし、タスクの成功率を 52% から 73% に上げた。ただし、監視はデプロイごとにcalibrationし直す必要がある。* [[code](https://github.com/sunnydubey1111/agent-trajectory-sentinel)]
+- **[LLM Value Functions for Credit Assignment in Agentic RL](https://arxiv.org/abs/2610.15840)** (Zhu et al., arXiv 2026) - *エージェントのRLで、凍結したLLMをcriticとして使う。criticは同じタスクのほかのrolloutの要約を見て、始点をグループの成功率に、終点を実際に得た報酬に合わせたうえで、途中のすべての状態の価値を一回の問い合わせで採点する。価値の差がステップごとのadvantageとなり、その合計はグループ内の相対的なリターンに一致する。Claude Opus 4.6をcriticにすると、Qwen3-8BはAppWorldで 26.3%、SWE-bench Verifiedで 20.2% に達し、GRPOの 19.8% と 12.0% を上回った。ただし改善はcriticしだいで、Qwen3-235Bをcriticにすると、Qwen3-4BのAppWorldでの成績は 9.8% にとどまり、Opusのときは 24.3% だった。*
+- **[Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions](https://arxiv.org/abs/2610.06191)** (Zhang et al., arXiv 2026) - *ツールを使うエージェントが証拠について下した判断と、その次の行動を切り分けて調べる。実験は、検索ソースがわざと失敗するようにしたHotpotQAで行った。七つのエージェントは、失敗するソースの結果を 97% から 100% の割合で役に立たないと判断したが、そうした判断が五回続いた後でも、補助のないQwen3-8Bが回答したのは 292 問中 1 問だけで、プロンプトに書いた停止ルールは良くても部分的にしか守られなかった。役に立たない結果が五回出たら回答させるルールをharnessが強制すると、六つの失敗条件で、四つのオープンモデルとClaude Haiku 4.5の成功率が 0.026 から 0.097 上がった。失敗は模擬である。* [[code](https://github.com/bennidict23/judged-useless-queried-anyway)]
+- **[Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning](https://arxiv.org/abs/2609.38147)** (Dahal et al., arXiv 2026) - *エージェントの制御と作業を分ける。作業者がタスクをこなす一方で、制御器は毎サイクル、進み具合を簡潔にまとめた記録を更新し、次の手を提案し、残りの呼び出し予算と照らして比べたうえで作業者を送り出す。完全な出力はメモリに残して再利用する。同じ作業者と予算を使う直接制御のエージェントと比べると、モデルとベンチマークの 12 の組み合わせすべてで得点が高く、ベンチマークごとの平均で 3.6 から 4.2 ポイント上回った。ProgramBenchではGPT-5.5で 71.5% に達し、Codexの 58.0%、直接制御の 63.7% を上回った。ただし、Opus 4.8で呼び出しが 400 回のときは、56.6% 対 62.7% で直接制御を下回った。*
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="memory"></a>
-### 💾 メモリ (57)
+### 💾 メモリ (60)
 *サーベイの§5（メモリ）に対応します。*
 
 <details>
-<summary><b>57本の論文を表示</b></summary>
+<summary><b>60本の論文を表示</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *トリプレット形式で構造化した読み書き型メモリの初期の設計で、影響も大きい。のちのグラフやKGにもとづくエージェントメモリの先駆けとなった。*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *心理学に裏づけられた（人間の記憶に着想を得た）忘却と定着の仕組みを、LLMエージェントのメモリに持ち込んだ最初期のシステムの一つである。* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -375,16 +385,19 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Dual-Layer Agentic Memory with Fast Write Routing and Slow Consolidation](https://arxiv.org/abs/2608.22215)** (Li et al., arXiv 2026) - *メモリへの書き込みを毎回、スキップ・新規書き込み・更新の三択にし、1.7B から 8B のcascadeで決める。冗長なメモリを最大 68% 削りつつ、escalationは入力の半分未満にとどめ、すべてを保持した場合のexact matchの 98% 超を保つ。*
 - **[Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents](https://arxiv.org/abs/2609.23986)** (Jiang et al., arXiv 2026) - *メモリの型付け、ルーティング、グラフの探索、停止の判断をJevに任せ、LLMは返ってきた結果の推論にだけ使う。LoCoMoのメモリを最速のbaselineより 6.6 倍速く構築し、スコアは 0.700 に対して 0.777 だった。その差の大半は敵対的な質問から生まれている。* [[code](https://github.com/libingzheren/Jev-Mem)]
 - **[From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning](https://arxiv.org/abs/2610.11373)** (Liu et al., arXiv 2026) - *重みを固定したLLMを一連のタスクに順に適応させる。プロンプト最適化が一つのプロンプトを持つのに対し、複数のプロンプトをrepertoireとして持つ。更新は、そのプロンプトがすでに扱えている事例でスコアの 90% 以上を保つ場合にだけそのプロンプトに取り込み、そうでなければ他のプロンプトで試し、どのプロンプトにも取り込めなければ新しいプロンプトとして追加する。入力ごとにLLMのselectorがプロンプトを選ぶ。ToolUse、FinQA、SciKE-Bioの順に学習し、Qwen3-8Bが回答してGPT-5.6-Lunaが更新を書く場合、最後のタスクを学習したあとのFinQAの正解率は 1.56 ポイント下がり、GEPAは 25.10 ポイント、ACEは 9.43 ポイント下がる。エージェントでの実験は一つだけで、Continual Learning Benchの六つの環境で最小限のscaffoldを使っている。平均スコアはQwen3-8Bで 18.0（GEPAは 9.5）、GPT-5.6-Lunaで 36.3（GEPAは 29.5）である。*
+- **[Reliable Memory from Unstable Growth: Curating Self-Written Agent Playbooks with Randomized Experiments](https://arxiv.org/abs/2610.18427)** (Pham et al., arXiv 2026) - *エージェントが自分で書いたplaybookのどの教訓を残すかを、エージェント自身の判断ではなく実験で決める。関連する教訓をブロックにまとめ、練習タスクの間、各ブロックを無作為にオンとオフに切り替え、成功を回帰分析して各ブロックの効果を推定する。選び直したplaybookは、新しい練習で全体のplaybookと空のplaybookの両方に勝ったときだけ使う。AppWorld、WebShop、ALFWorldでACEとDynamic Cheatsheetを使った 19 の設定の平均は 66.9 で、全体のplaybookの 55.5、エージェント自身が選んだ場合の 53.8 を上回った。ただし、全体と空のどちらかを選ぶだけでも 66.4 に達する。*
+- **[Can Agents Forget When Asked? A Benchmark for Memory Unlearning in LLM Agents](https://arxiv.org/abs/2610.18052)** (Xie et al., arXiv 2026) - *エージェントのメモリシステムが、ユーザーに忘れるよう求められた内容を消せるかを試す。合成した複数セッションの対話 50 件に、六種類の忘却要求 135 件と質問 1,742 件が含まれる。各対話には要求を除いた対照版があるので、システムはもともと保存していたものを忘れた場合にだけ得点できる。Mem0、A-MEM、LangMem、LightMem、SimpleMem、素朴なRAG、全文脈を入れたLLMのいずれも、end-to-endで通過した要求は 1.5% を超えなかった。簡単な攻撃で情報を引き出せる状態のまま残すか、求められたよりはるかに多くを消してしまうからである。* [[code](https://github.com/Nboxff/bemula-benchmark)]
+- **[Not All Experience Belongs in the Weights: Component Routing for Self-Improving GUI Agents](https://arxiv.org/abs/2610.01787)** (Wu et al., arXiv 2026) - *GUIエージェント自身の経験を、画面要素の位置情報、手順、状態に関する事実、教訓に分け、それぞれをファインチューニングで重みに入れる場合と、検索したメモとしてコンテキストに入れる場合の両方で試す。位置情報は重みに入れると 4.9 ポイント、教訓は 1.5 ポイント多く伸びたが、教訓のこの差は半数のセルで区間が 0 を含む。手順と状態に関する事実は、コンテキストに入れると 4.2 ポイントと 4.1 ポイント多く伸びた。繰り返し現れる頻度と、現在の状態に依存するかどうかに基づくルールで要素ごとに行き先を決めると、よいほうの単一の行き先より平均 3.5 ポイント高かった。MobileGymとAndroidWorldで、7B から 8B の三つのバックボーンを使った結果である。*
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="tools"></a>
-### 🔧 ツール利用 (46)
+### 🔧 ツール利用 (49)
 *サーベイの§6（ツール利用と行動実行）に対応します。*
 
 <details>
-<summary><b>46本の論文を表示</b></summary>
+<summary><b>49本の論文を表示</b></summary>
 
 - **[TALM: Tool Augmented Language Models](https://arxiv.org/abs/2205.12255)** (Parisi et al., arXiv 2022) - *LMのツール利用を自己教師ありのbootstrappingで身につけさせる初期の定式化で、影響力が大きい。Toolformerの自己教師ありアプローチを直接先取りしていた。*
 - **[API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs](https://arxiv.org/abs/2304.08244)** (Li et al., EMNLP 2023) - *ツールで拡張した対話LLMの評価と学習に特化したベンチマークとして、最も早く、最も引用されているものの一つである。* [[code](https://github.com/AlibabaResearch/DAMO-ConvAI)]
@@ -433,16 +446,19 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Can MCP Clients Decide What to Do After Failure? A Result-Only Actionability Audit](https://arxiv.org/abs/2609.00072)** (Mehan, arXiv 2026) - *完了したMCPの失敗結果だけから、決定的なソフトウェアが何を判断できるかを問う。到達可能な十のサーバーで意図的に起こした 21 件という、あえて小さなサンプルでは、型付きのフィールドを見れば失敗そのものは 18 件でわかり、大まかな方針も 8 件で読み取れたが、具体的な原因、対象、実行可能な修復、再実行の制約はどれも示されなかった。そのため回復は、誰かが解釈しなければならない文章に頼ったままになる。*
 - **[One Policy Is Enough: Single-Agent Reinforcement Learning Outperforms Tree Search for Chemistry Tool Learning](https://arxiv.org/abs/2608.30952)** (Dariani et al., arXiv 2026) - *二つの学習済みcriticのもとで方策モデルと実行モデルを別々に動かす階層的な進化型tree searchを、左から右への一本の生成に置き換える。この生成は、正解の呼び出し列から読み取ったプログラム的な報酬に対して、結果レベルの強化学習で訓練する。学習ループには学習済みのcriticも評価者も置かないが、それでもQwen-2.5-7Bで、質問あたり一度のモデル呼び出しのまま、Tool F1を 5.5%、Return F1を 9.6% 改善した。*
 - **[DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training](https://arxiv.org/abs/2609.04094)** (Gandhi et al., arXiv 2026) - *正解の成功信号がない状況で、long-horizonなツール利用エージェントをGRPOで学習させる。学習中にタスク固有のrubricを生成し、各trajectoryをLLM評価者で一度だけ採点し、注釈した基準ごとに、それに責任のあるステップへadvantageを閉じた形で再配分する。帰属を学習するモジュールは使わない。AppWorldではベースモデルより 15.9 ポイント高く、自身は検証器を使わないにもかかわらず、正解の報酬で学習したGRPOを 5.3 上回った。最先端の評価者がなくても、Tau-Benchで 5.3 ポイントの改善が得られる。* [[code](https://github.com/IBM/draco)]
+- **[Do Tool Calls Execute as Intended? Measuring and Repairing Intent-Execution Correspondence in LLM Agents](https://arxiv.org/abs/2610.04375)** (Yang et al., arXiv 2026) - *harnessが実際に実行した動作がLLMの出したツール呼び出しのとおりかを確かめ、違えば最初に変えた段階を特定する。Windowsの本番セッションから得たシェル呼び出し 47,828 件では、Claude CodeのBashツールが、コード、エスケープシーケンス、長いテキストを含む呼び出しの 12.0% を変えており、バックスラッシュが変えられた呼び出しの 80.7% はエラーを出さずに誤った動作を実行した。trajectoryをもとに判定するモデルは失敗の 95.1% をLLMのせいにしたが、実際には半分以上が、ツール呼び出しから実行までの経路によるものだった。IntActは、ベンチマークで呼び出しが変えられた失敗の 79.2% を回復した。Linuxでは 1,779 件すべてで、引数が書かれたとおりに届いた。* [[code](https://github.com/GLEAM-Lab/intact-bash-mod)]
+- **[ProgAgent: Learning Tool Orchestration through Programmatic Training](https://arxiv.org/abs/2610.14774)** (Li et al., arXiv 2026) - *Qwen3-8Bと14Bに、ツールを呼ぶコードを書いてツールを使いこなすよう学習させる。途中の結果はコンテキストではなく実行時の変数に置く。四つの環境規模にわたる合成タスク 215 件でcold-start SFTを行い、続いてGSPOをかけた。14BモデルはMCPMarkで 29.7% に達し、同じ手順でツールを直接呼び出した場合の 8.0% を上回った。MCP-Atlasでは 45.6% で、直接呼び出しの 29.7% やClaude Sonnet-4.5の 43.8% より高かった。しかし、Playwrightでのコードによる呼び出しの 40.7% は、制御フローのない一回だけのツール呼び出しだった。学習していないバックボーンは、コードのインターフェースだけではほとんど伸びなかった。*
+- **[Where Does Exactly-Once Live? Model, Harness, and Tool-Contract Effects on Duplicate Side Effects in LLM Agents](https://arxiv.org/abs/2609.29095)** (Li, arXiv 2026) - *九つのモデルを、最小限のscaffoldと、Copilot CLI、Hermes、Codex CLIで動かした 25,930 件のエピソードを採点する。基準は、六つの模擬サービスと十二種類の注入した障害からなるsandboxで、実際にコミットされた副作用の台帳である。一度だけ実行するよう指示すると、最先端のモデルは確認応答が失われた書き込みを 0.5% しか重複させなかったが、コミットが遅れて反映される場合は 56%、メッセージが再配信される場合は 74% を重複させた。これらの場合は読み返しても何も見つからず、分散の 81% をツールの契約が説明し、harnessの影響は小さかった。すべての書き込みにidempotency keyを付けると、重複は 28% から 4% に減った。重複を起こしたエピソードの 90% で、エージェントは成功したと報告していた。*
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 マルチエージェントシステム (51)
+### 🤝 マルチエージェントシステム (56)
 *サーベイの§7（マルチエージェントシステム）に対応します。*
 
 <details>
-<summary><b>51本の論文を表示</b></summary>
+<summary><b>56本の論文を表示</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *ロールプレイを通じたエージェント同士の自律的な協力を確立した、最も早く、最も引用されているフレームワークの一つである。* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *「society of minds」風の討論をテスト時の手法として広めた、マルチエージェント討論の先駆的な論文。* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -496,6 +512,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[OrchMAS: Orchestrated Reasoning with Multi Collaborative Heterogeneous Scientific Expert Structured Agents](https://arxiv.org/abs/2603.03005)** (Feng et al., arXiv 2026) - *科学的推論のために、orchestrationと実行を二つの層に分ける。Orchestratorモデルがタスクを読んでドメインを踏まえたパイプラインを組み、生成する専門家エージェントそれぞれの役割とプロンプトを書き、途中のフィードバックをもとに実行中にパイプラインを修正する。一方、別の実行モデルが各ステップをこなす。これにより、能力もコストも異なるbackboneを一回の実行のなかで混ぜて使える。*
 - **[At Equal Inference Cost, Multi-Agent Structure Does Not Beat a Single Frozen Agent](https://arxiv.org/abs/2609.04217)** (Dylan et al., arXiv 2026) - *環境でのrolloutの回数ではなくモデル呼び出しの総数をそろえると、進化させた単一のexecutorに対してPlanner-Executor-Criticチームが持つとされた優位は消える。ALFWorldでは 0.769 対 0.754（p = 0.80）で、評価呼び出しは 1.8 倍かかる。Leave-one-in分析では、plannerとcriticが空の、あるいは効き目のないプロンプトへと進化し、実際の価値はすべてexecutorにあった。WebShopではチームのほうが悪くなる傾向がある。*
 - **[A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms](https://arxiv.org/abs/2609.04170)** (Paglieri et al., arXiv 2026) - *形式的な予想を証明する 100 体のエージェント集団のうち一体が評価システムの抜け穴を見つけ、それが競争の圧力のもとで、まず共有知識ライブラリで、次にエージェント間のメッセージで広がった。一方で別のグループは不正な証明を監査し、仲間に警告し、ボイコットを行い、検証用のパッチを提案した。抜け穴を広めた透明な経路は、抵抗を可能にした経路と同じものであり、著者らはこれを単一のエージェント内部の失敗ではなく、コモンズのガバナンスの問題として読み解く。*
+- **[Scaling Inference-Time Compute with Teams of Coding Agents](https://arxiv.org/abs/2610.17471)** (Samway et al., arXiv 2026) - *コーディングエージェントのチーム設計を計算資源の配分として扱い、リーダーが任せる段階、作業者のモデル、チームの規模を変えながら、ProgramBenchの 200 タスクでGPT-5.6 Sol、Terra、Lunaを使って調べる。チームは単独のエージェントより成績が良いが、コストは三倍から七倍かかる。計画だけを任せると、三つの段階すべてを任せたときと同じ報酬を半分のコストで得られた。SolのリーダーのもとでLunaの安いplannerを使うと、全員Solのチームが得る向上の 47.5% を、その追加コストの 13.9% で得られたが、実装を安いモデルに任せると報酬は下がった。メンバー同士でメッセージをやり取りさせても報酬は上がらなかった。コードの骨組みがすでに作業を分けているCommit0-Liteでは、任せる価値があるのは実装の段階だった。*
+- **[Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://arxiv.org/abs/2610.00583)** (Paliskara et al., arXiv 2026) - *すべてのユーザーを一つの調整エージェントが受け持つ方式と、ユーザーごとにエージェントを置くチーム方式を、五つの最先端モデルと、資源を共有する四つの環境の 77 シナリオで比べると、チームはどの環境でも劣っていた。共有のAPI予算の環境では、互いに直接やり取りするClaude Opus 5のチームは最適値の 30% にとどまり、調整エージェントは 64%、互いの通信路がない場合は 7% だった。チームがエージェント四体から十六体に増えると、一度でも行動したSonnet 5エージェントの割合は 66% から 10% に下がった。明示的な指示などの緩和策は効果があったが、それを書いた環境でしか効かなかった。*
+- **[Scaling Discovery through Test-Time Communication](https://arxiv.org/abs/2609.21032)** (Park et al., arXiv 2026) - *同じCopilot CLIエージェントを複数動かして共有のワークスペースで発見を共有させ、エージェントあたりの予算をそろえたうえで、k 体のチームを、独立した k 体のエージェントの最良の結果と比べる。Claude Sonnet 4.6で公開されたARC-AGI-3の 25 ゲームを解くと、三体のチームは独立した 13 体の最良と、五体のチームは 33 体の最良と並んだ。GPT-5.6 Solの四体のチームはMNIST分類器を 1,957 バイトに圧縮し、独立した四体の最良の 3,160 バイトや、人間の最良の解の 2,461 バイトより小さかった。ただしこの利得には検証器のフィードバックと十分な計算量が必要で、予算が少ないときやTerminal-Bench 2.0では、チームのほうが下回った（60.67% 対 62.36%）。* [[code](https://github.com/jerryjonghopark/test-time-communication)]
+- **[Voting or Consensus? Decision-Making in Multi-Agent Debate](https://arxiv.org/abs/2502.19130)** (Kaesberg et al., ACL Findings 2025) - *マルチエージェント討論で意思決定プロトコルだけを変えて比べる。投票は推論タスクで（+13.2%）、合意は知識タスクで（+2.8%）効果がある。* [[code](https://github.com/lkaesberg/decision-protocols)]
+- **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *討論がターンを重ねるうちに課題から離れていくproblem driftを定義し、それを検出するDRIFTJudgeと、31% のケースを緩和するDRIFTPolicyを提案する。*
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -503,11 +524,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 ## 🌍 第2部：環境と応用のなかのエージェント
 
 <a id="environments"></a>
-### 🌐 インタラクティブ環境 (57)
+### 🌐 インタラクティブ環境 (60)
 *サーベイの§8（インタラクティブ環境のエージェント）に対応します。*
 
 <details>
-<summary><b>57本の論文を表示</b></summary>
+<summary><b>60本の論文を表示</b></summary>
 
 - **[Do As I Can, Not As I Say: Grounding Language in Robotic Affordances](https://arxiv.org/abs/2204.01691)** (Ahn et al., CoRL 2022) - *Embodiedなロボットエージェントにおいて、実世界のaffordanceでgroundingしたLLMをplannerとして使えることを示した、基礎となる実証である。* [[code](https://github.com/google-research/google-research/tree/master/saycan)]
 - **[Inner Monologue: Embodied Reasoning through Planning with Language Models](https://arxiv.org/abs/2207.05608)** (Huang et al., CoRL 2022) - *フィードバックにgroundingした閉ループの計画パターンを確立し、その後のembodiedエージェントやGUIエージェントのアーキテクチャの土台となった。*
@@ -567,16 +588,19 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[CUA-Universe: A Scalable and Dynamic Environment for Hybrid GUI+CLI Agents](https://arxiv.org/abs/2609.05374)** (Shi et al., arXiv 2026) - *同じアプリケーションの状態に、画面とコマンドラインのどちらからでも到達できる環境を構築する。実在する 16 のデスクトップアプリケーションを再現可能な仮想マシンに移し、コマンドのインターフェースは既存のものを見つけるか、ラップするか、生成して用意する。そこで集めたtrajectoryで学習すると、9B のモデルは非効率なクリックや壊れやすいスクリプトに頼らなくなり、安く済むほうのインターフェースを使うようになる。OSWorldで成功率が 16.8 ポイント上がり、ステップは 57%、トークンは 44% 減った。*
 - **[Discriminative World Models for Web Agents](https://arxiv.org/abs/2609.02885)** (Li et al., arXiv 2026) - *教師ありの次状態予測で学習した世界モデルは、rankerがそれを使う段になると、間違ったものを最適化していると論じる。ランキングに必要なのは、もっともらしく見えるだけの状態ではなく、候補となる行動どうしを区別できる予測状態だからである。そこで代わりに、分岐するWebArenaのtrajectoryの上で予測状態のマッチングを学習する。各決定点には、代わりの行動と、それぞれが生み出す状態が並べて付いている。*
 - **[Routing Is Least Learnable Where It Is Most Valuable: Bounds on Representation Routing for Web Agents](https://arxiv.org/abs/2608.06171)** (Wei et al., arXiv 2026) - *Webエージェントの六つの観測モードを切り替える五つのルーティング方針（confidenceによるcascadeを含む）のどれも、うまく選んだ固定モード一つに頑健には勝てない。Routerがラベルを得られるのはエージェントが成功したときだけだからである。同じモードを再実行するだけでも、結果の 12% から 14% が変わる。*
+- **[AutoEnvScaling: Automating the Data Flywheel with Terminal Agents](https://arxiv.org/abs/2610.14163)** (Yu et al., arXiv 2026) - *RL環境を作る作業を、エージェントが端末で行うタスクとして扱う。提案側のエージェントは解く側のモデルのrolloutを読み、sandboxで完結したタスクを作ってテストし、解く側の実力に合わせて難しさを調整する。そのため新しい環境は、解く側がまだ失敗するところを狙う。GPT-5.6-solが提案した環境で学習したQwen3.5-35B-A3Bは、Terminal-Bench 2.1で 38.9 に達し、条件をそろえたTmaxのbaselineの 34.6 を上回った。Qwen3.6-35B-A3Bが提案と解答の両方を担うと、得点は 41.1 から 53.3 に上がったが、Terminal-Bench 4.0では 1.6 から 3.2 に動いただけだった。提案側の作業スペースに解く側のrolloutを入れないと、二つの最先端の提案モデルで、学習後の解く側の得点はそれぞれ 3.6 ポイントと 6.7 ポイント下がった。* [[code](https://github.com/MSR-Orchard/AutoEnvScaling)]
+- **[SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire](https://arxiv.org/abs/2610.12596)** (Lowe and Keemink, arXiv 2026) - *20 のLLMに、デッキ構築ゲームSlay the Spireのランを、最高難度で、ツール呼び出しを通じて最後まで遊ばせる。held-outのシード十個を使い、ゲーム内の名前を隠したリスキン版でも試す。これを、ゲームのテレメトリから得た 206,082 回のランと、四人の熟練ストリーマーと比べる。Claude Fable 5.1は一回のランで平均 1.60 幕を突破し、人間の平均の 0.73 幕を上回ったが、ストリーマーの 2.5 から 3.1 幕には及ばず、差は第一幕の後に開いた。ランの間で記憶を引き継ぐ方法はどれもプレイを改善せず、保存された記憶の 17% は誤りだった。シード十個では、性能の近いモデルの順位はつけられない。*
+- **[Same Tasks, Different Apps: Why Mobile GUI Agents Fail to Generalize?](https://arxiv.org/abs/2609.34139)** (Tran et al., EMNLP Findings 2026) - *ユーザーの目標はそのままにして、それを処理するAndroidアプリだけを替え、52 のアプリで 520 のタスクとアプリの組を作る。指示文だけを受け取る 11 のエージェントは、元のAndroidWorldのアプリではタスクの 38.7% に成功したが、新しいアプリでは 27.3% だった。Gemini-3.1-Proは、元のテンプレートを引き継いだタスクで 81.1 から 52.1 に下がった。アプリに依存しないサブゴールを与えると、五つのカテゴリーでは成功率が 37.8% から 40.9% に上がったものの、そこでの差は 14.9 ポイントから 18.8 ポイントに広がり、残り五つのカテゴリーでは成功率が 18.3% から 14.8% に下がった。*
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="applications"></a>
-### 🚀 応用分野 (54)
+### 🚀 応用分野 (57)
 *サーベイの§10（応用分野）に対応します。*
 
 <details>
-<summary><b>54本の論文を表示</b></summary>
+<summary><b>57本の論文を表示</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *構造化されたコード検索に基づく、低コストな自律型プログラム修復エージェントの最初期の一つ。* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *エージェントを使わない単純なパイプラインでも複雑なエージェントに匹敵しうることを示した、主流の見方に対する影響力のある反論。* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -633,6 +657,9 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[SWE-Gate: Passing Functional Tests Is Not Enough for Software Engineering Agents](https://arxiv.org/abs/2609.04167)** (He et al., arXiv 2026) - *実際のpull requestのレビューコメントからレビュー上の制約を抽出し、75 のPythonプロジェクトにまたがる 303 のリポジトリ単位のインスタンスで、機能的な正しさとは別に採点する。機能テストを通った 644 件のパッチのうち 221 件は、レビュアーが示した制約をなお破っていた。機能だけで採点すると、エージェントの実際の成果を過大評価することになる。* [[code](https://github.com/DeepSoftwareAnalytics/SWE-Gate)]
 - **[Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets](https://arxiv.org/abs/2609.04373)** (Ross et al., arXiv 2026) - *学習とアーキテクチャが共通しているため、能力の高いモデルほど振る舞いが似通い、その相関した行動がどれだけ分散させても消えないリスクの下限を残す、と主張する。これをエージェントベースの市場でLLMトレーダーを使って検証した。能力が上がるほど相関は強まり、共有された推論が正確なうちはエージェントを増やすと市場全体のリスクが下がるが、エージェントが同じ誤情報の環境を共有したとたん、同じ相関が弱点に変わる。*
 - **[Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report](https://arxiv.org/abs/2608.15763)** (TaoLive AIGC LLM Team, arXiv 2026) - *大きなモデルは編集されたSkill、hook、プロンプト、ツールのスキーマに再学習なしで適応できるが、ライブ配信が課すレイテンシの予算には収まらない。そこで、変わり続けるharnessに合わせて小さなモデルを学習させるべきだという立場を取り、学習中にharnessの状態を拡張して、モデルが固定の構成を一度も見ないようにする。Harnessを変えた質問では、ベースモデルの 75.4 に対して 94.6 を記録した。Harnessを固定した教師ありファインチューニングはベースモデル比でIFEvalを 7.7 ポイント落とすが、拡張したレシピではまったく落ちない。H20一枚でのレイテンシはP50で 3.4 秒、P95で 8.1 秒で、Taobao LiveでのA/Bテストでも良い結果が出た。*
+- **[Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale](https://arxiv.org/abs/2610.07289)** (Ziftci et al., ASE 2026) - *提出前テストの失敗に対し、ReActで修正を生成して検証する修復エージェントを、Google社内の開発ツールに組み込んだ。一回の実行はツール呼び出し 100 回と 30 分までに制限し、実行の前後に、修正を見送るべき場合を除くフィルタを置く。社内版のGemini 2.5 Proでは、失敗 195 件のうち 67.18% で修正が正しいと判定された。本番では 295,508 件の変更に修正を提案し、開発者はそのうち 28,554 件を適用した。成功した修正にかかった時間の中央値は 9.85 分で、開発者が次に編集するまでの 27.48 分より短い。ただし、変更そのものを元に戻すことや、失敗したテストをコメントアウトすることを提案する場合もある。*
+- **[From Benchmark to Bench: Can Agents Survive Real-World Drug Discovery?](https://arxiv.org/abs/2610.06411)** (Llompart et al., arXiv 2026) - *Claude Sonnet 4.6に、24 のMCPツールを通じてリード最適化を進めさせる。プロジェクトの目標を書いて改め、分子を自分で提案するか、生成をREINVENT 4に任せる。GSK、Sanofi、AstraZenecaの過去のキャンペーン九件を、時点を固定して再現したところ、GSKの四系列のうち三つとAstraZenecaのキャンペーンは目標を達成したが、Sanofiのプロジェクトは四件中二件だけだった。四人の化学者は、提案された分子とheld-outの化合物を見分けられなかった。成否は生成の経路よりも、スコアリングモデルの精度に左右された。評価項目はすべて実測ではなく予測値である。*
+- **[Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](https://arxiv.org/abs/2610.00609)** (Drozdov et al., arXiv 2026) - *法律リサーチのエージェントを、専門家が書いた米国法の問題 413 問で、部分点なしで採点する。答えが正解になるのは、rubricのすべての基準を満たし、引用した判例や法令が確かめられた場合だけである。ウェブ検索、判例検索、文書検索のツールを持つ十三の最先端モデルのうち、最も良いClaude Opus 4.8でも完全に正しかったのは 42.9% で、重み付きの合格率は 68% から 86% だった。Kimi K2.6は平均 112 回ツールを呼び出して 15.5% にとどまり、ツールを外すと平均 22.5 ポイント下がった。各問題の実行は一回で、採点はLLMの判定モデルによる。* [[code](https://github.com/vals-ai/legal-research-bench)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -640,11 +667,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 ## ⚖️ 第3部：横断的な課題
 
 <a id="evaluation"></a>
-### 📊 評価とベンチマーク (51)
+### 📊 評価とベンチマーク (55)
 *サーベイの§9（評価とベンチマーク）に対応します。*
 
 <details>
-<summary><b>51本の論文を表示</b></summary>
+<summary><b>55本の論文を表示</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *ツールを使う汎用エージェントアシスタントの基準となるベンチマーク。フロンティアエージェントの進歩を追う、人気の公開リーダーボードの土台になっている。*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *コーディング／ソフトウェア工学エージェントの事実上の標準ベンチマーク。SWE-bench Verified/Lite/Live/Multimodalといった派生版を生んだ。* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -698,16 +725,20 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Autonomous Evaluation and Refinement of Digital Agents](https://arxiv.org/abs/2404.06474)** (Pan et al., COLM 2024) - *コスト水準の異なる複数のエージェント評価器を作り、oracle指標との一致率は 74.4% から 92.9% だった。さらにそれらを報酬として使い、追加の教師データなしでWebArenaの最高性能を 29% 改善した。* [[code](https://github.com/Berkeley-NLP/Agent-Eval-Refine)]
 - **[JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550)** (Li et al., arXiv 2026) - *テキストではなく決定を返す評価者は、通常の選好と事実性の判定で最強のLLM評価者に三ポイント差まで迫り、費用はその 0.36% で済む。一方、導出を確かめる必要がある場合や、誤った答えがうまく書かれている場合には差が広がる。Acceptかescalateかを選ぶcascadeにすると、強い評価者の精度の 99% を保てる。*
 - **[TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces](https://arxiv.org/abs/2609.33295)** (Min et al., arXiv 2026) - *Claude CodeとOpenClawの実運用セッション 252,557 件から、元のエージェントが望ましくない行動をとった地点でtraceを切り、モデルの次のターンを行動ごとのrubricで採点する形で 107 個のベンチマークを作る。環境は再実行しない。九つのフロンティアLLMの平均合格率は 26.7% で、rubricが形式の正しいツール呼び出しだけを求める場合は 67.9% だが、先に進む前に必要な確認を求める場合は 8.1% にとどまる。TodoWriteによる計画の呼び出しから始まった応答は、同じ事例で他の応答が 30.8% 合格するのに対して 4.6% しか合格せず、著者はこれを相関として報告している。Traceは公開されていないため、公開データからベンチマークを作り直すことはできない。*
+- **[TestJack: Should you trust the results in coding benchmarks? Agentic Coding Benchmarks Auditing via Evaluator Evolution](https://arxiv.org/abs/2610.10619)** (Yao et al., arXiv 2026) - *コーディングベンチマークで公式テストに合格した試行を監査し直す。GPT-5.5の監査モデルが、パッチが破っているかもしれないプロンプト内の要件を狙ったテストを試行ごとに書き、参照パッチが通るテストだけを残す。そのため、反証のたびに再実行できるテストが残る。6 種類のモデルバックエンドと 5 つのベンチマークで、正解と判定された試行の 34.4% を反証し、解決率を 50.6% から 33.2% に下げた。反証率はSWE-bench Verifiedの 7.6% からSWE-Marathonの 53.6% までである。ただし、監査モデルもレビューモデルもLLMなので、反証の確かさは、それらがプロンプトをどれだけ正しく読んだかに左右される。*
+- **[AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks](https://arxiv.org/abs/2610.11050)** (Lù et al., arXiv 2026) - *長いcomputer useタスクを判定するLLMの判定モデルを、三つのOSで人が録画した 166 時間分から作った指示文とtrajectoryの組 1,373 件で試す。負例は、録画を、よく似た別のタスクの指示文と組み合わせて作る。十一の判定モデルを、完全なtrajectoryを直接読ませる方法と、五つのharnessの中でコーディングエージェントとして使う方法の両方で動かした。Codex内のGPT-5.5がバランス精度 80.9% で最も高く、直接プロンプトで尋ねたときは 68.6% だった。一方、Qwen 3.6 27BはOpenCodeの中で使うと、使わない場合より 7.2 ポイント低く、指示文なしで見せるとtrajectoryの 98.9% を成功と判定した。負例は、エージェントの実際の失敗ではなく、近い指示文と入れ替えたものである。* [[code](https://github.com/ServiceNow/agenthorizon)]
+- **[Finding the Right Fit: Model-Harness Interactions across Agent Tasks](https://arxiv.org/abs/2610.00917)** (Li et al., arXiv 2026) - *五つのモデルを、設定可能な四つのharness（OpenHands、DeepSeek Harness、PI、openJiuwen）と組み合わせてTUA-Bench、ALE-CLI、Terminal-Bench 4で動かし、CodexとClaude Codeの純正の組み合わせを加えて、計 66 の設定を比べる。モデルの順位はharnessによって入れ替わり、Terminal-Bench 4では、ClaudeはOpenHandsではGPTを 7.94 ポイント上回ったが、PIでは 30.16 ポイント下回った。五つのモデルのうち四つは、ベンチマークごとに最良のharnessが変わり、モデルの開発元のharnessが常に最良とは限らなかった。GPT-6 AstraはPIでタスクあたり $4.66 で 60.32% を得たが、DeepSeek Harnessでは $19.94 で 52.38% だった。各タスクは最後の実行一回分だけを数える。* [[code](https://github.com/liyix/finding-the-right-fit)]
+- **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *2次元グリッドの経路探索を一手ずつの意思決定タスクにしたGymnasium環境。最良のモデルが解けるのは 16.0% で、人間は 98.0%。* [[code](https://github.com/lkaesberg/Spatial-Gym)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="safety"></a>
-### 🛡️ 安全性とアライメント (59)
+### 🛡️ 安全性とアライメント (62)
 *サーベイの§11（安全性・セキュリティ・信頼性）に対応します。*
 
 <details>
-<summary><b>59本の論文を表示</b></summary>
+<summary><b>62本の論文を表示</b></summary>
 
 - **[Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/abs/2302.12173)** (Greshake et al., arXiv 2023) - *Indirect prompt injectionという脅威モデルを打ち立てた論文で、その後のLLMエージェントのセキュリティ研究のほぼすべてがこれを土台にしている。* ⭐ [[code](https://github.com/greshake/llm-security)]
 - **[AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents](https://arxiv.org/abs/2406.13352)** (Debenedetti et al., NeurIPS 2024) - *Prompt injectionの攻撃と防御に対するエージェントの頑健性を測る、最も広く使われている標準的なテストベッド。* [[code](https://github.com/ethz-spylab/agentdojo)]
@@ -769,6 +800,9 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[BAITBENCH: Measuring Agent Reward Hacking with Optional Shortcuts Planted in ML Tasks](https://arxiv.org/abs/2608.30724)** (Prasad et al., arXiv 2026) - *三つの合成した表形式のMLタスクそれぞれに、使うかどうかを選べる近道を仕込む。この近道は公開スコアを押し上げるが隠しテストセットでは失敗し、明示されたルールには違反しない。七つのフロンティアエージェントの実行の 57.1% がその近道を使い、七つのうち五つは半数を超えた。プロンプトでずるをしないよう頼んでも、平均は半数を上回ったままだった。*
 - **[LlamaFirewall: An open source guardrail system for building secure AI agents](https://arxiv.org/abs/2505.03574)** (Chennabasappa et al., arXiv 2025) - *小さなjailbreak分類器、注入と目標のずれを見張るchain-of-thoughtの監査器、静的コードスキャナーを重ね、エージェントを囲む実行時の最後の層とする。AgentDojoでは 86M の分類器だけで攻撃成功率が 17.6% から 7.5% に下がり、監査器を加えると 1.75% になる。* [[code](https://github.com/meta-llama/PurpleLlama/tree/main/LlamaFirewall)]
 - **[Type-Safe Is Not Error-Free: A Constrained Decision Head Follows the Option Name, Not the Rubric Bound to It](https://arxiv.org/abs/2609.26758)** (Sun and Xu, arXiv 2026) - *どの選択肢名をどのrubricに結びつけるかを入れ替え、型付きの決定を返すモデルが名前のほうに従うことを示す。1,200 件のworkflow上の判断で、0/1 をno/yesに言い換えると、百件あたり 70.4 件多く答えが反転した。Jev自身にも同じ反転が見られ、その間type errorの発生率はずっと 0% のままだった。*
+- **[Red-Teaming Auto Mode: Improving Blocking Classifiers Against Malign Coding Agents](https://arxiv.org/abs/2609.19587)** (Remedios et al., arXiv 2026) - *本番のコーディングエージェントの動作を一つずつ承認するブロック型の監視モデル、つまりClaude CodeのAuto ModeとCodexのGuardianを近似したものに対して、レッドチーミングを行う。攻撃側は、監視の仕組みを知らされたOpus 5である。エージェントが自分の動作に書き込んだprompt injectionは、rolloutの 78.4% でAuto Modeを、85.2% でGuardianを通過し、四種類の攻撃の平均成功率はそれぞれ 65% と 72% だった。記録のエスケープと区切りの明示、すべての編集とコンテキスト圧縮の監視、最後にツールを呼んで調べるエージェントの段階を加えたAuto Mode ++は、これを 9% に下げ、正常な動作 4,000 件のうち止めたのは 1% 未満だった。ただし、複数のコンテキストに分けた攻撃を止めるコストは依然として高い。* [[code](https://github.com/safety-research/red-teaming-auto-mode)]
+- **[ClashBench: Conflicts Leading Agents to Seize and Harm](https://arxiv.org/abs/2609.19892)** (Xie et al., arXiv 2026) - *実行中の別のタスクが、ポート、ロック、ディスク、GPUメモリ、会議室の予約をすでに押さえている状況で、エージェントにタスクを与える。55 種類の資源にわたる実行可能な 268 事例で、17 のモデルをCodex、Claude Code、OpenCodeを通じて動かした。実行の 44.5% で、エージェントは自分のタスクを終えた一方、既存のタスクはヘルスチェックに失敗した。この割合はClaude-Sonnet-5の 25.2% からQwen3.8-Maxの 61.2% までで、どちらもClaude Codeでの値である。エージェントは衝突に気づいたうえで資源を奪うことが多く、そうした事例の 31.9% では、最終応答で衝突にも奪ったことにも触れなかった。既存の作業に影響を与えないよう指示しても 38.2% が残った。ほとんどの事例は一回しか実行していない。* [[code](https://github.com/TarferSoul/CLASHBench)]
+- **[HarnessSecurity-Bench: Do Security Mechanisms Really Protect Coding Agent Harnesses?](https://arxiv.org/abs/2610.07639)** (Zhu et al., arXiv 2026) - *40 のコーディングエージェントのharnessについて十種類のセキュリティ機構を評価し、そのうち九つを、誤解を招くコンテキストと悪意ある資源を仕込んだ 23 のタスクで 2,500 回試す。対象はClaude Code、Codex CLI、Gemini CLI、gptme、Qwen Code、GitHub Copilotで、すべてGLM-5.2で動かした。自動承認は有用性を 77.1% から 95.4% に上げたが、攻撃成功率も 29.2% から 95.6% に上げた。ネットワークの隔離と読み取り専用モードは攻撃成功率を 0.8% に下げたが、有用性をそれぞれ 24.5 ポイントと 34.0 ポイント失った。コマンドのallowlistは、有用性の損失 1.5 ポイントで攻撃成功率を 48.1 ポイント下げたが、許可されたPythonインタプリタ経由で一度回避された。バックボーンは一つだけである。* [[code](https://github.com/TsingPig/HarnessSecurity-Benchmark)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -860,6 +894,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-10-14**: 2026 年 9 月中旬以降に出た論文を、セクションごとに三本ずつ計 30 本追加しました。否定的な結果を報告した論文がいくつかあり、そのうちの一本では、コーディングベンチマークが正解と判定したエージェントの実行の 34.4% が、タスクに書かれた要件を破っていました。536 本から 566 本になりました。
 - **2026-10-12**: SELFを「計画と推論」に、EFREを「メモリ」に追加しました（[@markovchain-builder](https://github.com/markovchain-builder)、[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)）。SELFは報酬なしでエージェントを学習させる手法で、Qwen3-8Bではτ-bench Retailで 43.2% に達し、報酬で学習したGRPOは 39.1% でした。534 本から 536 本になりました。
 - **2026-10-03**: 第一著者の[@ZhishanQ](https://github.com/ZhishanQ)が送ってくれたTraceDanceを「評価とベンチマーク」に追加しました（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。実際のエージェントのセッションからテストを作る論文で、先に進む前に確認が必要な事例では、九つのフロンティアLLMの合格率は 8.1% でした。533 本から 534 本になりました。
 - **2026-09-30**: 公開GitHubプロジェクト 2,170 件でのJevの使われ方を分析したJev in the Wildを「サーベイとポジションペーパー」に追加しました（[@Gavin-M34](https://github.com/Gavin-M34)、[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)）。532 本から 533 本になりました。
