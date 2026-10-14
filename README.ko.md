@@ -95,28 +95,28 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - [⭐ 스타터 키트](#starter-kit)
 - [🔥 주목할 10편 (2026)](#to-watch)
 - **🧭 배경**
-  - [📚 서베이와 포지션 페이퍼 (58)](#surveys)
-  - [🏗️ 에이전트 아키텍처와 프레임워크 (51)](#architectures)
+  - [📚 서베이와 포지션 페이퍼 (61)](#surveys)
+  - [🏗️ 에이전트 아키텍처와 프레임워크 (54)](#architectures)
 - **🧱 제1부: 핵심 구성 요소**
-  - [🧠 계획과 추론 (52)](#planning)
-  - [💾 메모리 (57)](#memory)
-  - [🔧 도구 사용 (46)](#tools)
-  - [🤝 다중 에이전트 시스템 (51)](#multi-agent)
+  - [🧠 계획과 추론 (55)](#planning)
+  - [💾 메모리 (60)](#memory)
+  - [🔧 도구 사용 (49)](#tools)
+  - [🤝 다중 에이전트 시스템 (54)](#multi-agent)
 - **🌍 제2부: 환경과 응용 속의 에이전트**
-  - [🌐 상호작용 환경 (57)](#environments)
-  - [🚀 응용 분야 (54)](#applications)
+  - [🌐 상호작용 환경 (60)](#environments)
+  - [🚀 응용 분야 (57)](#applications)
 - **⚖️ 제3부: 전반에 걸친 과제**
-  - [📊 평가와 벤치마크 (51)](#evaluation)
-  - [🛡️ 안전과 정렬 (59)](#safety)
+  - [📊 평가와 벤치마크 (54)](#evaluation)
+  - [🛡️ 안전과 정렬 (62)](#safety)
 
 ## 🧭 배경
 
 <a id="surveys"></a>
-### 📚 서베이와 포지션 페이퍼 (58)
+### 📚 서베이와 포지션 페이퍼 (61)
 *서베이 §1-§3(서론, 배경, 분류 체계)에 해당합니다.*
 
 <details>
-<summary><b>논문 58편 보기</b></summary>
+<summary><b>논문 61편 보기</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *가장 많이 인용되는 범용 LLM 에이전트 서베이이자 이 분야의 표준 문헌이다.* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *Wang et al. 2023과 함께 이 분야의 기틀을 놓은 두 종합 서베이 중 하나다.* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -177,16 +177,19 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Terminal Agents: A Survey of AI Agents in Command-Line Environments](https://arxiv.org/abs/2608.20485)** (Bin et al., arXiv 2026) - *과제 영역이 아니라 터미널을 기준으로 연구를 정리한다. 명령을 실행하고 텍스트 피드백을 받으며 과제를 진행하는 에이전트를 아키텍처, 역량 획득, 평가에 걸쳐 일곱 차원의 역량 프로파일로 정리한다. 조건을 고정한 자체 진단에서는 벤치마크 계열마다 관찰되는 과정 신호가 다르고, 조건을 맞춘 시스템 비교도 벤치마크에 따라 결과가 달라진다. 그래서 어떤 결과든 단일 구성 요소의 효과로 돌릴 수 있는 범위가 제한된다.*
 - **[Autonomous Research Agents: A Survey of AI Scientists and the Verification Gap](https://arxiv.org/abs/2608.05179)** (Ding et al., arXiv 2026) - *AI 과학자 시스템 후보 125개를 선별해 그중 26개를 일곱 가지 감사 차원으로 코딩하고, 병목이 능력에서 검증 가능성으로 옮겨 갔음을 밝힌다. 실행 가능한 24개 시스템 중 83%가 코드를 공개하지만 seed나 실행 trace를 공개하는 것은 38%뿐이고 참신성 검증을 조금이라도 보고하는 것도 38%뿐이다. 폐쇄 루프 시스템 아홉 개 가운데 일곱 개는 기계적 재실행이며, 외부에서 검증된 루프 내 oracle은 코퍼스 전체 어디에도 없다.*
 - **[Jev in the Wild: A Data-Driven Analysis of the Jev Model's Functionality, Applications and Ecosystem](https://arxiv.org/abs/2609.30216)** (Ling et al., arXiv 2026) - *Jev를 쓰는 공개 GitHub 프로젝트 2,170개를 출시 일주일 뒤에 모아 분류하고, Jev가 행동을 고르는 데보다 입력을 판단하는 데 훨씬 많이 쓰인다는 것을 보인다. 속성 판단은 프로젝트의 77%에, 행동 선택은 31%에 나타나지만, 인터페이스 에이전트와 시뮬레이션·제어 프로젝트에서는 행동 선택이 라벨의 절반가량을 차지한다. routing과 인터페이스 에이전트 프로젝트는 전체의 19.6%인데 스타는 63%를 받는다. 어떤 저장소를 포함할지와 각 프로젝트의 라벨은 LLM 에이전트가 정했고 두 번째 에이전트가 검토했으며, 사람이 붙인 라벨과 비교한 결과는 보고하지 않는다.*
+- **[Why Agentic Workflows Fail: A Taxonomy Derived from Literature and Empirical Data](https://arxiv.org/abs/2610.17418)** (Li et al., arXiv 2026) - *에이전트 workflow의 실패를 네 가지 축으로 분류한다. 책임 소재(에이전트, 외부 시스템, 또는 둘 다), 65가지 유형 가운데 어떤 메커니즘인지, workflow의 어느 단계인지, 에이전트의 어떤 능력인지다. 이 체계를 논문에서 모은 실패 기록 397건과, 저장소 229곳의 GitHub 이슈와 풀 리퀘스트에서 모은 1,196건에 적용했다. GitHub의 실패는 실행 중 동작 단계에 몰려 기록의 64.8%를 차지했고, 논문 쪽은 14.1%였다. 그중 61%는 외부 API 장애처럼 에이전트 탓이 아니었다. 이후 나온 논문의 기록 69건 중 68건이 기존 유형에 들어맞았으며, 이 건수는 실제 발생 빈도의 추정치가 아니다.*
+- **[Distilling Agentic Systems: A Roadmap across Models, Artifacts, and Harnesses](https://arxiv.org/abs/2609.36630)** (Luo et al., arXiv 2026) - *distillation의 범위를 교사 모델에서 교사 에이전트로 넓히고, 학생이 배운 것을 어디에 담아 두는지에 따라 문헌을 나눈다. 가중치, 메모리와 skill과 도구 같은 재사용 가능한 산출물, workflow와 라우팅과 검증을 통한 실행 harness, 그리고 이들 사이를 오가는 경우다. 마지막에는 텍스트로 된 workflow를 제어기로 컴파일하거나 산출물을 강제되는 규칙으로 바꾸는 경로가 들어간다. 전달됐다는 주장마다 내재적 증거, 인과적 증거, end-to-end 증거를 요구하며, 어느 한 곳이 일반적으로 더 낫지는 않다고 결론짓는다. 다만 각 방법은 주된 저장 위치 하나에만 분류되어 있다.*
+- **[Agentic Societies Need a Social Harness](https://arxiv.org/abs/2609.17527)** (Chugh et al., arXiv 2026) - *서로 다른 사람을 대신하는 에이전트에게는 각자의 harness 위에, 에이전트 사이에 오가는 메시지를 다루는 사회적 harness가 필요하다고 주장한다. 근거로는 대학의 회의 일정을 잡는 OpenClaw 에이전트를 쓰는데, 모두 GPT-5.4인 구성과 한 에이전트만 Claude Opus 4.8인 구성이다. 설정마다 열 번씩 돌렸을 때, 상대마다 세션을 따로 두면 혼합 구성은 조교가 두 명 이상인 그룹 회의를 모두 실패했고, 세션을 공유하면 조교가 일곱 명일 때 성공률이 0%에서 90%로 올랐다. 에이전트가 그대로 전달한 거짓 취소 주장은 GPT-5.4 실행의 100%에서 통했다. 검증 가능한 신원부터 사회 제도까지 다섯 층으로 된 구조를 제안하지만, 직접 만들지도 비용을 재지도 않았다.*
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ 에이전트 아키텍처와 프레임워크 (51)
+### 🏗️ 에이전트 아키텍처와 프레임워크 (54)
 *서베이 §2(배경)와 서베이 전체에서 이어지는 예시에 해당합니다.*
 
 <details>
-<summary><b>논문 51편 보기</b></summary>
+<summary><b>논문 54편 보기</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *큰 영향을 끼쳤지만 논문은 없는 AutoGPT 자율 에이전트 설계 패턴을 다룬, 동료 심사에 준하는 유일한 실증 연구다.* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *이질적인 여러 환경에 걸쳐 단일 에이전트의 일반 능력을 재는 표준 벤치마크다.* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -240,6 +243,9 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks](https://arxiv.org/abs/2305.17390)** (Lin et al., NeurIPS 2023) - *에이전트를 빠르게 행동하는 fine-tuning된 작은 모델과, 진행이 멈추거나 유효하지 않은 행동이 나오는 등의 신호가 있을 때만 호출되는 GPT-4 planner로 나눈다. ScienceWorld 과제 유형 30개 전반에서 SayCan, ReAct, Reflexion을 앞섰다.*
 - **[R2V Agent: Teaching SLMs When to Ask for Help](https://arxiv.org/abs/2605.16604)** (Hemadri et al., arXiv 2026) - *난이도가 trajectory 중간에 바뀌므로 질의 단위가 아니라 단계 단위로 라우팅한다. Brier score로 calibration한 router가 남은 실패 위험이 높을 때만 distillation으로 만든 작은 모델에서 교사 LLM으로 escalation해, escalation 비율 41.7%로 TextWorld 성공률을 64.6%에서 98.2%까지 끌어올렸다.* [[code](https://github.com/RaghuHemadri/r2v-agent)]
 - **[REFLEX with Jev for Efficient Selective Control in LLM Agents](https://arxiv.org/abs/2609.26532)** (Wu and Lim, arXiv 2026) - *텍스트 대신 타입이 정해진 결정을 내놓는 모델 Jev에게 에이전트의 제한된 선택을 맡기고, confidence가 낮거나 텍스트가 필요할 때만 강한 LLM을 부른다. 고정된 100개 과제 벤치마크에서 성공률 95%를 내면서 강한 모델 호출을 72.7% 줄였지만, BFCL과 τ 계열 과제에서는 값싼 생성형 cascade보다 나은 점이 거의 없었다.*
+- **[What Does a Harness Buy? Tokens, Mostly](https://arxiv.org/abs/2610.04433)** (Liu and Han, arXiv 2026) - *모델 다섯 개를 Claude Code, mini-SWE-agent, OpenCode에서 각각 돌려 SWE-bench Verified를 풀게 하고, 같은 설정을 다시 실행해 실행 사이의 잡음이 얼마나 큰지 잰다. 과제 447개에서 Claude Code와 mini-SWE-agent는 여기서 돌린 두 Qwen 모델 모두에서 5포인트 이내로 동등했다. 가장 어려운 과제 45개에서는 harness를 바꾸면 과제의 13%에서 결과가 뒤집혔는데, 같은 설정을 다시 돌렸을 때와 같은 비율이다. 잡음보다 큰 효과는 OpenCode가 최대 9포인트 뒤처진 것 하나뿐이었다. 반면 과제당 비용은 최대 세 배까지 차이가 났고, 그 차이는 고정된 앞부분 프롬프트의 크기에서 나왔다. Claude Code는 16k 토큰, mini-SWE-agent는 천 토큰 미만이다. 벤치마크는 하나만 썼다.* [[code](https://github.com/YangzeLiu/what-does-a-harness-buy)]
+- **[When Sub-Agents Work in Parallel: The Promises and Pitfalls of Dynamic Concurrency in Long-Horizon Coding Tasks](https://arxiv.org/abs/2610.10263)** (Li et al., arXiv 2026) - *Codex(GPT-5.4), Claude Code(Claude Opus 5), Kimi Code(Kimi K3)에 내장된 동적 동시 실행, 즉 메인 에이전트가 실행 중에 병렬 하위 에이전트를 띄울지 스스로 정하는 기능을 코딩 과제 354개에서 켜고 끄며 비교한다. 통과율은 11.9포인트 하락에서 2.3포인트 상승 사이에서 움직였고, 토큰 사용량은 1.41배에서 3.31배로 늘었다. Claude Code는 SWE-bench Verified에서 83.0%에서 59.0%로 떨어졌지만, long-horizon 과제로 이루어진 LoopsBench에서는 7.1%에서 21.4%로 올랐다. 주석을 단 실패 804건 중 33.2%는 공유 상태와 병합 문제였다. 설정마다 과제당 한 번씩만 실행했다.*
+- **[Ask Your Advisor: Learning When to Consult Stronger Models in Agentic Systems](https://arxiv.org/abs/2610.13870)** (Sowietzki et al., arXiv 2026) - *값싼 실행 모델이 언제 더 강한 조언 모델에게 물어야 하는지를 학습한다. workflow의 각 접점에서 간추린 상태 표현을 보고 가만히 있을지 물을지를 고르며, 비용을 감점으로 반영한 결과에 Monte Carlo 제어를 적용해 학습한다. Magentic-One에서 gemini-3-flash-preview가 실행하고 gemini-3.1-pro-preview가 조언할 때, SWE-bench Verified-Mini에서 $22.09로 48.0%에 이르렀다. 실행 모델만 쓰면 18.0%, 조언 모델만 쓰면 $45.90로 62.0%였다. RouteLLM($25.03에 30.0%)과 비슷한 횟수로 무작위로 묻는 방식(28.0%)보다 나았지만, Terminal-Bench에서는 휴리스틱과 같은 34.7%에 그쳤다. 모델 쌍 하나, 프레임워크 하나, 과제 50개짜리 테스트 세트로 실험했다.* [[code](https://github.com/Pasl4/ARIA)]
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -247,11 +253,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 ## 🧱 제1부: 핵심 구성 요소
 
 <a id="planning"></a>
-### 🧠 계획과 추론 (52)
+### 🧠 계획과 추론 (55)
 *서베이 §4(계획과 추론)에 해당합니다.*
 
 <details>
-<summary><b>논문 52편 보기</b></summary>
+<summary><b>논문 55편 보기</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *사실상 모든 LLM 에이전트 추론·계획 모듈의 바탕에 있는 기초 기법이자, CoT/ToT/ReAct 계보 전체의 출발점이다.*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *에이전트의 추론·계획 파이프라인 안에서 널리 재사용되는 표준 추론 시점 ensemble·검증 전략이다.*
@@ -306,16 +312,19 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Steer, Don't Solve: Training Small Critic Models for Large Code Agents](https://arxiv.org/abs/2606.21811)** (Gandhi et al., arXiv 2026) - *4B·8B critic 모델을 SFT와 DPO로 학습시켜, 코딩 에이전트의 trajectory에서 오류를 찾고 추론 시점에 몇 단계마다 상위 수준의 방향을 제시하게 한다. 행동을 직접 생성하지는 않는다. 이 critic은 더 큰 에이전트 여섯 개의 SWE-bench Verified 해결률을 높였는데, GLM-4.7-Flash-30B-A3B는 16.0점, GPT-OSS-120B는 14.4점 올랐다. 에이전트가 더 적은 단계로 끝나는 경우에는 조언에 드는 비용을 감안해도 전체 비용이 줄어, GPT-OSS-20B의 예시당 비용이 $0.07에서 $0.03이 되었다.* [[code](https://github.com/shubhamrgandhi/critic-training)]
 - **[Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners (KnowNo)](https://arxiv.org/abs/2307.01928)** (Ren et al., CoRL 2023) - *LLM planner가 내놓은 다음 단계 후보에 conformal prediction을 적용해, 임계값을 통과한 단계가 둘 이상일 때만 로봇이 사람에게 묻게 한다. 사람의 도움을 최소로 유지하면서 작업 완수에 통계적 보장을 준다.*
 - **[Real-Time Detection and Repair of LLM Agent Failures](https://arxiv.org/abs/2608.02464)** (Dubey, arXiv 2026) - *에이전트보다 비용이 더 드는 단계별 LLM 판정 대신, 단계당 약 200마이크로초가 드는 텔레메트리 모니터와 결정론적 재계산 점검을 쓴다. 문제가 표시된 실행은 되돌려 과제 성공률을 52%에서 73%로 끌어올렸다. 다만 모니터는 배포마다 다시 calibration해야 한다.* [[code](https://github.com/sunnydubey1111/agent-trajectory-sentinel)]
+- **[LLM Value Functions for Credit Assignment in Agentic RL](https://arxiv.org/abs/2610.15840)** (Zhu et al., arXiv 2026) - *에이전트 RL에서 고정된 LLM을 critic으로 쓴다. critic은 같은 과제의 다른 rollout 요약을 보고, 시작 지점은 그룹의 성공률에, 끝 지점은 실제로 받은 보상에 맞춘 상태에서 중간 상태 전부의 가치를 한 번의 질의로 매긴다. 가치의 차이는 단계별 advantage가 되며, 그 합은 그룹 기준 상대 보상과 같다. Claude Opus 4.6을 critic으로 쓰면 Qwen3-8B는 AppWorld에서 26.3%, SWE-bench Verified에서 20.2%에 이르러 GRPO의 19.8%와 12.0%를 앞섰다. 다만 이득은 critic에 달려 있어서, Qwen3-235B를 critic으로 쓰면 Qwen3-4B는 AppWorld에서 9.8%에 그쳤고, Opus를 쓸 때는 24.3%였다.*
+- **[Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions](https://arxiv.org/abs/2610.06191)** (Zhang et al., arXiv 2026) - *도구를 쓰는 에이전트가 증거를 두고 내린 판단과 그다음 행동을 떼어서 본다. 실험은 검색 소스가 일부러 실패하도록 만든 HotpotQA에서 했다. 일곱 에이전트가 실패하는 소스의 결과를 쓸모없다고 판단한 비율은 97%에서 100%였지만, 그런 판단이 다섯 번 이어진 뒤에도 도움을 받지 않은 Qwen3-8B는 292문항 중 1문항에서만 답을 냈고, 프롬프트에 적은 중단 규칙은 기껏해야 일부만 지켜졌다. 쓸모없는 결과가 다섯 번 나오면 답하게 만드는 규칙을 harness가 강제하자, 여섯 가지 실패 조건에서 공개 모델 넷과 Claude Haiku 4.5의 성공률이 0.026에서 0.097만큼 올랐다. 실패는 시뮬레이션한 것이다.* [[code](https://github.com/bennidict23/judged-useless-queried-anyway)]
+- **[Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning](https://arxiv.org/abs/2609.38147)** (Dahal et al., arXiv 2026) - *에이전트의 제어와 실제 작업을 나눈다. 작업자가 과제를 하는 동안 제어기는 매 주기마다 진행 상황을 간추린 기록을 갱신하고, 다음 단계를 제안하고, 남은 호출 예산에 비춰 따져 본 뒤 작업자를 보낸다. 전체 출력은 메모리에 두고 다시 쓴다. 같은 작업자와 예산을 쓰는 직접 제어 에이전트와 비교하면 모델과 벤치마크 조합 12개 모두에서 점수가 높았고, 벤치마크별 평균으로 3.6에서 4.2포인트 앞섰다. ProgramBench에서는 GPT-5.5로 71.5%에 이르러 Codex의 58.0%, 직접 제어의 63.7%보다 높았다. 그러나 Opus 4.8로 호출을 400번 쓸 때는 56.6%로, 직접 제어의 62.7%에 뒤졌다.*
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
 
 <a id="memory"></a>
-### 💾 메모리 (57)
+### 💾 메모리 (60)
 *서베이 §5(메모리)에 해당합니다.*
 
 <details>
-<summary><b>논문 57편 보기</b></summary>
+<summary><b>논문 60편 보기</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *Triplet 기반의 구조화된 읽기·쓰기 메모리를 일찍 내놓아 영향력이 컸던 설계로, 이후 그래프·KG 기반 에이전트 메모리 시스템의 전신이 되었다.*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *심리학에 근거한(사람의 기억에서 착안한) 망각·공고화 메커니즘을 LLM 에이전트 메모리에 처음 들여온 시스템 가운데 하나이다.* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -375,16 +384,19 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Dual-Layer Agentic Memory with Fast Write Routing and Slow Consolidation](https://arxiv.org/abs/2608.22215)** (Li et al., arXiv 2026) - *메모리 쓰기를 매번 세 갈래 선택(건너뛰기, 새로 쓰기, 갱신)으로 바꾸고, 1.7B에서 8B로 이어지는 cascade가 이 선택을 맡는다. 중복 메모리를 최대 68% 걷어 내면서 입력의 절반 미만만 escalation하고, 전부 남길 때의 exact match를 98% 넘게 유지한다.*
 - **[Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents](https://arxiv.org/abs/2609.23986)** (Jiang et al., arXiv 2026) - *메모리 유형 분류, 라우팅, 그래프 탐색, 멈출 시점 판단을 Jev에 맡기고, LLM은 돌아온 결과를 두고 추론할 때만 부른다. 가장 빠른 baseline보다 LoCoMo 메모리를 6.6배 빨리 구축하고 0.777 대 0.700으로 앞서는데, 그 차이의 대부분은 적대적 질문에서 나온다.* [[code](https://github.com/libingzheren/Jev-Mem)]
 - **[From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning](https://arxiv.org/abs/2610.11373)** (Liu et al., arXiv 2026) - *고정된 LLM을 여러 과제에 차례로 적응시킬 때, 프롬프트 최적화처럼 프롬프트 하나를 두는 대신 프롬프트 여러 개로 된 repertoire를 둔다. 갱신은 그 프롬프트가 이미 처리하던 예시에서 점수를 90% 이상 유지할 때만 그 프롬프트에 반영하고, 그렇지 않으면 다른 프롬프트에 시도하며, 받아들이는 프롬프트가 없으면 새 프롬프트로 추가한다. 입력마다 LLM selector가 프롬프트를 고른다. ToolUse, FinQA, SciKE-Bio 순서로 학습하고 Qwen3-8B가 답하며 GPT-5.6-Luna가 갱신을 쓸 때, 마지막 과제를 학습한 뒤 FinQA 정확도는 1.56포인트 떨어지고, GEPA는 25.10포인트, ACE는 9.43포인트 떨어진다. 에이전트 실험은 하나뿐이며 Continual Learning Bench 환경 여섯 개에서 최소한의 scaffold로 수행했다. 평균 점수는 Qwen3-8B에서 18.0(GEPA 9.5), GPT-5.6-Luna에서 36.3(GEPA 29.5)이다.*
+- **[Reliable Memory from Unstable Growth: Curating Self-Written Agent Playbooks with Randomized Experiments](https://arxiv.org/abs/2610.18427)** (Pham et al., arXiv 2026) - *에이전트가 스스로 쓴 playbook에서 어떤 교훈을 남길지를 에이전트 자신의 판단이 아니라 실험으로 정한다. 관련된 교훈을 블록으로 묶고, 연습 과제를 하는 동안 블록마다 무작위로 켜고 끈 뒤, 성공 여부를 회귀 분석해 블록별 효과를 추정한다. 이렇게 고른 playbook은 새 연습 과제에서 전체 playbook과 빈 playbook을 모두 이길 때만 쓴다. AppWorld, WebShop, ALFWorld에서 ACE와 Dynamic Cheatsheet로 실험한 19개 설정의 평균은 66.9로, 전체 playbook의 55.5와 에이전트가 직접 고른 경우의 53.8보다 높았다. 다만 전체 playbook과 빈 playbook 중 하나를 고르기만 해도 66.4가 나왔다.*
+- **[Can Agents Forget When Asked? A Benchmark for Memory Unlearning in LLM Agents](https://arxiv.org/abs/2610.18052)** (Xie et al., arXiv 2026) - *에이전트 메모리 시스템이 사용자가 잊으라고 요청한 내용을 지울 수 있는지 시험한다. 합성한 다중 세션 대화 50개에 여섯 유형의 삭제 요청 135건과 질문 1,742개가 들어 있다. 대화마다 요청을 뺀 대조 버전이 있어서, 시스템은 원래 저장했던 것을 잊었을 때만 점수를 받는다. Mem0, A-MEM, LangMem, LightMem, SimpleMem, 단순 RAG, 전체 컨텍스트를 넣은 LLM 가운데 어느 시스템도 end-to-end로 요청의 1.5%를 넘게 통과하지 못했다. 간단한 공격으로 정보를 다시 끌어낼 수 있게 남겨 두거나, 요청보다 훨씬 많이 지웠기 때문이다.* [[code](https://github.com/Nboxff/bemula-benchmark)]
+- **[Not All Experience Belongs in the Weights: Component Routing for Self-Improving GUI Agents](https://arxiv.org/abs/2610.01787)** (Wu et al., arXiv 2026) - *GUI 에이전트가 쌓은 경험을 화면 요소의 위치 정보, 절차, 상태에 관한 사실, 교훈으로 나누고, 각각을 미세 조정으로 가중치에 넣었을 때와 검색한 노트로 컨텍스트에 넣었을 때를 모두 시험한다. 위치 정보는 가중치에 넣을 때 4.9포인트, 교훈은 1.5포인트 더 얻었는데, 교훈의 이 차이는 셀의 절반에서 구간이 0을 포함했다. 절차와 상태에 관한 사실은 컨텍스트에 넣을 때 각각 4.2포인트와 4.1포인트 더 얻었다. 얼마나 자주 반복되는지와 현재 상태에 달려 있는지를 기준으로 한 규칙으로 구성 요소마다 갈 곳을 정하면, 둘 중 나은 한 곳에 모두 넣을 때보다 평균 3.5포인트 높았다. 실험은 MobileGym과 AndroidWorld에서 7B에서 8B 크기의 백본 세 개로 했다.*
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
 
 <a id="tools"></a>
-### 🔧 도구 사용 (46)
+### 🔧 도구 사용 (49)
 *서베이 §6(도구 사용과 행동 실행)에 해당합니다.*
 
 <details>
-<summary><b>논문 46편 보기</b></summary>
+<summary><b>논문 49편 보기</b></summary>
 
 - **[TALM: Tool Augmented Language Models](https://arxiv.org/abs/2205.12255)** (Parisi et al., arXiv 2022) - *언어 모델이 자기 지도 방식으로 도구 사용을 스스로 익히게 하는 초기 정식화로 영향력이 컸고, Toolformer의 자기 지도 접근에 앞서 같은 방향을 제시했다.*
 - **[API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs](https://arxiv.org/abs/2304.08244)** (Li et al., EMNLP 2023) - *도구로 보강한 대화형 LLM을 평가하고 학습시키는 전용 벤치마크 가운데 가장 이르고 가장 많이 인용된 것 중 하나이다.* [[code](https://github.com/AlibabaResearch/DAMO-ConvAI)]
@@ -433,16 +445,19 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Can MCP Clients Decide What to Do After Failure? A Result-Only Actionability Audit](https://arxiv.org/abs/2609.00072)** (Mehan, arXiv 2026) - *끝난 MCP 실패 결과 하나만 보고 결정론적 소프트웨어가 무엇을 판단할 수 있는지 묻는다. 일부러 작게 잡은 표본(접근 가능한 서버 열 곳에서 유도한 실패 21건)에서 타입이 있는 필드로 알 수 있었던 것은 실패 여부(18건)와 대략적인 대응 방침(8건)까지였고, 구체적인 원인, 대상, 실행 가능한 수정, 재실행 제약은 한 건에서도 알 수 없었다. 그래서 복구는 누군가 읽고 해석해야 하는 자연어 설명에 의존하게 된다.*
 - **[One Policy Is Enough: Single-Agent Reinforcement Learning Outperforms Tree Search for Chemistry Tool Learning](https://arxiv.org/abs/2608.30952)** (Dariani et al., arXiv 2026) - *학습된 critic 두 개 아래에서 정책 모델과 실행 모델을 따로 돌리는 계층형 진화 tree search를, 왼쪽에서 오른쪽으로 한 번 생성하는 단일 모델로 대체한다. 이 모델은 정답 호출 사슬에서 읽어 낸 프로그램 보상에 맞춰 결과 수준 강화학습으로 학습하며, 학습 루프에 학습된 critic도 심판도 두지 않는다. 그런데도 Qwen-2.5-7B에서 질문당 모델 호출 한 번으로 Tool F1을 5.5%, Return F1을 9.6% 높인다.*
 - **[DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training](https://arxiv.org/abs/2609.04094)** (Gandhi et al., arXiv 2026) - *정답 성공 신호가 없을 때도 long-horizon 도구 사용 에이전트를 GRPO로 학습시킨다. 학습 중에 과제별 rubric을 만들고, 각 trajectory를 LLM 심판으로 한 번 채점한 뒤, 주석으로 단 기준마다 책임이 있는 단계들에 advantage를 닫힌 형태로 다시 나눠 주며, 따로 학습한 귀속 모듈은 쓰지 않는다. AppWorld에서 기본 모델보다 15.9포인트 오르고, 자체 검증기 없이도 정답 보상으로 학습한 GRPO를 5.3포인트 앞서며, frontier 모델 심판 없이 Tau-Bench에서도 5.3포인트를 올린다.* [[code](https://github.com/IBM/draco)]
+- **[Do Tool Calls Execute as Intended? Measuring and Repairing Intent-Execution Correspondence in LLM Agents](https://arxiv.org/abs/2610.04375)** (Yang et al., arXiv 2026) - *harness가 실제로 실행한 동작이 LLM이 낸 도구 호출과 같은지 확인하고, 다르면 처음 바꾼 단계를 짚어 낸다. Windows의 실제 운영 세션에서 나온 셸 호출 47,828건에서 Claude Code의 Bash 도구는 코드, 이스케이프 시퀀스, 긴 텍스트를 담은 호출의 12.0%를 바꿨고, 백슬래시가 바뀐 호출의 80.7%는 오류 없이 엉뚱한 동작을 실행했다. trajectory를 보고 판정하는 심사 모델은 실패의 95.1%를 LLM 탓으로 돌렸지만, 실제로는 절반 넘게 도구 호출에서 실행까지의 경로가 원인이었다. IntAct는 벤치마크에서 호출이 바뀐 실패의 79.2%를 되살렸다. Linux에서는 1,779건 모두 인자가 적힌 그대로 전달됐다.* [[code](https://github.com/GLEAM-Lab/intact-bash-mod)]
+- **[ProgAgent: Learning Tool Orchestration through Programmatic Training](https://arxiv.org/abs/2610.14774)** (Li et al., arXiv 2026) - *Qwen3-8B와 14B가 도구를 부르는 코드를 써서 도구를 조율하도록 학습시킨다. 중간 결과는 컨텍스트가 아니라 런타임 변수에 담긴다. 환경 크기 네 가지에 걸친 합성 과제 215개로 cold-start SFT를 한 뒤 GSPO를 적용했다. 14B 모델은 MCPMark에서 29.7%로, 같은 방식으로 학습하되 도구를 직접 호출한 경우의 8.0%를 앞섰고, MCP-Atlas에서는 45.6%로 직접 호출의 29.7%와 Claude Sonnet-4.5의 43.8%보다 높았다. 그러나 Playwright에서 코드로 한 호출의 40.7%는 제어 흐름 없이 도구를 한 번만 부르는 것이었고, 학습하지 않은 백본은 코드 인터페이스만으로는 거의 나아지지 않았다.*
+- **[Where Does Exactly-Once Live? Model, Harness, and Tool-Contract Effects on Duplicate Side Effects in LLM Agents](https://arxiv.org/abs/2609.29095)** (Li, arXiv 2026) - *모델 아홉 개를 최소한의 scaffold와 Copilot CLI, Hermes, Codex CLI에서 돌린 에피소드 25,930개를 채점한다. 기준은 시뮬레이션 서비스 여섯 개와 주입한 장애 열두 가지로 이루어진 sandbox에서 실제로 커밋된 부수 효과의 장부다. 정확히 한 번만 실행하라고 지시하면 최신 모델은 확인 응답이 사라진 쓰기를 0.5%만 중복했지만, 커밋이 늦게 반영될 때는 56%, 메시지가 다시 전달될 때는 74%를 중복했다. 이 두 경우에는 다시 읽어 봐도 아무것도 나오지 않으며, 분산의 81%를 도구 계약이 설명했고 harness의 영향은 작았다. 모든 쓰기에 idempotency key를 붙이면 중복이 28%에서 4%로 줄었다. 중복을 일으킨 에피소드의 90%에서 에이전트는 성공했다고 보고했다.*
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 다중 에이전트 시스템 (51)
+### 🤝 다중 에이전트 시스템 (54)
 *서베이 §7(다중 에이전트 시스템)에 해당합니다.*
 
 <details>
-<summary><b>논문 51편 보기</b></summary>
+<summary><b>논문 54편 보기</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *역할극으로 에이전트끼리 자율적으로 협력하는 방식을 확립한, 가장 이르고 많이 인용된 프레임워크 가운데 하나이다.* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *'society of minds' 방식의 토론을 테스트 시점 기법으로 널리 알린, 다중 에이전트 토론의 효시 격 논문이다.* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -496,6 +511,9 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[OrchMAS: Orchestrated Reasoning with Multi Collaborative Heterogeneous Scientific Expert Structured Agents](https://arxiv.org/abs/2603.03005)** (Feng et al., arXiv 2026) - *과학 추론을 위해 orchestration과 실행을 두 계층으로 나눈다. Orchestrator 모델이 과제를 읽고 도메인을 고려한 파이프라인을 세운 뒤, 만들어 내는 전문가 에이전트마다 역할과 프롬프트를 써 주고, 실행 도중 중간 피드백을 받아 파이프라인을 고친다. 별도의 실행 모델이 각 단계를 수행하므로, 능력과 비용이 다른 백본을 한 실행 안에서 섞어 쓸 수 있다.*
 - **[At Equal Inference Cost, Multi-Agent Structure Does Not Beat a Single Frozen Agent](https://arxiv.org/abs/2609.04217)** (Dylan et al., arXiv 2026) - *환경 rollout 수가 아니라 전체 모델 호출 수를 고정하자, Planner-Executor-Critic 팀이 진화시킨 단일 executor보다 낫다던 이점이 사라진다. ALFWorld에서 0.769 대 0.754(p = 0.80)이면서 평가 호출은 1.8배를 쓴다. Leave-one-in 분석으로 보면 실제 가치는 전부 executor에서 나오고 planner와 critic은 비어 있거나 아무 효과 없는 프롬프트로 진화하며, WebShop에서는 팀 쪽이 더 나빠지는 경향을 보인다.*
 - **[A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms](https://arxiv.org/abs/2609.04170)** (Paglieri et al., arXiv 2026) - *형식 추측을 증명하는 에이전트 100개 집단에서 에이전트 하나가 평가 시스템의 허점을 찾아냈고, 이 허점은 경쟁 압력 속에서 공유 지식 라이브러리를 거쳐 에이전트 간 메시지로 퍼졌다. 한편 다른 무리는 부정한 증명을 점검하고, 동료에게 경고하고, 보이콧을 벌이고, 검증 패치를 제안했다. 허점이 퍼진 투명한 채널이 곧 저항을 가능하게 한 채널이었고, 저자들은 이를 개별 에이전트 내부의 실패가 아니라 공유지 거버넌스 문제로 본다.*
+- **[Scaling Inference-Time Compute with Teams of Coding Agents](https://arxiv.org/abs/2610.17471)** (Samway et al., arXiv 2026) - *코딩 에이전트 팀의 설계를 컴퓨팅 배분의 문제로 보고, 리더가 맡기는 단계, 작업자 모델, 팀 크기를 바꿔 가며 ProgramBench 과제 200개에서 GPT-5.6 Sol, Terra, Luna로 실험한다. 팀은 혼자 일하는 에이전트보다 나았지만 비용은 세 배에서 일곱 배였다. 계획 단계만 맡겨도 세 단계를 모두 맡긴 것과 같은 보상을 절반 비용으로 얻었다. Sol 리더 아래 값싼 Luna planner를 두면 전부 Sol인 팀이 얻는 향상의 47.5%를 그 추가 비용의 13.9%로 얻었지만, 구현을 값싼 모델에 맡기면 보상이 떨어졌다. 작업자끼리 메시지를 주고받게 해도 보상은 오르지 않았다. 코드 골격이 이미 작업을 나눠 주는 Commit0-Lite에서는 구현이 맡길 만한 단계였다.*
+- **[Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://arxiv.org/abs/2610.00583)** (Paliskara et al., arXiv 2026) - *모든 사용자를 조정 에이전트 하나가 맡는 방식과, 사용자마다 에이전트를 하나씩 두는 팀 방식을 프런티어 모델 다섯 개와, 자원을 공유하는 네 환경의 시나리오 77개에서 비교한다. 팀은 모든 환경에서 더 나빴다. 공유 API 예산 환경에서 서로 직접 소통하는 Claude Opus 5 팀은 최적값의 30%에 그쳤고, 조정 에이전트는 64%, 서로 소통할 통로가 없는 팀은 7%였다. 팀이 에이전트 넷에서 열여섯으로 커지자 한 번이라도 행동한 Sonnet 5 에이전트의 비율은 66%에서 10%로 떨어졌다. 명시적인 지시 같은 완화책은 도움이 됐지만, 그 지시를 만든 환경에서만 통했다.*
+- **[Scaling Discovery through Test-Time Communication](https://arxiv.org/abs/2609.21032)** (Park et al., arXiv 2026) - *같은 Copilot CLI 에이전트 여러 개가 공용 작업 공간으로 발견한 것을 나누게 하고, 에이전트당 예산을 같게 맞춘 채 k개로 이루어진 팀을 독립 에이전트 k개 중 최고 결과와 비교한다. Claude Sonnet 4.6으로 공개된 ARC-AGI-3 게임 25개를 풀 때, 에이전트 셋으로 이루어진 팀은 독립 에이전트 13개 중 최고와, 다섯으로 이루어진 팀은 33개 중 최고와 맞먹었다. GPT-5.6 Sol 에이전트 넷으로 된 팀은 MNIST 분류기를 1,957바이트로 압축해, 독립 에이전트 넷 중 최고인 3,160바이트와 사람이 만든 최고 해법인 2,461바이트보다 작았다. 다만 이 이득에는 검증기의 피드백과 충분한 컴퓨팅이 필요해서, 예산이 적을 때와 Terminal-Bench 2.0에서는 팀이 뒤처졌다(60.67% 대 62.36%).* [[code](https://github.com/jerryjonghopark/test-time-communication)]
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -503,11 +521,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 ## 🌍 제2부: 환경과 응용 속의 에이전트
 
 <a id="environments"></a>
-### 🌐 상호작용 환경 (57)
+### 🌐 상호작용 환경 (60)
 *서베이 §8(상호작용 환경의 에이전트)에 해당합니다.*
 
 <details>
-<summary><b>논문 57편 보기</b></summary>
+<summary><b>논문 60편 보기</b></summary>
 
 - **[Do As I Can, Not As I Say: Grounding Language in Robotic Affordances](https://arxiv.org/abs/2204.01691)** (Ahn et al., CoRL 2022) - *Embodied 로봇 에이전트에서 LLM을 planner로 쓰고 실제 세계의 affordance로 grounding한, 토대가 된 시연이다.* [[code](https://github.com/google-research/google-research/tree/master/saycan)]
 - **[Inner Monologue: Embodied Reasoning through Planning with Language Models](https://arxiv.org/abs/2207.05608)** (Huang et al., CoRL 2022) - *피드백에 grounding된 폐루프 계획 패턴을 확립해, 이후 embodied·GUI 에이전트 아키텍처의 바탕이 되었다.*
@@ -567,16 +585,19 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[CUA-Universe: A Scalable and Dynamic Environment for Hybrid GUI+CLI Agents](https://arxiv.org/abs/2609.05374)** (Shi et al., arXiv 2026) - *같은 애플리케이션 상태에 화면과 명령줄 어느 쪽으로도 접근할 수 있는 환경을 구축한다. 실제 데스크톱 애플리케이션 16개를 재현 가능한 가상 머신으로 옮기고, 명령 인터페이스는 찾아내거나 감싸거나 새로 생성해 붙인다. 여기서 모은 trajectory로 학습하면 9B 모델이 비효율적인 클릭과 깨지기 쉬운 스크립트에서 벗어나 더 싼 쪽 인터페이스를 고르게 되어, OSWorld에서 성공률이 16.8포인트 오르고 단계는 57%, 토큰은 44% 줄어든다.*
 - **[Discriminative World Models for Web Agents](https://arxiv.org/abs/2609.02885)** (Li et al., arXiv 2026) - *다음 상태 예측으로 지도학습한 world model은 순위 모델이 그 출력을 쓰는 순간 엉뚱한 목표에 최적화된 셈이라고 주장한다. 순위를 매기려면 그럴듯해 보이는 상태가 아니라 후보 행동들을 서로 구별해 주는 예측 상태가 필요하기 때문이다. 그래서 결정 지점마다 대안 행동과 각 행동이 만드는 상태가 함께 달린, 분기하는 WebArena trajectory에서 예측 상태 매칭으로 학습한다.*
 - **[Routing Is Least Learnable Where It Is Most Valuable: Bounds on Representation Routing for Web Agents](https://arxiv.org/abs/2608.06171)** (Wei et al., arXiv 2026) - *웹 에이전트 관측 방식 여섯 가지를 두고 라우팅 정책 다섯 가지(confidence cascade 포함)를 비교했지만, 잘 고른 고정 방식 하나를 안정적으로 이기는 것은 없었다. Router는 에이전트가 성공하는 만큼만 라벨을 얻기 때문이다. 같은 방식을 다시 돌리기만 해도 결과의 12-14%가 바뀐다.*
+- **[AutoEnvScaling: Automating the Data Flywheel with Terminal Agents](https://arxiv.org/abs/2610.14163)** (Yu et al., arXiv 2026) - *RL 환경을 만드는 일을 에이전트가 터미널에서 하는 과제로 다룬다. 제안 에이전트는 풀이 모델의 rollout을 읽은 뒤 sandbox에서 완결된 과제를 만들고 시험하며, 풀이 모델의 수준에 맞춰 난이도를 조정한다. 그래서 새 환경은 풀이 모델이 아직 실패하는 지점을 겨냥한다. GPT-5.6-sol이 만든 환경으로 학습한 Qwen3.5-35B-A3B는 Terminal-Bench 2.1에서 38.9로, 조건을 맞춘 Tmax baseline의 34.6을 앞섰다. Qwen3.6-35B-A3B가 제안과 풀이를 모두 맡으면 점수가 41.1에서 53.3으로 올랐지만, Terminal-Bench 4.0에서는 1.6에서 3.2로 움직이는 데 그쳤다. 제안 에이전트의 작업 공간에서 풀이 모델의 rollout을 빼면, 두 프런티어 제안 모델에서 학습된 풀이 모델의 점수가 각각 3.6포인트와 6.7포인트 떨어졌다.* [[code](https://github.com/MSR-Orchard/AutoEnvScaling)]
+- **[SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire](https://arxiv.org/abs/2610.12596)** (Lowe and Keemink, arXiv 2026) - *LLM 20개가 덱 빌딩 게임 Slay the Spire의 한 판 전체를 가장 높은 난이도에서 도구 호출로 플레이하게 한다. held-out 시드 열 개를 쓰고, 게임 속 이름을 가린 리스킨 버전에서도 시험한다. 결과는 게임 원격 측정 데이터에 남은 206,082판, 그리고 전문 스트리머 네 명과 비교한다. Claude Fable 5.1은 한 판에 평균 1.60막을 깨서 사람의 평균 0.73막보다 높았지만 스트리머의 2.5막에서 3.1막에는 못 미쳤고, 그 격차는 첫 막 이후에 벌어졌다. 판과 판 사이에 메모리를 넘기는 방법은 어느 것도 플레이를 개선하지 못했는데, 저장된 메모리의 17%가 사실과 달랐다. 시드 열 개로는 비슷한 모델끼리 순위를 매기기에 부족하다.*
+- **[Same Tasks, Different Apps: Why Mobile GUI Agents Fail to Generalize?](https://arxiv.org/abs/2609.34139)** (Tran et al., EMNLP Findings 2026) - *사용자의 목표는 그대로 두고 그 목표를 처리하는 Android 앱만 바꿔, 앱 52개에서 과제와 앱 쌍 520개를 만든다. 지시문만 받는 에이전트 11개는 원래 AndroidWorld 앱에서는 과제의 38.7%를 성공했지만 새 앱에서는 27.3%였다. Gemini-3.1-Pro는 원래 템플릿을 이어받은 과제에서 81.1에서 52.1로 떨어졌다. 앱과 무관한 하위 목표를 주면 다섯 범주에서는 성공률이 37.8%에서 40.9%로 올랐지만 그 범주의 격차는 14.9포인트에서 18.8포인트로 커졌고, 나머지 다섯 범주에서는 성공률이 18.3%에서 14.8%로 떨어졌다.*
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
 
 <a id="applications"></a>
-### 🚀 응용 분야 (54)
+### 🚀 응용 분야 (57)
 *서베이 §10(응용 분야)에 해당합니다.*
 
 <details>
-<summary><b>논문 54편 보기</b></summary>
+<summary><b>논문 57편 보기</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *구조화된 코드 검색에 기반해 비용 효율적으로 프로그램을 자율 수정하는 초기 에이전트 중 하나다.* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *에이전트 구조 없이 짠 단순한 파이프라인도 복잡한 에이전트에 견줄 수 있음을 보인, 영향력 있는 반론이다.* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -633,6 +654,9 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[SWE-Gate: Passing Functional Tests Is Not Enough for Software Engineering Agents](https://arxiv.org/abs/2609.04167)** (He et al., arXiv 2026) - *실제 pull request 리뷰 코멘트에서 리뷰 제약을 뽑아내고, Python 프로젝트 75개의 저장소 수준 인스턴스 303개에서 이를 기능적 정확성과 따로 채점한다. 기능 테스트를 통과한 패치 644개 중 221개가 리뷰어가 이미 밝힌 제약을 어겼으니, 기능만 보는 채점은 에이전트가 실제로 해낸 일을 부풀리는 셈이다.* [[code](https://github.com/DeepSoftwareAnalytics/SWE-Gate)]
 - **[Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets](https://arxiv.org/abs/2609.04373)** (Ross et al., arXiv 2026) - *학습과 아키텍처를 공유하는 탓에 유능한 모델일수록 비슷하게 행동하고, 그렇게 상관된 행동은 아무리 분산해도 없앨 수 없는 위험의 하한을 남긴다고 주장한다. 이를 에이전트 기반 시장의 LLM 트레이더로 검증한 결과, 능력이 오를수록 상관도 커졌고, 공유된 추론이 정확한 동안에는 에이전트가 많을수록 시장 수준의 위험이 줄었지만, 에이전트들이 잘못된 정보 환경을 공유하자 같은 상관이 오히려 위험 요인이 되었다.*
 - **[Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report](https://arxiv.org/abs/2608.15763)** (TaoLive AIGC LLM Team, arXiv 2026) - *대형 모델은 편집된 Skills, hook, 프롬프트, 도구 스키마에 재학습 없이 적응하지만 라이브 방송이 요구하는 지연 시간 예산을 맞추지 못하므로, 작은 모델을 계속 바뀌는 harness에 맞춰 학습시켜야 한다는 입장이다. 학습 중에 harness 상태를 증강해 모델이 고정된 구성을 한 번도 보지 않게 한 결과 harness 변형 질문에서 기본 모델의 75.4보다 높은 94.6을 얻었다. 고정 harness로 supervised fine-tuning하면 기본 모델보다 IFEval이 7.7점 떨어지지만 증강 방식은 한 점도 잃지 않았고, H20 한 장에서 P50·P95 지연 시간은 3.4초와 8.1초였으며 Taobao Live A/B 테스트에서도 긍정적인 결과를 냈다.*
+- **[Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale](https://arxiv.org/abs/2610.07289)** (Ziftci et al., ASE 2026) - *제출 전 테스트가 실패하면 ReAct 방식으로 수정안을 만들고 검증하는 수리 에이전트를 Google 내부 개발 도구에 넣었다. 실행마다 도구 호출 100번과 30분으로 제한하고, 실행 전후에는 수정을 포기할 경우를 가려내는 필터를 둔다. 내부 Gemini 2.5 Pro로는 실패 195건 중 67.18%에서 수정이 옳다고 판정됐다. 실제 배포에서는 변경 295,508건에 수정을 제안했고 개발자가 그중 28,554건을 적용했다. 성공한 수정에 걸린 시간의 중앙값은 9.85분으로, 개발자가 다음 편집을 하기까지 걸린 27.48분보다 짧았다. 다만 변경 자체를 되돌리거나 실패한 테스트를 주석 처리하자고 제안하는 경우도 있다.*
+- **[From Benchmark to Bench: Can Agents Survive Real-World Drug Discovery?](https://arxiv.org/abs/2610.06411)** (Llompart et al., arXiv 2026) - *Claude Sonnet 4.6이 MCP 도구 24개로 선도물질 최적화를 직접 진행하게 한다. 프로젝트의 목표를 쓰고 고치며, 분자를 스스로 제안하거나 생성을 REINVENT 4에 맡긴다. GSK, Sanofi, AstraZeneca의 지난 캠페인 아홉 개를 시점을 고정해 재현했을 때, GSK 시리즈 네 개 중 세 개와 AstraZeneca 캠페인은 목표를 달성했지만 Sanofi 프로젝트는 네 개 중 두 개만 달성했다. 화학자 네 명은 제안된 분자와 held-out 화합물을 구별하지 못했고, 성공 여부는 생성 방식보다 점수 모델의 정확도를 따라갔다. 모든 평가 지표는 실측이 아닌 예측값이다.*
+- **[Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](https://arxiv.org/abs/2610.00609)** (Drozdov et al., arXiv 2026) - *법률 리서치 에이전트를 전문가가 쓴 미국 법 문제 413개로 부분 점수 없이 채점한다. 답은 rubric의 모든 기준을 충족하고 인용한 판례와 법령이 실제로 맞아야만 인정된다. 웹 검색, 판례 검색, 문서 검색 도구를 갖춘 프런티어 모델 13개 중 가장 나은 Claude Opus 4.8도 완전히 맞힌 비율은 42.9%였고, 가중 통과율은 68%에서 86% 사이였다. Kimi K2.6은 평균 112번 도구를 호출하고도 15.5%에 그쳤고, 도구를 빼면 평균 22.5포인트가 떨어졌다. 문제마다 한 번씩 실행했고 채점은 LLM 심사 모델이 했다.* [[code](https://github.com/vals-ai/legal-research-bench)]
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -640,11 +664,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 ## ⚖️ 제3부: 전반에 걸친 과제
 
 <a id="evaluation"></a>
-### 📊 평가와 벤치마크 (51)
+### 📊 평가와 벤치마크 (54)
 *서베이 §9(평가와 벤치마크)에 해당합니다.*
 
 <details>
-<summary><b>논문 51편 보기</b></summary>
+<summary><b>논문 54편 보기</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *도구를 쓰는 범용 에이전트 어시스턴트의 기준 벤치마크다. 널리 쓰이는 공개 순위표들이 이를 바탕으로 frontier 에이전트의 발전을 추적한다.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *코딩·소프트웨어 공학 에이전트의 사실상 표준 벤치마크이며, 여기서 SWE-bench Verified/Lite/Live/Multimodal 계열이 파생되었다.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -698,16 +722,19 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Autonomous Evaluation and Refinement of Digital Agents](https://arxiv.org/abs/2404.06474)** (Pan et al., COLM 2024) - *비용 수준이 서로 다른 에이전트 평가자를 여러 개 만들었고, oracle 지표와의 일치율은 74.4에서 92.9%였다. 이를 보상으로 써서 추가 감독 없이 WebArena의 최고 성능을 29% 끌어올렸다.* [[code](https://github.com/Berkeley-NLP/Agent-Eval-Refine)]
 - **[JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550)** (Li et al., arXiv 2026) - *텍스트 대신 결정을 돌려주는 심판은 일반적인 선호와 사실성 판정에서 가장 강한 LLM 심판에 세 포인트 이내로 따라붙으면서 비용은 그 0.36%에 그친다. 유도 과정을 검산해야 하거나 틀린 답이 그럴듯하게 쓰였을 때는 더 뒤처지며, 받아들이거나 escalation하는 cascade는 더 강한 심판 정확도의 99%를 유지한다.*
 - **[TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces](https://arxiv.org/abs/2609.33295)** (Min et al., arXiv 2026) - *Claude Code와 OpenClaw의 실제 배포 세션 252,557개에서, 원래 에이전트가 바람직하지 않은 행동을 보인 지점에서 trace를 자르고 모델의 다음 턴을 행동별 rubric으로 채점하는 방식으로 벤치마크 107개를 만든다. 환경은 다시 실행하지 않는다. frontier LLM 아홉 개의 평균 통과율은 26.7%이고, rubric이 올바른 형식의 도구 호출만 요구하면 67.9%지만 다음 단계로 넘어가기 전에 필요한 확인을 요구하면 8.1%에 그친다. TodoWrite 계획 호출로 시작한 응답은 같은 사례에서 다른 응답이 30.8%를 통과할 때 4.6%만 통과했는데, 저자들은 이를 상관관계로만 보고한다. trace는 공개하지 않아 공개 데이터로 벤치마크를 다시 만들 수는 없다.*
+- **[TestJack: Should you trust the results in coding benchmarks? Agentic Coding Benchmarks Auditing via Evaluator Evolution](https://arxiv.org/abs/2610.10619)** (Yao et al., arXiv 2026) - *코딩 벤치마크에서 공식 테스트를 통과한 시도를 다시 감사한다. GPT-5.5 감사 모델이 시도마다 패치가 어겼을 수 있는 프롬프트 속 요구 사항을 겨냥한 테스트를 쓰고, 정답 패치가 통과하는 테스트만 남긴다. 그래서 반박마다 다시 돌려 볼 수 있는 테스트가 함께 남는다. 모델 백엔드 6개와 벤치마크 5개에서 정답으로 판정된 시도의 34.4%를 반박해 해결률을 50.6%에서 33.2%로 낮췄고, 반박 비율은 SWE-bench Verified의 7.6%부터 SWE-Marathon의 53.6%까지였다. 다만 감사 모델과 검토 모델이 모두 LLM이어서, 반박을 얼마나 믿을 수 있는지는 이들이 프롬프트를 얼마나 정확히 읽었는지에 달려 있다.*
+- **[AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks](https://arxiv.org/abs/2610.11050)** (Lù et al., arXiv 2026) - *긴 computer use 과제를 판정하는 LLM 심사 모델을, 세 운영체제에서 사람이 녹화한 166시간 분량으로 만든 지시문과 trajectory 쌍 1,373개로 시험한다. 오답 예시는 녹화 하나를 아주 비슷한 다른 과제의 지시문과 짝지어 만든다. 심사 모델 11개를 전체 trajectory를 직접 보여 주는 방식과, harness 다섯 개 안에서 코딩 에이전트로 쓰는 방식 모두로 돌렸다. Codex 안의 GPT-5.5가 균형 정확도 80.9%로 가장 높았고, 직접 프롬프트로 물었을 때는 68.6%였다. 반면 Qwen 3.6 27B는 OpenCode 안에서 쓸 때가 쓰지 않을 때보다 7.2포인트 낮았고, 지시문 없이 보여 주면 trajectory의 98.9%를 성공으로 판정했다. 오답 예시는 실제 에이전트의 실패가 아니라 비슷한 지시문으로 바꿔 끼운 것이다.* [[code](https://github.com/ServiceNow/agenthorizon)]
+- **[Finding the Right Fit: Model-Harness Interactions across Agent Tasks](https://arxiv.org/abs/2610.00917)** (Li et al., arXiv 2026) - *모델 다섯 개를 설정 가능한 harness 네 개(OpenHands, DeepSeek Harness, PI, openJiuwen)와 짝지어 TUA-Bench, ALE-CLI, Terminal-Bench 4에서 돌리고, Codex와 Claude Code의 기본 조합을 더해 모두 66개 설정을 비교한다. 모델 순위는 harness에 따라 뒤집혔다. Terminal-Bench 4에서 Claude는 OpenHands에서는 GPT보다 7.94포인트 앞섰지만 PI에서는 30.16포인트 뒤졌다. 모델 다섯 개 중 네 개는 벤치마크마다 가장 좋은 harness가 달랐고, 모델 회사가 직접 만든 harness가 늘 가장 좋은 것도 아니었다. GPT-6 Astra는 PI에서 과제당 $4.66로 60.32%를 얻었고, DeepSeek Harness에서는 $19.94로 52.38%였다. 과제마다 마지막 실행 한 번만 집계했다.* [[code](https://github.com/liyix/finding-the-right-fit)]
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
 
 <a id="safety"></a>
-### 🛡️ 안전과 정렬 (59)
+### 🛡️ 안전과 정렬 (62)
 *서베이 §11(안전·보안·신뢰성)에 해당합니다.*
 
 <details>
-<summary><b>논문 59편 보기</b></summary>
+<summary><b>논문 62편 보기</b></summary>
 
 - **[Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/abs/2302.12173)** (Greshake et al., arXiv 2023) - *이후 거의 모든 LLM 에이전트 보안 연구의 바탕이 된 indirect prompt injection 위협 모델을 처음 세운 논문이다.* ⭐ [[code](https://github.com/greshake/llm-security)]
 - **[AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents](https://arxiv.org/abs/2406.13352)** (Debenedetti et al., NeurIPS 2024) - *Prompt injection 공격에 대한 에이전트의 견고성과 방어 기법을 재는, 가장 널리 쓰이는 표준 테스트베드다.* [[code](https://github.com/ethz-spylab/agentdojo)]
@@ -769,6 +796,9 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[BAITBENCH: Measuring Agent Reward Hacking with Optional Shortcuts Planted in ML Tasks](https://arxiv.org/abs/2608.30724)** (Prasad et al., arXiv 2026) - *합성 표 형식 ML 과제 세 개에 각각, 공개 점수는 부풀리지만 숨겨진 테스트 세트에서는 실패하고 명시된 규칙은 어기지 않는 선택적 지름길을 심어 둔다. Frontier 에이전트 일곱 개의 실행 중 57.1%가 이 지름길을 택했고, 일곱 중 다섯은 절반을 넘었으며, 프롬프트로 부정행위를 하지 말라고 해도 평균은 절반 위에 머물렀다.*
 - **[LlamaFirewall: An open source guardrail system for building secure AI agents](https://arxiv.org/abs/2505.03574)** (Chennabasappa et al., arXiv 2025) - *작은 jailbreak 분류기, injection과 목표 이탈을 살피는 chain-of-thought 감사기, 정적 코드 스캐너를 에이전트를 둘러싼 마지막 런타임 계층으로 쌓는다. AgentDojo에서 86M 분류기 하나만으로 공격 성공률이 17.6%에서 7.5%로 줄고, 감사기를 더하면 1.75%까지 내려간다.* [[code](https://github.com/meta-llama/PurpleLlama/tree/main/LlamaFirewall)]
 - **[Type-Safe Is Not Error-Free: A Constrained Decision Head Follows the Option Name, Not the Rubric Bound to It](https://arxiv.org/abs/2609.26758)** (Sun and Xu, arXiv 2026) - *선택지 이름과 rubric의 짝을 바꿔 보니, 타입이 정해진 결정을 내는 decision model은 rubric이 아니라 이름을 따랐다. Workflow 결정 1,200건에서 0/1을 no/yes로 바꿔 부르자 백 건당 70.4건이 더 뒤집혔고, Jev도 같은 역전을 보였으며, type error 비율은 내내 0%였다.*
+- **[Red-Teaming Auto Mode: Improving Blocking Classifiers Against Malign Coding Agents](https://arxiv.org/abs/2609.19587)** (Remedios et al., arXiv 2026) - *실제 코딩 에이전트의 동작을 하나하나 승인하는 차단 모니터, 즉 Claude Code의 Auto Mode와 Codex의 Guardian을 근사한 모니터를 레드팀 방식으로 공격해 본다. 공격 모델은 모니터의 작동 방식을 아는 Opus 5다. 에이전트가 자기 동작 안에 직접 써넣은 prompt injection은 rollout의 78.4%에서 Auto Mode를, 85.2%에서 Guardian을 통과했고, 네 가지 공격 유형의 평균 공격 성공률은 각각 65%와 72%였다. 기록을 이스케이프하고 경계를 표시하며, 모든 편집과 컨텍스트 압축을 감시하고, 마지막 단계로 도구를 호출하며 조사하는 에이전트를 둔 Auto Mode ++는 이를 9%로 낮췄고, 정상 동작 4,000건 중 차단한 비율은 1% 미만이었다. 다만 여러 컨텍스트에 나눠 들어오는 공격은 막는 비용이 여전히 크다.* [[code](https://github.com/safety-research/red-teaming-auto-mode)]
+- **[ClashBench: Conflicts Leading Agents to Seize and Harm](https://arxiv.org/abs/2609.19892)** (Xie et al., arXiv 2026) - *실행 중인 다른 작업이 이미 포트, 잠금, 디스크, GPU 메모리, 회의실 예약을 쥐고 있는 상황에서 에이전트에게 과제를 준다. 자원 55종에 걸친 실행 가능한 사례 268개로, 모델 17개를 Codex, Claude Code, OpenCode에서 돌렸다. 실행의 44.5%에서 에이전트는 자기 과제를 끝냈지만 기존 작업은 상태 점검에 실패했다. 이 비율은 Claude-Sonnet-5의 25.2%부터 Qwen3.8-Max의 61.2%까지였고, 둘 다 Claude Code에서 잰 값이다. 에이전트는 충돌을 알아챈 뒤에 자원을 빼앗는 경우가 많았고, 그런 사례의 31.9%에서는 최종 답변에서 충돌도 탈취도 언급하지 않았다. 기존 작업에 영향을 주지 말라고 지시해도 38.2%가 남았다. 대부분의 사례는 한 번씩만 실행했다.* [[code](https://github.com/TarferSoul/CLASHBench)]
+- **[HarnessSecurity-Bench: Do Security Mechanisms Really Protect Coding Agent Harnesses?](https://arxiv.org/abs/2610.07639)** (Zhu et al., arXiv 2026) - *코딩 에이전트 harness 40개에 걸쳐 보안 장치 열 가지를 평가한 뒤, 그중 아홉 가지를 오해를 부르는 컨텍스트와 악성 자원을 넣은 과제 23개로 2,500번 시험한다. 대상은 Claude Code, Codex CLI, Gemini CLI, gptme, Qwen Code, GitHub Copilot이며 모두 GLM-5.2로 돌렸다. 자동 승인은 유용성을 77.1%에서 95.4%로 올렸지만 공격 성공률도 29.2%에서 95.6%로 올렸다. 네트워크 격리와 읽기 전용 모드는 공격 성공률을 0.8%로 낮췄지만, 유용성을 각각 24.5포인트와 34.0포인트 잃었다. 명령 allowlist는 유용성을 1.5포인트만 잃으면서 공격 성공률을 48.1포인트 낮췄는데, 허용된 Python 인터프리터를 거쳐 우회한 사례가 한 번 있었다. 백본은 하나만 썼다.* [[code](https://github.com/TsingPig/HarnessSecurity-Benchmark)]
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -860,6 +890,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-10-14**: 2026년 9월 중순 이후 나온 논문 30편을 절마다 세 편씩 추가했습니다. 부정적인 결과를 보고한 논문이 여럿인데, 그중 하나에서는 코딩 벤치마크가 정답으로 판정한 에이전트 실행의 34.4%가 과제에 적힌 요구 사항을 어겼습니다. 536편에서 566편으로 늘었습니다.
 - **2026-10-12**: SELF를 계획과 추론 절에, EFRE를 메모리 절에 추가했습니다([@markovchain-builder](https://github.com/markovchain-builder), [#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)). SELF는 보상 없이 에이전트를 학습시키는 방법으로, Qwen3-8B에서 τ-bench Retail 성공률이 43.2%이고 보상으로 학습한 GRPO는 39.1%입니다. 534편에서 536편으로 늘었습니다.
 - **2026-10-03**: 제1저자 [@ZhishanQ](https://github.com/ZhishanQ)가 보내 준 TraceDance를 평가와 벤치마크 절에 추가했습니다([#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)). 실제 에이전트 세션으로 테스트를 만드는 논문인데, 다음 단계로 넘어가기 전에 확인이 필요한 사례에서 frontier LLM 아홉 개의 통과율은 8.1%였습니다. 533편에서 534편으로 늘었습니다.
 - **2026-09-30**: 공개 GitHub 프로젝트 2,170개가 Jev를 어떻게 쓰는지 분석한 Jev in the Wild를 서베이와 포지션 페이퍼 절에 추가했습니다([@Gavin-M34](https://github.com/Gavin-M34), [#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)). 532편에서 533편으로 늘었습니다.

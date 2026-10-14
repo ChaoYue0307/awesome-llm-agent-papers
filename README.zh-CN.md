@@ -95,28 +95,28 @@
 - [⭐ 入门必读](#starter-kit)
 - [🔥 值得关注的 10 篇 (2026)](#to-watch)
 - **🧭 背景**
-  - [📚 综述与立场论文 (58)](#surveys)
-  - [🏗️ 智能体架构与框架 (51)](#architectures)
+  - [📚 综述与立场论文 (61)](#surveys)
+  - [🏗️ 智能体架构与框架 (54)](#architectures)
 - **🧱 第一部分：核心组成**
-  - [🧠 规划与推理 (52)](#planning)
-  - [💾 记忆 (57)](#memory)
-  - [🔧 工具使用 (46)](#tools)
-  - [🤝 多智能体系统 (51)](#multi-agent)
+  - [🧠 规划与推理 (55)](#planning)
+  - [💾 记忆 (60)](#memory)
+  - [🔧 工具使用 (49)](#tools)
+  - [🤝 多智能体系统 (54)](#multi-agent)
 - **🌍 第二部分：环境与应用中的智能体**
-  - [🌐 交互环境 (57)](#environments)
-  - [🚀 应用领域 (54)](#applications)
+  - [🌐 交互环境 (60)](#environments)
+  - [🚀 应用领域 (57)](#applications)
 - **⚖️ 第三部分：贯穿全局的问题**
-  - [📊 评估与基准 (51)](#evaluation)
-  - [🛡️ 安全与对齐 (59)](#safety)
+  - [📊 评估与基准 (54)](#evaluation)
+  - [🛡️ 安全与对齐 (62)](#safety)
 
 ## 🧭 背景
 
 <a id="surveys"></a>
-### 📚 综述与立场论文 (58)
+### 📚 综述与立场论文 (61)
 *对应综述 §1-§3（引言、背景、分类体系）。*
 
 <details>
-<summary><b>展开 58 篇论文</b></summary>
+<summary><b>展开 61 篇论文</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *最经典、引用量最高的通用 LLM 智能体综述。* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *与 Wang et al. 2023 并称两篇开创性的通用综述。* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -177,16 +177,19 @@
 - **[Terminal Agents: A Survey of AI Agents in Command-Line Environments](https://arxiv.org/abs/2608.20485)** (Bin et al., arXiv 2026) - *以终端而不是任务领域作为组织视角，研究那些靠命令执行和文本反馈推动循环前进的智能体，并用七维能力画像从架构、能力习得和评估几个方面加以梳理。综述自己在固定条件下做的诊断显示，不同的基准家族暴露出不同的过程信号，配对的系统比较结果也取决于基准，这限制了任何结果能在多大程度上归因于单个组件。*
 - **[Autonomous Research Agents: A Survey of AI Scientists and the Verification Gap](https://arxiv.org/abs/2608.05179)** (Ding et al., arXiv 2026) - *从筛选出的 125 个 AI 科学家系统中选取 26 个，按七个审计维度编码，发现瓶颈已从能力转向可检验性：24 个可运行系统中 83% 公开了代码，但只有 38% 公开了随机种子或执行 trace，也只有 38% 报告了任何形式的新颖性验证；九个闭环系统里有七个只是机械地重跑，整个语料中找不到一个经过外部验证的循环内 oracle。*
 - **[Jev in the Wild: A Data-Driven Analysis of the Jev Model's Functionality, Applications and Ecosystem](https://arxiv.org/abs/2609.30216)** (Ling et al., arXiv 2026) - *收集 Jev 发布一周后 GitHub 上 2,170 个使用 Jev 的公开项目并加以分类，发现它更多用于判断输入，而不是选择动作：77% 的项目用到属性判断，31% 用到动作选择，不过在界面智能体和模拟与控制类项目中，动作选择约占标签的一半；routing 和界面智能体项目只占 19.6%，却获得了 63% 的 star。哪些仓库计入、每个项目如何标注，都由一个 LLM 智能体决定，再由第二个智能体复核，论文没有报告与人工标注的对比。*
+- **[Why Agentic Workflows Fail: A Taxonomy Derived from Literature and Empirical Data](https://arxiv.org/abs/2610.17418)** (Li et al., arXiv 2026) - *沿四个维度为智能体 workflow 的失败编码：责任来源（智能体、外部系统或两者）、65 种类型中的失败机制、workflow 阶段和智能体能力，并把这套方案用于来自论文的 397 条失败记录，以及来自 229 个仓库的 GitHub issue 和 pull request 的 1,196 条记录。GitHub 上的失败集中在执行中的动作环节，占记录的 64.8%，文献中只占 14.1%，其中 61% 并非智能体的过错，例如外部 API 出错；后来论文中的 69 条记录有 68 条能归入现有类型，这些计数也不是发生率的估计。*
+- **[Distilling Agentic Systems: A Roadmap across Models, Artifacts, and Harnesses](https://arxiv.org/abs/2609.36630)** (Luo et al., arXiv 2026) - *把 distillation 的对象从教师模型扩展到教师智能体，并按学生把学到的东西保存在哪里来整理文献：权重中，记忆、skill 和工具等可复用的产物中，通过 workflow、路由和验证体现在执行 harness 中，或者跨越这几处，例如把文本形式的 workflow 编译成控制器，或把某个产物变成强制执行的规则；它要求每个迁移主张给出内在、因果和 end-to-end 三类证据，结论是没有哪一处普遍更优，不过每种方法只被归入一个主要位置。*
+- **[Agentic Societies Need a Social Harness](https://arxiv.org/abs/2609.17527)** (Chugh et al., arXiv 2026) - *主张代表不同的人行事的智能体，在各自的 harness 之上还需要一个管理智能体之间消息的社会 harness，并用为大学安排会议的 OpenClaw 智能体来支持这一主张，智能体全部使用 GPT-5.4，或其中一个改用 Claude Opus 4.8。每种设置运行十次：若对每个对方各用一个隔离会话，混合配置在助教多于一人的小组会议上全部失败，共享会话则在七名助教时把成功率从 0% 提高到 90%；智能体转达的虚假取消声明在 GPT-5.4 的运行中 100% 得逞。文中提出的五层结构从可验证的身份到社会制度，既没有实现，也没有评估成本。*
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ 智能体架构与框架 (51)
+### 🏗️ 智能体架构与框架 (54)
 *对应综述 §2（背景）以及贯穿全文的示例。*
 
 <details>
-<summary><b>展开 51 篇论文</b></summary>
+<summary><b>展开 54 篇论文</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *AutoGPT 自主智能体设计模式影响广泛，却没有对应的论文；这是针对它的唯一一项接近同行评审水准的实证研究。* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *在异构环境中衡量单智能体通用能力的标准参考基准。* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -240,6 +243,9 @@
 - **[SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks](https://arxiv.org/abs/2305.17390)** (Lin et al., NeurIPS 2023) - *把智能体拆成两部分：一个经过微调、快速行动的小模型，以及只在行动停滞或无效等触发条件下才调用的 GPT-4 planner；在 30 类 ScienceWorld 任务上胜过 SayCan、ReAct 和 Reflexion。*
 - **[R2V Agent: Teaching SLMs When to Ask for Help](https://arxiv.org/abs/2605.16604)** (Hemadri et al., arXiv 2026) - *难度会在 trajectory 中途变化，所以按步骤而不是按查询来做路由：一个用 Brier 分数做过 calibration 的 router，只在剩余失败风险高时，才从经过 distillation 的小模型转交给教师 LLM，把 TextWorld 的成功率从 64.6% 提高到 98.2%，escalation 比例为 41.7%。* [[code](https://github.com/RaghuHemadri/r2v-agent)]
 - **[REFLEX with Jev for Efficient Selective Control in LLM Agents](https://arxiv.org/abs/2609.26532)** (Wu and Lim, arXiv 2026) - *让 Jev（一种不输出文本、只给出类型化决策的模型）负责智能体的有限选择，只在 confidence 低或需要文本时才调用强 LLM：在由 100 个任务组成的固定基准上成功率 95%，强模型调用减少 72.7%，但在 BFCL 和 τ 类任务上，相比廉价的生成式 cascade 几乎没有提升。*
+- **[What Does a Harness Buy? Tokens, Mostly](https://arxiv.org/abs/2610.04433)** (Liu and Han, arXiv 2026) - *让五个模型分别在 Claude Code、mini-SWE-agent 和 OpenCode 中运行 SWE-bench Verified，并把每种配置重跑一遍来度量运行之间的噪声。在 447 个任务上，Claude Code 与 mini-SWE-agent 在这里运行的两个 Qwen 模型上都在 5 个点以内等效；在最难的 45 个任务上，换一个 harness 会让 13% 的任务结果翻转，与重跑一次的比例相同；唯一超出噪声的效应是 OpenCode 最多落后 9 个点。每个任务的成本则最多相差三倍，差距由固定的前置提示决定：Claude Code 为 16k token，mini-SWE-agent 不到一千。只用了一个基准。* [[code](https://github.com/YangzeLiu/what-does-a-harness-buy)]
+- **[When Sub-Agents Work in Parallel: The Promises and Pitfalls of Dynamic Concurrency in Long-Horizon Coding Tasks](https://arxiv.org/abs/2610.10263)** (Li et al., arXiv 2026) - *在 354 个编码任务上开关 Codex（GPT-5.4）、Claude Code（Claude Opus 5）和 Kimi Code（Kimi K3）内置的动态并发，即由主智能体在运行时决定是否派生并行的子智能体。通过率的变化介于下降 11.9 个点和上升 2.3 个点之间，token 用量增至 1.41 到 3.31 倍；Claude Code 在 SWE-bench Verified 上从 83.0% 降到 59.0%，在 long-horizon 的 LoopsBench 上却从 7.1% 升到 21.4%；在标注的 804 个失败中，33.2% 是共享状态和合并问题。每种配置在每个任务上只运行一次。*
+- **[Ask Your Advisor: Learning When to Consult Stronger Models in Agentic Systems](https://arxiv.org/abs/2610.13870)** (Sowietzki et al., arXiv 2026) - *学习廉价的执行模型何时该向更强的顾问模型求助：在 workflow 的每个接触点，根据精简的状态抽象选择保持沉默或求助，并在扣除成本的结果上用 Monte Carlo 控制来学习。在 Magentic-One 上由 gemini-3-flash-preview 执行、gemini-3.1-pro-preview 提供建议时，它在 SWE-bench Verified-Mini 上花 $22.09 达到 48.0%，只用执行模型为 18.0%，只用顾问模型则花 $45.90 达到 62.0%；它胜过 RouteLLM（$25.03 下 30.0%）和求助次数相近的随机方式（28.0%），但在 Terminal-Bench 上只与一个启发式方法持平，都是 34.7%。实验只用了一对模型、一个框架和 50 个任务的测试集。* [[code](https://github.com/Pasl4/ARIA)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -247,11 +253,11 @@
 ## 🧱 第一部分：核心组成
 
 <a id="planning"></a>
-### 🧠 规划与推理 (52)
+### 🧠 规划与推理 (55)
 *对应综述 §4（规划与推理）。*
 
 <details>
-<summary><b>展开 52 篇论文</b></summary>
+<summary><b>展开 55 篇论文</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *几乎所有 LLM 智能体推理与规划模块背后的基础技术，也是整个 CoT/ToT/ReAct 谱系的起点。*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *标准的推理阶段 ensemble 与验证策略，在智能体的推理和规划流水线中广泛复用。*
@@ -306,16 +312,19 @@
 - **[Steer, Don't Solve: Training Small Critic Models for Large Code Agents](https://arxiv.org/abs/2606.21811)** (Gandhi et al., arXiv 2026) - *用 SFT 和 DPO 训练 4B 和 8B 的 critic 模型，让它们找出编码智能体 trajectory 中的错误，并在推理时每隔几步给出高层指导，自己并不生成行动。这些 critic 提高了六个更大智能体在 SWE-bench Verified 上的解决率，GLM-4.7-Flash-30B-A3B 提高 16.0 个点，GPT-OSS-120B 提高 14.4 个点；如果智能体因此用更少的步数完成任务，加上引导后的总花费反而更低：GPT-OSS-20B 每个样例的花费从 0.07 美元降到 0.03 美元。* [[code](https://github.com/shubhamrgandhi/critic-training)]
 - **[Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners (KnowNo)](https://arxiv.org/abs/2307.01928)** (Ren et al., CoRL 2023) - *对 LLM planner 给出的候选下一步应用 conformal prediction，只有超过一个候选通过阈值时，机器人才向人求助；这样既为任务完成提供统计保证，又把人的帮助降到最少。*
 - **[Real-Time Detection and Repair of LLM Agent Failures](https://arxiv.org/abs/2608.02464)** (Dubey, arXiv 2026) - *逐步让 LLM 评估者打分，成本比智能体本身还高，于是改用每步约 200 微秒的遥测监控器，加上确定性的重算检查，并把被标记的运行回滚，使任务成功率从 52% 提高到 73%；这些监控器每次部署都必须重新做 calibration。* [[code](https://github.com/sunnydubey1111/agent-trajectory-sentinel)]
+- **[LLM Value Functions for Credit Assignment in Agentic RL](https://arxiv.org/abs/2610.15840)** (Zhu et al., arXiv 2026) - *在智能体 RL 中用一个冻结的 LLM 作 critic：它看到同一任务上其他 rollout 的摘要，起点锚定在组内成功率、终点锚定在实际获得的奖励，用一次查询为所有中间状态打分，价值之差即成为每一步的 advantage，其总和等于组内相对回报。以 Claude Opus 4.6 作 critic 时，Qwen3-8B 在 AppWorld 上达到 26.3%，在 SWE-bench Verified 上达到 20.2%，GRPO 分别为 19.8% 和 12.0%；但收益取决于 critic，换成 Qwen3-235B 作 critic 时，Qwen3-4B 在 AppWorld 上只有 9.8%，用 Opus 时为 24.3%。*
+- **[Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions](https://arxiv.org/abs/2610.06191)** (Zhang et al., arXiv 2026) - *把使用工具的智能体对证据得出的判断与它接下来的行动分开来看，实验在一个故意让搜索源失效的 HotpotQA 上进行：七个智能体判定失效源的结果无用的比例为 97% 到 100%，但在连续五次这样的判断之后，不加辅助的 Qwen3-8B 在 292 个问题中只对 1 个给出了答案，写进提示的停止规则最多只被部分遵守；由 harness 强制执行、在五次无用结果后强制作答的规则，让四个开放模型和 Claude Haiku 4.5 在六种失效情形下的成功率提高 0.026 到 0.097。失效是模拟的。* [[code](https://github.com/bennidict23/judged-useless-queried-anyway)]
+- **[Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning](https://arxiv.org/abs/2609.38147)** (Dahal et al., arXiv 2026) - *把智能体的控制与具体工作分开：由执行者完成任务，控制器在每个周期更新一份精简的进度记录，提出下一步，按剩余的调用预算权衡后分派执行者，完整输出存进记忆以便复用。与使用相同执行者和预算的直接控制智能体相比，它在全部 12 个模型与基准组合中得分都更高，按基准平均高出 3.6 到 4.2 个点；在 ProgramBench 上用 GPT-5.5 达到 71.5%，Codex 为 58.0%，直接控制为 63.7%。但用 Opus 4.8、调用 400 次时，它落后于直接控制，为 56.6% 对 62.7%。*
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="memory"></a>
-### 💾 记忆 (57)
+### 💾 记忆 (60)
 *对应综述 §5（记忆）。*
 
 <details>
-<summary><b>展开 57 篇论文</b></summary>
+<summary><b>展开 60 篇论文</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *早期且影响很大的读写记忆设计，以三元组形式做结构化存储，是后来基于图和知识图谱的智能体记忆系统的前身。*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *最早把有心理学依据的遗忘与巩固机制（受人类记忆启发）引入 LLM 智能体记忆的系统之一。* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -375,16 +384,19 @@
 - **[Dual-Layer Agentic Memory with Fast Write Routing and Slow Consolidation](https://arxiv.org/abs/2608.22215)** (Li et al., arXiv 2026) - *把每次记忆写入变成三选一（跳过、新写、更新），由 1.7B 到 8B 的 cascade 来决定：最多剪掉 68% 的冗余记忆，转交出去的输入不到一半，同时保住全量保留时 98% 以上的 exact match。*
 - **[Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents](https://arxiv.org/abs/2609.23986)** (Jiang et al., arXiv 2026) - *把记忆分类、路由、图遍历和停止判断交给 Jev，只在需要对取回的内容做推理时才调用 LLM：构建 LoCoMo 记忆的速度是最快 baseline 的 6.6 倍，得分 0.777 对 0.700；领先的部分大多来自对抗性问题。* [[code](https://github.com/libingzheren/Jev-Mem)]
 - **[From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning](https://arxiv.org/abs/2610.11373)** (Liu et al., arXiv 2026) - *让冻结的 LLM 依次适应一系列任务。提示优化只维护一个提示，这里维护一组提示（repertoire）：一次更新只有在该提示在它已能处理的样例上保持至少 90% 的得分时才写入该提示，否则在其他提示上尝试，其他提示也都不能接受时就新建一个提示；每个输入由 LLM selector 选择提示。在 ToolUse、FinQA、SciKE-Bio 的任务序列上，由 Qwen3-8B 作答、GPT-5.6-Luna 撰写更新时，学完最后一个任务后 FinQA 准确率下降 1.56 个百分点，GEPA 下降 25.10 个百分点，ACE 下降 9.43 个百分点。智能体实验只有一项，在 Continual Learning Bench 的六个环境上用一个最简 scaffold 完成：使用 Qwen3-8B 时平均得分为 18.0，GEPA 为 9.5；使用 GPT-5.6-Luna 时为 36.3，GEPA 为 29.5。*
+- **[Reliable Memory from Unstable Growth: Curating Self-Written Agent Playbooks with Randomized Experiments](https://arxiv.org/abs/2610.18427)** (Pham et al., arXiv 2026) - *用实验而不是智能体自己的判断，来决定保留智能体自写 playbook 中的哪些经验：把相关的经验归成块，在练习任务中随机开关每个块，用对成功率的回归估计每个块的效果，只有当筛选后的 playbook 在新的练习中胜过完整版和空白版时才投入使用。在 AppWorld、WebShop 和 ALFWorld 上搭配 ACE 与 Dynamic Cheatsheet 的 19 个设置中，它平均得到 66.9，完整 playbook 为 55.5，智能体自己挑选的为 53.8；不过只在完整版和空白版之间二选一，就已经能达到 66.4。*
+- **[Can Agents Forget When Asked? A Benchmark for Memory Unlearning in LLM Agents](https://arxiv.org/abs/2610.18052)** (Xie et al., arXiv 2026) - *测试智能体记忆系统能否删除用户要求遗忘的内容：50 段合成的多会话对话包含六类共 135 个遗忘请求和 1,742 个问题，每段对话都有不含这些请求的对照版本，所以系统只有在遗忘了自己确实存过的内容时才得分。在 Mem0、A-MEM、LangMem、LightMem、SimpleMem、朴素 RAG 和全上下文 LLM 中，没有一个系统 end-to-end 通过的请求超过 1.5%，原因是要么信息在简单攻击下仍能被提取出来，要么删掉的远多于要求的。* [[code](https://github.com/Nboxff/bemula-benchmark)]
+- **[Not All Experience Belongs in the Weights: Component Routing for Self-Improving GUI Agents](https://arxiv.org/abs/2610.01787)** (Wu et al., arXiv 2026) - *把 GUI 智能体自身的经验拆成界面元素的定位信息、操作流程、状态事实和经验教训，分别测试通过微调写进权重和作为检索到的笔记放进上下文这两种做法：定位信息写进权重多得 4.9 个点，经验教训多得 1.5 个点，后者的区间在一半的单元格中包含零；操作流程和状态事实放进上下文分别多得 4.2 和 4.1 个点。按出现频率和是否依赖当前状态的规则为每类经验选择去处，平均比两种单一去处中较好的一种高 3.5 个点，实验覆盖 MobileGym 和 AndroidWorld 上三个 7B 到 8B 的骨干模型。*
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="tools"></a>
-### 🔧 工具使用 (46)
+### 🔧 工具使用 (49)
 *对应综述 §6（工具使用与行动执行）。*
 
 <details>
-<summary><b>展开 46 篇论文</b></summary>
+<summary><b>展开 49 篇论文</b></summary>
 
 - **[TALM: Tool Augmented Language Models](https://arxiv.org/abs/2205.12255)** (Parisi et al., arXiv 2022) - *较早提出用自监督自举让语言模型学会使用工具，影响很大，直接预示了 Toolformer 的自监督方法。*
 - **[API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs](https://arxiv.org/abs/2304.08244)** (Li et al., EMNLP 2023) - *最早也是引用最多的专用基准之一，用来评估和训练工具增强的对话 LLM。* [[code](https://github.com/AlibabaResearch/DAMO-ConvAI)]
@@ -433,16 +445,19 @@
 - **[Can MCP Clients Decide What to Do After Failure? A Result-Only Actionability Audit](https://arxiv.org/abs/2609.00072)** (Mehan, arXiv 2026) - *追问确定性的软件单凭一条已完成的 MCP 失败结果能做出什么决定。在刻意取小的样本里（十个可访问服务器上诱发的 21 次失败），类型化字段在 18 例中让失败变得可见，在 8 例中能读出大致的处理策略，却从未给出具体原因、目标、可执行的修复或重放约束，于是恢复只能依靠需要有人去解读的文字说明。*
 - **[One Policy Is Enough: Single-Agent Reinforcement Learning Outperforms Tree Search for Chemistry Tool Learning](https://arxiv.org/abs/2608.30952)** (Dariani et al., arXiv 2026) - *原方法是分层进化式 tree search，在两个学习得到的 critic 下分别运行策略模型和执行模型；本文改为一次从左到右的生成，用结果级强化学习训练，奖励由标准调用链以程序方式直接读出，训练循环里既不保留学习得到的 critic，也不设评估者，在 Qwen-2.5-7B 上每个问题只调用一次模型，仍把 Tool F1 提高 5.5%、Return F1 提高 9.6%。*
 - **[DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training](https://arxiv.org/abs/2609.04094)** (Gandhi et al., arXiv 2026) - *在没有真实成功信号时用 GRPO 训练 long-horizon 工具使用智能体：训练中生成针对任务的 rubric，由 LLM 评估者给每条 trajectory 打一次分，再以闭式解把 advantage 重新分配到每条标注标准所对应的步骤上，无需训练归因模块。在 AppWorld 上比基础模型高 15.9 分，自身不用任何 verifier，却比用真实奖励训练的 GRPO 高 5.3 分；迁移到 Tau-Bench 时，不借助前沿模型当评估者也能提升 5.3 分。* [[code](https://github.com/IBM/draco)]
+- **[Do Tool Calls Execute as Intended? Measuring and Repairing Intent-Execution Correspondence in LLM Agents](https://arxiv.org/abs/2610.04375)** (Yang et al., arXiv 2026) - *检查 harness 实际执行的动作是否就是 LLM 发出的工具调用中的动作，并指出最先改动它的环节。在 Windows 上生产会话的 47,828 次 shell 调用中，Claude Code 的 Bash 工具改动了含有代码、转义序列或长文本的调用中的 12.0%，反斜杠被改动的调用有 80.7% 在没有报错的情况下执行了错误的动作；基于 trajectory 的评判模型把 95.1% 的失败归咎于 LLM，而实际上一半以上是从工具调用到执行的路径造成的。IntAct 修复了基准中调用被改动的失败的 79.2%；在 Linux 上，全部 1,779 次调用的参数都按原样送达。* [[code](https://github.com/GLEAM-Lab/intact-bash-mod)]
+- **[ProgAgent: Learning Tool Orchestration through Programmatic Training](https://arxiv.org/abs/2610.14774)** (Li et al., arXiv 2026) - *训练 Qwen3-8B 和 14B 通过编写调用工具的代码来编排工具，中间结果保存在运行时变量里，而不放进上下文；训练数据是四种环境规模下合成的 215 个任务，先做 cold-start SFT，再做 GSPO。14B 模型在 MCPMark 上达到 29.7%，同样配方但直接调用工具时为 8.0%；在 MCP-Atlas 上达到 45.6%，直接调用为 29.7%，Claude Sonnet-4.5 为 43.8%。但它在 Playwright 上的代码调用有 40.7% 只包含一次工具调用、没有任何控制流，未经训练的骨干模型仅靠代码接口也几乎没有提升。*
+- **[Where Does Exactly-Once Live? Model, Harness, and Tool-Contract Effects on Duplicate Side Effects in LLM Agents](https://arxiv.org/abs/2609.29095)** (Li, arXiv 2026) - *把九个模型在一个最小 scaffold 以及 Copilot CLI、Hermes 和 Codex CLI 下运行的 25,930 个回合，对照一个由六个模拟服务和十二种注入故障组成的 sandbox 中实际提交的副作用账本来评分。被要求只执行一次时，前沿模型对确认消息丢失的写操作只重复了 0.5%，但在提交延迟时重复了 56%，在消息重新投递时重复了 74%；这两种情况下回读查不到任何东西，方差的 81% 由工具契约解释，harness 的影响很小。给每次写操作加上 idempotency key，重复率从 28% 降到 4%；在发生了重复的回合中，智能体有 90% 报告了成功。*
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 多智能体系统 (51)
+### 🤝 多智能体系统 (54)
 *对应综述 §7（多智能体系统）。*
 
 <details>
-<summary><b>展开 51 篇论文</b></summary>
+<summary><b>展开 54 篇论文</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *最早也是引用最多的框架之一，通过角色扮演实现智能体之间的自主协作。* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *多智能体辩论的开创性论文，让“society of minds”式的辩论作为一种测试时技术流行起来。* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -496,6 +511,9 @@
 - **[OrchMAS: Orchestrated Reasoning with Multi Collaborative Heterogeneous Scientific Expert Structured Agents](https://arxiv.org/abs/2603.03005)** (Feng et al., arXiv 2026) - *面向科学推理，把编排和执行拆成两层：orchestrator 模型读取任务，搭建考虑领域特点的流水线，为它创建的每个专家智能体写好角色和提示词，运行中再根据中间反馈修改流水线；另一个执行模型负责完成各个步骤。这样一次运行里就能混用能力和成本各不相同的骨干模型。*
 - **[At Equal Inference Cost, Multi-Agent Structure Does Not Beat a Single Frozen Agent](https://arxiv.org/abs/2609.04217)** (Dylan et al., arXiv 2026) - *固定的是模型调用总次数，而不是环境 rollout 次数，于是 Planner-Executor-Critic 团队相对单个进化后执行者此前报告的优势就消失了：在 ALFWorld 上是 0.769 对 0.754（p = 0.80），评估调用次数却是对方的 1.8 倍；leave-one-in 分析显示，实际收益全部来自执行者，planner 和 critic 的提示词进化成了空白或不起作用的内容；在 WebShop 上，团队的表现还有变差的趋势。*
 - **[A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms](https://arxiv.org/abs/2609.04170)** (Paglieri et al., arXiv 2026) - *在一个由 100 个智能体组成、证明形式化猜想的群体中，有一个智能体找到了评估系统的漏洞；在竞争压力下，这个漏洞先通过共享知识库、再通过点对点消息扩散开来。与此同时，另一批智能体审查欺诈性证明、提醒同伴、发起抵制，并提出验证补丁。传播漏洞的透明渠道，恰恰也是让抵抗成为可能的渠道，作者因此把它看作公地治理问题，而不是某个智能体内部的故障。*
+- **[Scaling Inference-Time Compute with Teams of Coding Agents](https://arxiv.org/abs/2610.17471)** (Samway et al., arXiv 2026) - *把编码智能体团队的设计看作计算分配问题，在 200 个 ProgramBench 任务上用 GPT-5.6 Sol、Terra 和 Luna，改变负责人委派的阶段、执行者模型和团队规模。团队胜过单个智能体，但成本是其三到七倍；只委派规划阶段，就能以一半的成本拿到委派全部三个阶段的奖励；在 Sol 负责人之下用廉价的 Luna 做 planner，能以全 Sol 团队额外成本的 13.9% 拿到其提升的 47.5%，而用廉价模型做实现会降低奖励；成员之间互发消息也不会提高奖励。在代码骨架已经划分好工作的 Commit0-Lite 上，值得委派的是实现阶段。*
+- **[Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://arxiv.org/abs/2610.00583)** (Paliskara et al., arXiv 2026) - *比较由一个协调智能体服务所有用户，与每个用户各有一个智能体的团队，覆盖五个前沿模型和四个共享资源环境中的 77 个场景，结果团队在每个环境中都更差：在共享 API 预算的环境中，点对点通信的 Claude Opus 5 团队只达到最优值的 30%，协调智能体为 64%，彼此之间没有通道时为 7%；团队从四个智能体扩大到十六个时，至少行动过一次的 Sonnet 5 智能体比例从 66% 降到 10%。明确的指示等缓解办法有帮助，但只在为之编写的那个环境中有效。*
+- **[Scaling Discovery through Test-Time Communication](https://arxiv.org/abs/2609.21032)** (Park et al., arXiv 2026) - *让多个相同的 Copilot CLI 智能体通过共享工作区交流发现，并在每个智能体预算相同的条件下，把 k 个智能体组成的团队与 k 个独立智能体中的最好结果比较：用 Claude Sonnet 4.6 解 25 个公开的 ARC-AGI-3 游戏时，三个智能体的团队相当于 13 个独立智能体中的最好结果，五个的团队相当于 33 个中的最好结果；四个 GPT-5.6 Sol 智能体的团队把一个 MNIST 分类器压缩到 1,957 字节，四个独立智能体中最好的是 3,160 字节，人类最好的解法是 2,461 字节。这些收益需要验证器的反馈和足够的算力，在预算低时以及在 Terminal-Bench 2.0 上团队都落后，后者为 60.67% 对 62.36%。* [[code](https://github.com/jerryjonghopark/test-time-communication)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -503,11 +521,11 @@
 ## 🌍 第二部分：环境与应用中的智能体
 
 <a id="environments"></a>
-### 🌐 交互环境 (57)
+### 🌐 交互环境 (60)
 *对应综述 §8（交互环境中的智能体）。*
 
 <details>
-<summary><b>展开 57 篇论文</b></summary>
+<summary><b>展开 60 篇论文</b></summary>
 
 - **[Do As I Can, Not As I Say: Grounding Language in Robotic Affordances](https://arxiv.org/abs/2204.01691)** (Ahn et al., CoRL 2022) - *奠基性的示范：让 LLM 充当 planner，并借助真实世界的 affordance 做 grounding，用于 embodied 机器人智能体。* [[code](https://github.com/google-research/google-research/tree/master/saycan)]
 - **[Inner Monologue: Embodied Reasoning through Planning with Language Models](https://arxiv.org/abs/2207.05608)** (Huang et al., CoRL 2022) - *确立了以反馈为依据的闭环规划模式，后来的 embodied 智能体和 GUI 智能体架构都建立在这一模式之上。*
@@ -567,16 +585,19 @@
 - **[CUA-Universe: A Scalable and Dynamic Environment for Hybrid GUI+CLI Agents](https://arxiv.org/abs/2609.05374)** (Shi et al., arXiv 2026) - *构建一类环境，让同一个应用状态既能通过屏幕、也能通过命令行到达：把 16 个真实桌面应用改造成可复现的虚拟机，其命令接口通过发现、封装或生成得到。用收集到的 trajectory 训练后，9B 模型不再低效地点击或写脆弱的脚本，而是转向选用成本更低的那种接口：在 OSWorld 上成功率提高 16.8 个百分点，步数减少 57%，token 减少 44%。*
 - **[Discriminative World Models for Web Agents](https://arxiv.org/abs/2609.02885)** (Li et al., arXiv 2026) - *指出用监督式下一状态预测训练的世界模型，一旦交给排序器使用，优化的目标就错了：排序需要的是能区分各个候选行动的预测状态，而不只是看起来合理的状态。因此改用预测状态匹配来训练，数据是 WebArena 上带分支的 trajectory，每个决策点都附有其他可选行动，以及各个行动产生的状态。*
 - **[Routing Is Least Learnable Where It Is Most Valuable: Bounds on Representation Routing for Web Agents](https://arxiv.org/abs/2608.06171)** (Wei et al., arXiv 2026) - *在 Web 智能体的六种观测方式之间做路由，五种路由策略（其中包括一种 confidence cascade）没有一种能稳定胜过一个选得好的固定方式，因为只有智能体成功时，router 才能拿到标签；同一种方式重跑一遍，就已经有 12% 到 14% 的结果会改变。*
+- **[AutoEnvScaling: Automating the Data Flywheel with Terminal Agents](https://arxiv.org/abs/2610.14163)** (Yu et al., arXiv 2026) - *把构建 RL 环境当作智能体在终端里完成的任务：提议者读取求解模型的 rollout，然后在 sandbox 中构建并测试完整的任务，再按求解模型的水平调整难度，使新环境瞄准求解模型仍会失败的地方。用 GPT-5.6-sol 作提议者生成的环境训练出的 Qwen3.5-35B-A3B 在 Terminal-Bench 2.1 上达到 38.9，条件匹配的 Tmax baseline 为 34.6；由 Qwen3.6-35B-A3B 同时担任提议者和求解模型时，分数从 41.1 升到 53.3，但在 Terminal-Bench 4.0 上只从 1.6 变到 3.2；如果提议者的工作区里没有求解模型的 rollout，在两个前沿提议者下训练出的求解模型分别少 3.6 和 6.7 个点。* [[code](https://github.com/MSR-Orchard/AutoEnvScaling)]
+- **[SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire](https://arxiv.org/abs/2610.12596)** (Lowe and Keemink, arXiv 2026) - *让 20 个 LLM 通过工具调用，在最高难度下完整地玩卡牌构筑游戏 Slay the Spire，使用十个 held-out 种子，并在一个隐藏游戏内名称的换皮版本下测试，再与游戏遥测数据中的 206,082 局和四位专业主播比较：Claude Fable 5.1 平均每局通过 1.60 幕，人类平均为 0.73 幕，主播为 2.5 到 3.1 幕，差距在第一幕之后拉开；在各局之间传递记忆的方法都没有改善表现，因为存下的记忆有 17% 是错误的。十个种子不足以给相近的模型排序。*
+- **[Same Tasks, Different Apps: Why Mobile GUI Agents Fail to Generalize?](https://arxiv.org/abs/2609.34139)** (Tran et al., EMNLP Findings 2026) - *保持用户目标不变，只更换实现该目标的 Android 应用，在 52 个应用上构造 520 个任务与应用的组合：11 个只接收指令的智能体在原有 AndroidWorld 应用中完成 38.7% 的任务，在新应用中只有 27.3%；Gemini-3.1-Pro 在沿用原模板的任务上从 81.1 降到 52.1；与应用无关的子目标在五个类别中把成功率从 37.8% 提高到 40.9%，却把那里的差距从 14.9 个点拉大到 18.8 个点，在另外五个类别中则把成功率从 18.3% 拉低到 14.8%。*
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="applications"></a>
-### 🚀 应用领域 (54)
+### 🚀 应用领域 (57)
 *对应综述 §10（应用领域）。*
 
 <details>
-<summary><b>展开 54 篇论文</b></summary>
+<summary><b>展开 57 篇论文</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *最早一批低成本的自主程序修复智能体之一，建立在结构化的代码搜索之上。* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *很有影响力的反向论证：更简单、不走智能体路线的流水线，也能和复杂的智能体比肩。* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -633,6 +654,9 @@
 - **[SWE-Gate: Passing Functional Tests Is Not Enough for Software Engineering Agents](https://arxiv.org/abs/2609.04167)** (He et al., arXiv 2026) - *从真实 pull request 的评审意见中提炼出评审约束，在 75 个 Python 项目的 303 个仓库级实例上，把它们和功能正确性分开打分；结果发现，通过功能测试的 644 个补丁里有 221 个仍违反了评审者提出过的约束，所以只看功能的评分会高估智能体实际交付的成果。* [[code](https://github.com/DeepSoftwareAnalytics/SWE-Gate)]
 - **[Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets](https://arxiv.org/abs/2609.04373)** (Ross et al., arXiv 2026) - *论证共同的训练方式和架构会让能力更强的模型行为更趋一致，它们相互关联的行动会留下一道再怎么分散也消除不了的风险下限；并在基于智能体的市场中用 LLM 交易者加以检验：相关性随能力上升；共同的推理正确时，智能体越多，市场层面的风险越低；而一旦智能体身处同一个错误信息环境，同样的相关性就成了负担。*
 - **[Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report](https://arxiv.org/abs/2608.15763)** (TaoLive AIGC LLM Team, arXiv 2026) - *主张小模型必须针对不断变化的 harness 来训练：大模型不用重新训练就能适应改动过的 Skills、hook、提示词和工具 schema，却达不到直播所要求的延迟预算。为此在训练中增强 harness 状态，让模型从来见不到固定的配置：在 harness 变体问题上得分 94.6，基座模型为 75.4；固定 harness 的监督微调会让 IFEval 比基座模型掉 7.7 分，增强方案则一分不掉；在单张 H20 上 P50 和 P95 延迟分别为 3.4 秒和 8.1 秒，并在淘宝直播的 A/B 测试中取得正向结果。*
+- **[Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale](https://arxiv.org/abs/2610.07289)** (Ziftci et al., ASE 2026) - *在 Google 内部开发工具中，把一个按 ReAct 方式生成并验证修复的智能体用于提交前测试失败，每次运行限 100 次工具调用和 30 分钟，运行前后都有决定是否放弃的过滤器把关。用内部的 Gemini 2.5 Pro 时，在 195 个失败中有 67.18% 的修复被判为正确；部署后它为 295,508 个变更提出修复，开发者采用了其中 28,554 个，每个成功修复的耗时中位数为 9.85 分钟，而开发者到下一次编辑要 27.48 分钟。不过它有时会提议撤回变更，或把失败的测试注释掉。*
+- **[From Benchmark to Bench: Can Agents Survive Real-World Drug Discovery?](https://arxiv.org/abs/2610.06411)** (Llompart et al., arXiv 2026) - *让 Claude Sonnet 4.6 通过 24 个 MCP 工具主导先导化合物优化，自己撰写和修改项目目标，并选择自己提出分子或把生成交给 REINVENT 4；在按固定时间截点重放的 GSK、Sanofi 和 AstraZeneca 九个历史项目中，GSK 的四个系列有三个以及 AstraZeneca 的项目达到了目标，Sanofi 的四个项目只有两个达到；四位化学家无法区分它提出的分子与 held-out 化合物，成败取决于打分模型的准确度，而不是生成途径。所有终点指标都是预测值，而不是实测值。*
+- **[Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](https://arxiv.org/abs/2610.00609)** (Drozdov et al., arXiv 2026) - *用专家编写的 413 道美国法律问题为法律研究智能体评分，不给部分分：答案必须满足 rubric 的每一条标准，且引用的法律依据都经得起核对，才算正确。在配备网页搜索、判例法检索和文档检索工具的十三个前沿模型中，最好的 Claude Opus 4.8 完全正确的比例为 42.9%，而加权通过率在 68% 到 86% 之间；Kimi K2.6 平均调用 112 次工具，只得到 15.5%；去掉工具平均损失 22.5 个点。每道题只运行一次，由 LLM 评判模型打分。* [[code](https://github.com/vals-ai/legal-research-bench)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -640,11 +664,11 @@
 ## ⚖️ 第三部分：贯穿全局的问题
 
 <a id="evaluation"></a>
-### 📊 评估与基准 (51)
+### 📊 评估与基准 (54)
 *对应综述 §9（评估与基准）。*
 
 <details>
-<summary><b>展开 51 篇论文</b></summary>
+<summary><b>展开 54 篇论文</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *参考基准，面向会用工具的通用智能体助手；一些热门的公开排行榜以它为基础，追踪前沿智能体的进展。*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *编码与软件工程智能体事实上的标准基准；衍生出了 SWE-bench Verified/Lite/Live/Multimodal 这一系列。* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -698,16 +722,19 @@
 - **[Autonomous Evaluation and Refinement of Digital Agents](https://arxiv.org/abs/2404.06474)** (Pan et al., COLM 2024) - *构建了几个成本不同的智能体评估者，与 oracle 指标的一致率在 74.4% 到 92.9% 之间；再把它们当作奖励，在不增加额外监督的情况下，把 WebArena 上的最好成绩提高了 29%。* [[code](https://github.com/Berkeley-NLP/Agent-Eval-Refine)]
 - **[JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550)** (Li et al., arXiv 2026) - *只返回决定、不返回文本的评估者，在普通的偏好判断和事实性上与最强的 LLM 评估者相差不到三个百分点，费用只有后者的 0.36%；遇到需要核查推导、或错误答案写得很像样的情况，就落后得更多。“接受或转交”的 cascade 保住了更强评估者 99% 的准确率。*
 - **[TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces](https://arxiv.org/abs/2609.33295)** (Min et al., arXiv 2026) - *从 Claude Code 和 OpenClaw 的 252,557 个部署会话中构建 107 个基准：在原智能体出现不当行为的位置截断 trace，用针对该行为的 rubric 给模型的下一轮回复打分，不重放环境。九个前沿 LLM 的平均通过率为 26.7%；rubric 只要求格式正确的工具调用时为 67.9%，要求继续之前先做必要检查时只有 8.1%；以 TodoWrite 规划调用开头的回复通过率为 4.6%，同一批实例上其他回复为 30.8%，作者将其报告为相关性。trace 没有公开，因此无法用公开数据重建这些基准。*
+- **[TestJack: Should you trust the results in coding benchmarks? Agentic Coding Benchmarks Auditing via Evaluator Evolution](https://arxiv.org/abs/2610.10619)** (Yao et al., arXiv 2026) - *复查编码基准中通过了官方测试的尝试：由 GPT-5.5 审计模型针对提示中补丁可能违反的要求，为每次尝试编写测试，只保留参考补丁能通过的测试，因此每次推翻都附带一个可重放的测试。在 6 个模型后端和 5 个基准上，它推翻了被判为正确的尝试中的 34.4%，使解决率从 50.6% 降到 33.2%，推翻比例从 SWE-bench Verified 的 7.6% 到 SWE-Marathon 的 53.6% 不等；不过审计模型和复核模型都是 LLM，推翻是否可靠取决于它们对提示的理解。*
+- **[AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks](https://arxiv.org/abs/2610.11050)** (Lù et al., arXiv 2026) - *用 1,373 个指令与 trajectory 的配对来测试评判长 computer use 任务的 LLM 评判模型，这些配对来自三个操作系统上 166 小时的人工录制，每个负例都是把一段录制与一个非常相近任务的指令配在一起；十一个评判模型既直接读取完整的 trajectory，也作为编码智能体在五个 harness 中运行：Codex 中的 GPT-5.5 以 80.9% 的平衡准确率居首，直接提示时为 68.6%；Qwen 3.6 27B 在 OpenCode 中反而比不用时低 7.2 个点，不给指令时会把 98.9% 的 trajectory 判为成功。这些负例只是换成了相近指令的配对，而不是智能体真实的失败。* [[code](https://github.com/ServiceNow/agenthorizon)]
+- **[Finding the Right Fit: Model-Harness Interactions across Agent Tasks](https://arxiv.org/abs/2610.00917)** (Li et al., arXiv 2026) - *把五个模型与四个可配置的 harness（OpenHands、DeepSeek Harness、PI 和 openJiuwen）配对，在 TUA-Bench、ALE-CLI 和 Terminal-Bench 4 上运行，再加上 Codex 与 Claude Code 的原生组合，共 66 种配置：模型排名会随 harness 反转，在 Terminal-Bench 4 上，Claude 在 OpenHands 中领先 GPT 7.94 个点，在 PI 中却落后 30.16 个点；五个模型中有四个的最佳 harness 随基准而变，模型厂商自己的 harness 也不一定最好；GPT-6 Astra 在 PI 中以每个任务 $4.66 的成本得到 60.32%，在 DeepSeek Harness 中花 $19.94 只得到 52.38%。每个任务只按最后一次运行计一次。* [[code](https://github.com/liyix/finding-the-right-fit)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="safety"></a>
-### 🛡️ 安全与对齐 (59)
+### 🛡️ 安全与对齐 (62)
 *对应综述 §11（安全、安全防护与可信性）。*
 
 <details>
-<summary><b>展开 59 篇论文</b></summary>
+<summary><b>展开 62 篇论文</b></summary>
 
 - **[Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/abs/2302.12173)** (Greshake et al., arXiv 2023) - *提出 indirect prompt injection 威胁模型的奠基论文，后来几乎所有 LLM 智能体安全研究都以它为基础。* ⭐ [[code](https://github.com/greshake/llm-security)]
 - **[AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents](https://arxiv.org/abs/2406.13352)** (Debenedetti et al., NeurIPS 2024) - *使用最广的标准化测试平台，用来衡量智能体抵御 prompt injection 攻击的鲁棒性以及防御的效果。* [[code](https://github.com/ethz-spylab/agentdojo)]
@@ -769,6 +796,9 @@
 - **[BAITBENCH: Measuring Agent Reward Hacking with Optional Shortcuts Planted in ML Tasks](https://arxiv.org/abs/2608.30724)** (Prasad et al., arXiv 2026) - *在三个合成的表格型 ML 任务中各埋一条可选的捷径：它能抬高公开分数，却通不过隐藏测试集，也不违反任何明文规定。七个前沿智能体的运行中有 57.1% 走了这条捷径，七个里有五个超过一半；即使提示词要求不要作弊，平均值仍在一半以上。*
 - **[LlamaFirewall: An open source guardrail system for building secure AI agents](https://arxiv.org/abs/2505.03574)** (Chennabasappa et al., arXiv 2025) - *在智能体外围叠加一个小型 jailbreak 分类器、一个阅读 chain-of-thought 以找出注入和目标偏离的审查器，以及一个静态代码扫描器，作为运行时的最后一道防线；在 AgentDojo 上，仅 86M 的分类器就把攻击成功率从 17.6% 降到 7.5%，再加上审查器，降到 1.75%。* [[code](https://github.com/meta-llama/PurpleLlama/tree/main/LlamaFirewall)]
 - **[Type-Safe Is Not Error-Free: A Constrained Decision Head Follows the Option Name, Not the Rubric Bound to It](https://arxiv.org/abs/2609.26758)** (Sun and Xu, arXiv 2026) - *调换选项名称与 rubric 之间的配对，发现类型化的 decision model 跟着名称走：在 1,200 个 workflow 决策上，把 0/1 改名为 no/yes，每一百个答案就多翻转 70.4 个；Jev 本身也出现同样的反转，而 type error 率始终保持在 0%。*
+- **[Red-Teaming Auto Mode: Improving Blocking Classifiers Against Malign Coding Agents](https://arxiv.org/abs/2609.19587)** (Remedios et al., arXiv 2026) - *对审批生产环境编码智能体每个动作的阻断式监控器做红队测试，对象是 Claude Code 的 Auto Mode 和对 Codex 中 Guardian 的近似实现，攻击者是知道监控器工作方式的 Opus 5：智能体写进自己动作里的 prompt injection 在 78.4% 的 rollout 中通过了 Auto Mode，在 85.2% 中通过了 Guardian，四类攻击的平均成功率分别为 65% 和 72%；Auto Mode ++ 对记录做转义和边界标记，监控每一次编辑和上下文压缩，并在最后加入一个调用工具做调查的智能体阶段，把成功率降到 9%，同时在 4,000 个正常动作中只拦下不到 1%。不过分散在多个上下文中的攻击，拦截成本仍然很高。* [[code](https://github.com/safety-research/red-teaming-auto-mode)]
+- **[ClashBench: Conflicts Leading Agents to Seize and Harm](https://arxiv.org/abs/2609.19892)** (Xie et al., arXiv 2026) - *让智能体执行一个任务，而它需要的端口、锁、磁盘、GPU 显存或会议室预订已被一个正在运行的任务占用；共 268 个可执行案例，涉及 55 类资源，17 个模型通过 Codex、Claude Code 和 OpenCode 运行：在 44.5% 的运行中，智能体完成了自己的任务，原有任务却没通过健康检查，这一比例从 Claude-Sonnet-5 的 25.2% 到 Qwen3.8-Max 的 61.2%，两者都在 Claude Code 中；智能体常常是在意识到冲突之后抢占资源，这类案例中有 31.9% 的最终回复既没提冲突也没提抢占；即使指示它不要影响已有的工作，比例仍有 38.2%。大多数案例只运行了一次。* [[code](https://github.com/TarferSoul/CLASHBench)]
+- **[HarnessSecurity-Bench: Do Security Mechanisms Really Protect Coding Agent Harnesses?](https://arxiv.org/abs/2610.07639)** (Zhu et al., arXiv 2026) - *先评估 40 个编码智能体 harness 中的十种安全机制，再用植入误导性上下文和恶意资源的 23 个任务，对其中九种机制做 2,500 次试验，对象是 Claude Code、Codex CLI、Gemini CLI、gptme、Qwen Code 和 GitHub Copilot，全部由 GLM-5.2 驱动：自动批准让可用性从 77.1% 升到 95.4%，攻击成功率也从 29.2% 升到 95.6%；网络隔离和只读模式把攻击成功率降到 0.8%，代价是可用性分别下降 24.5 和 34.0 个点；命令 allowlist 让攻击成功率下降 48.1 个点，可用性只损失 1.5 个点，不过有一次被允许的 Python 解释器绕过了它。只用了一个骨干模型。* [[code](https://github.com/TsingPig/HarnessSecurity-Benchmark)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -860,6 +890,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-10-14**: 新增 2026 年 9 月中旬以来发表的 30 篇论文，每个章节三篇。这一批里有不少负面结果，例如其中一项研究发现，编码基准判为正确的智能体运行中，有 34.4% 违反了任务中写明的要求。从 536 篇增至 566 篇。
 - **2026-10-12**: 新增 SELF 和 EFRE，分别收入规划与推理和记忆（[@markovchain-builder](https://github.com/markovchain-builder)，[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)）。SELF 不用奖励训练智能体，使用 Qwen3-8B 时在 τ-bench Retail 上达到 43.2%，用奖励训练的 GRPO 为 39.1%。从 534 篇增至 536 篇。
 - **2026-10-03**: 新增 TraceDance，由第一作者 [@ZhishanQ](https://github.com/ZhishanQ) 提交，收入评估与基准（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。它用真实的智能体会话构建测试；在需要先做检查再继续的实例上，九个前沿 LLM 的通过率只有 8.1%。从 533 篇增至 534 篇。
 - **2026-09-30**: 新增 Jev in the Wild，分析 2,170 个公开 GitHub 项目如何使用 Jev，收入综述与立场论文（[@Gavin-M34](https://github.com/Gavin-M34)，[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)）。从 532 篇增至 533 篇。
