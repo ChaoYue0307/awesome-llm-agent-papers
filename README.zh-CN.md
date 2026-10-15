@@ -96,12 +96,12 @@
 - [🔥 值得关注的 10 篇 (2026)](#to-watch)
 - **🧭 背景**
   - [📚 综述与立场论文 (61)](#surveys)
-  - [🏗️ 智能体架构与框架 (55)](#architectures)
+  - [🏗️ 智能体架构与框架 (54)](#architectures)
 - **🧱 第一部分：核心组成**
   - [🧠 规划与推理 (55)](#planning)
   - [💾 记忆 (60)](#memory)
   - [🔧 工具使用 (49)](#tools)
-  - [🤝 多智能体系统 (56)](#multi-agent)
+  - [🤝 多智能体系统 (57)](#multi-agent)
 - **🌍 第二部分：环境与应用中的智能体**
   - [🌐 交互环境 (60)](#environments)
   - [🚀 应用领域 (57)](#applications)
@@ -185,11 +185,11 @@
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ 智能体架构与框架 (55)
+### 🏗️ 智能体架构与框架 (54)
 *对应综述 §2（背景）以及贯穿全文的示例。*
 
 <details>
-<summary><b>展开 55 篇论文</b></summary>
+<summary><b>展开 54 篇论文</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *AutoGPT 自主智能体设计模式影响广泛，却没有对应的论文；这是针对它的唯一一项接近同行评审水准的实证研究。* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *在异构环境中衡量单智能体通用能力的标准参考基准。* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -246,7 +246,6 @@
 - **[What Does a Harness Buy? Tokens, Mostly](https://arxiv.org/abs/2610.04433)** (Liu and Han, arXiv 2026) - *让五个模型分别在 Claude Code、mini-SWE-agent 和 OpenCode 中运行 SWE-bench Verified，并把每种配置重跑一遍来度量运行之间的噪声。在 447 个任务上，Claude Code 与 mini-SWE-agent 在这里运行的两个 Qwen 模型上都在 5 个点以内等效；在最难的 45 个任务上，换一个 harness 会让 13% 的任务结果翻转，与重跑一次的比例相同；唯一超出噪声的效应是 OpenCode 最多落后 9 个点。每个任务的成本则最多相差三倍，差距由固定的前置提示决定：Claude Code 为 16k token，mini-SWE-agent 不到一千。只用了一个基准。* [[code](https://github.com/YangzeLiu/what-does-a-harness-buy)]
 - **[When Sub-Agents Work in Parallel: The Promises and Pitfalls of Dynamic Concurrency in Long-Horizon Coding Tasks](https://arxiv.org/abs/2610.10263)** (Li et al., arXiv 2026) - *在 354 个编码任务上开关 Codex（GPT-5.4）、Claude Code（Claude Opus 5）和 Kimi Code（Kimi K3）内置的动态并发，即由主智能体在运行时决定是否派生并行的子智能体。通过率的变化介于下降 11.9 个点和上升 2.3 个点之间，token 用量增至 1.41 到 3.31 倍；Claude Code 在 SWE-bench Verified 上从 83.0% 降到 59.0%，在 long-horizon 的 LoopsBench 上却从 7.1% 升到 21.4%；在标注的 804 个失败中，33.2% 是共享状态和合并问题。每种配置在每个任务上只运行一次。*
 - **[Ask Your Advisor: Learning When to Consult Stronger Models in Agentic Systems](https://arxiv.org/abs/2610.13870)** (Sowietzki et al., arXiv 2026) - *学习廉价的执行模型何时该向更强的顾问模型求助：在 workflow 的每个接触点，根据精简的状态抽象选择保持沉默或求助，并在扣除成本的结果上用 Monte Carlo 控制来学习。在 Magentic-One 上由 gemini-3-flash-preview 执行、gemini-3.1-pro-preview 提供建议时，它在 SWE-bench Verified-Mini 上花 $22.09 达到 48.0%，只用执行模型为 18.0%，只用顾问模型则花 $45.90 达到 62.0%；它胜过 RouteLLM（$25.03 下 30.0%）和求助次数相近的随机方式（28.0%），但在 Terminal-Bench 上只与一个启发式方法持平，都是 34.7%。实验只用了一对模型、一个框架和 50 个任务的测试集。* [[code](https://github.com/Pasl4/ARIA)]
-- **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *开源的多智能体辩论框架，提供由 persona、回复生成器、讨论范式和决策协议组合而成的 144 种以上配置，并附带评估流程。* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -454,11 +453,11 @@
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 多智能体系统 (56)
+### 🤝 多智能体系统 (57)
 *对应综述 §7（多智能体系统）。*
 
 <details>
-<summary><b>展开 56 篇论文</b></summary>
+<summary><b>展开 57 篇论文</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *最早也是引用最多的框架之一，通过角色扮演实现智能体之间的自主协作。* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *多智能体辩论的开创性论文，让“society of minds”式的辩论作为一种测试时技术流行起来。* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -491,7 +490,7 @@
 - **[Who Broke the System? Failure Localization in LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2607.07989)** (Xia et al., arXiv 2026) - *定位是哪个智能体搞砸了一次多智能体运行。这是调试的前提，整体成功率却会把它掩盖掉。*
 - **[When is Routing Meaningful? Diversity and Robustness in Language Model Societies](https://arxiv.org/abs/2607.09197)** (Huot et al., arXiv 2026) - *追问在一群模型之间做路由什么时候才有意义，多样性又在什么情况下带来鲁棒性而不是噪声。*
 - **[What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates](https://arxiv.org/abs/2607.02507)** (Ghaffarizadeh et al., arXiv 2026) - *观察没有听众时智能体会说些什么，揭示出任务指标捕捉不到的潜在目标和社会结构。*
-- **[Decision Protocols in Multi-Agent Large Language Model Conversations](https://arxiv.org/abs/2607.05477)** (Kaesberg et al., arXiv 2026) - *比较多智能体对话中的决策协议，把投票规则或共识规则当作一个设计变量。*
+- **[Decision Protocols in Multi-Agent Large Language Model Conversations](https://arxiv.org/abs/2607.05477)** (Kaesberg, arXiv 2026) - *比较多智能体对话中的决策协议，把投票规则或共识规则当作一个设计变量。*
 - **[The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break](https://arxiv.org/abs/2604.11978)** (Wang et al., arXiv 2026) - *诊断智能体系统在 long-horizon 任务上在哪里失败、为什么失败，并指出许多看似具备的 long-horizon 能力只是假象。*
 - **[GoAgent: Group-of-Agents Communication Topology Generation for LLM-based Multi-Agent Systems](https://arxiv.org/abs/2603.19677)** (Chen et al., arXiv 2026) - *以 group-of-agents 图的形式自动生成多智能体系统的 communication topology，而不是手工固定下来。*
 - **[Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces](https://arxiv.org/abs/2605.02801)** (Zhang et al., arXiv 2026) - *用强化学习，从编排 trace 出发 end-to-end 地训练多智能体系统。*
@@ -515,8 +514,9 @@
 - **[Scaling Inference-Time Compute with Teams of Coding Agents](https://arxiv.org/abs/2610.17471)** (Samway et al., arXiv 2026) - *把编码智能体团队的设计看作计算分配问题，在 200 个 ProgramBench 任务上用 GPT-5.6 Sol、Terra 和 Luna，改变负责人委派的阶段、执行者模型和团队规模。团队胜过单个智能体，但成本是其三到七倍；只委派规划阶段，就能以一半的成本拿到委派全部三个阶段的奖励；在 Sol 负责人之下用廉价的 Luna 做 planner，能以全 Sol 团队额外成本的 13.9% 拿到其提升的 47.5%，而用廉价模型做实现会降低奖励；成员之间互发消息也不会提高奖励。在代码骨架已经划分好工作的 Commit0-Lite 上，值得委派的是实现阶段。*
 - **[Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://arxiv.org/abs/2610.00583)** (Paliskara et al., arXiv 2026) - *比较由一个协调智能体服务所有用户，与每个用户各有一个智能体的团队，覆盖五个前沿模型和四个共享资源环境中的 77 个场景，结果团队在每个环境中都更差：在共享 API 预算的环境中，点对点通信的 Claude Opus 5 团队只达到最优值的 30%，协调智能体为 64%，彼此之间没有通道时为 7%；团队从四个智能体扩大到十六个时，至少行动过一次的 Sonnet 5 智能体比例从 66% 降到 10%。明确的指示等缓解办法有帮助，但只在为之编写的那个环境中有效。*
 - **[Scaling Discovery through Test-Time Communication](https://arxiv.org/abs/2609.21032)** (Park et al., arXiv 2026) - *让多个相同的 Copilot CLI 智能体通过共享工作区交流发现，并在每个智能体预算相同的条件下，把 k 个智能体组成的团队与 k 个独立智能体中的最好结果比较：用 Claude Sonnet 4.6 解 25 个公开的 ARC-AGI-3 游戏时，三个智能体的团队相当于 13 个独立智能体中的最好结果，五个的团队相当于 33 个中的最好结果；四个 GPT-5.6 Sol 智能体的团队把一个 MNIST 分类器压缩到 1,957 字节，四个独立智能体中最好的是 3,160 字节，人类最好的解法是 2,461 字节。这些收益需要验证器的反馈和足够的算力，在预算低时以及在 Terminal-Bench 2.0 上团队都落后，后者为 60.67% 对 62.36%。* [[code](https://github.com/jerryjonghopark/test-time-communication)]
-- **[Voting or Consensus? Decision-Making in Multi-Agent Debate](https://arxiv.org/abs/2502.19130)** (Kaesberg et al., ACL Findings 2025) - *在多智能体辩论中只改变决策协议：投票有助于推理任务（+13.2%），共识有助于知识任务（+2.8%）。* [[code](https://github.com/lkaesberg/decision-protocols)]
-- **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *定义了 problem drift，即辩论随轮次推进逐渐偏离任务，并提出用于检测它的 DRIFTJudge 和能缓解 31% 情况的 DRIFTPolicy。*
+- **[Voting or Consensus? Decision-Making in Multi-Agent Debate](https://arxiv.org/abs/2502.19130)** (Kaesberg et al., ACL Findings 2025) - *只改变三个 Llama 3 8B 智能体辩论中的决策协议，在三个知识任务和三个推理任务上比较四种投票规则和三种共识规则：在推理任务上，投票平均比共识高 13.2 个点，差距主要来自 MuSR 和 SQuAD 2.0，StrategyQA 上只差 0.2；在知识任务上，共识领先 2.8 个点，平均 1.42 轮就能做出决定，投票则需要 3.38 轮；赞同投票有 59% 的情况无法做出决定；在 StrategyQA 上，增加智能体有帮助，而在投票前增加轮数反而有害。作者提出的 Collective Improvement 让智能体只看到彼此上一轮的解答，在 StrategyQA 上提高了 7.4 个点。不过所有结果都基于数据集的子集，而且辩论的计算量是一次 chain-of-thought 回答的五到十倍。* [[code](https://github.com/lkaesberg/decision-protocols)]
+- **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *在十个任务上让三个 Llama-3.1-70B 智能体辩论七轮，每轮之后给答案打分，答案比之前某一轮差时就算出现了 problem drift：三个生成任务中有 74.6% 到 88.6% 的辩论发生 drift，知识和推理任务为 6.6% 到 15.5%；发生 drift 的辩论中只有 8.5% 到 45.4% 能恢复；八位专家阅读了 170 段发生 drift 的辩论摘录，标注最多的是缺乏进展（60 段）。不需要标准答案的检测器 DRIFTJudge 在 MMLU-Pro 上特异度为 0.92，精确率却只有 0.15。在 DRIFTJudge 标出的轮次调用反馈智能体 DRIFTPolicy，能让采用投票的 Qwen2-7B 智能体七轮后的准确率损失从 3.66 个点降到 0.08 个点，但在共识方式下无效，Llama-3.1-70B 用了它损失 4.08 个点，不用则损失 2.23 个点。* [[code](https://github.com/jonas-becker/problem-drift)]
+- **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *面向文本任务的开源多智能体辩论框架，在一个配置文件中分别设定智能体的 persona（无、专家、Big Five）、回应方式（简单、批判、推理）、讨论范式（memory、relay、report、debate）和决策协议（投票、共识或评估者），公开演示中共有 144 种组合；它可接入任何兼容 OpenAI 的端点，能加载 Hugging Face 上的任意文本数据集，并通过重复运行给出标准差。Voting or Consensus? 和 Stay Focused 都是在它上面做的实验，论文中的结果则转述自作者此前的研究，例如在 StrategyQA 上，消息全部可见的 memory 范式平均 1.75 轮达成一致，relay 需要 2.61 轮。* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -728,7 +728,7 @@
 - **[TestJack: Should you trust the results in coding benchmarks? Agentic Coding Benchmarks Auditing via Evaluator Evolution](https://arxiv.org/abs/2610.10619)** (Yao et al., arXiv 2026) - *复查编码基准中通过了官方测试的尝试：由 GPT-5.5 审计模型针对提示中补丁可能违反的要求，为每次尝试编写测试，只保留参考补丁能通过的测试，因此每次推翻都附带一个可重放的测试。在 6 个模型后端和 5 个基准上，它推翻了被判为正确的尝试中的 34.4%，使解决率从 50.6% 降到 33.2%，推翻比例从 SWE-bench Verified 的 7.6% 到 SWE-Marathon 的 53.6% 不等；不过审计模型和复核模型都是 LLM，推翻是否可靠取决于它们对提示的理解。*
 - **[AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks](https://arxiv.org/abs/2610.11050)** (Lù et al., arXiv 2026) - *用 1,373 个指令与 trajectory 的配对来测试评判长 computer use 任务的 LLM 评判模型，这些配对来自三个操作系统上 166 小时的人工录制，每个负例都是把一段录制与一个非常相近任务的指令配在一起；十一个评判模型既直接读取完整的 trajectory，也作为编码智能体在五个 harness 中运行：Codex 中的 GPT-5.5 以 80.9% 的平衡准确率居首，直接提示时为 68.6%；Qwen 3.6 27B 在 OpenCode 中反而比不用时低 7.2 个点，不给指令时会把 98.9% 的 trajectory 判为成功。这些负例只是换成了相近指令的配对，而不是智能体真实的失败。* [[code](https://github.com/ServiceNow/agenthorizon)]
 - **[Finding the Right Fit: Model-Harness Interactions across Agent Tasks](https://arxiv.org/abs/2610.00917)** (Li et al., arXiv 2026) - *把五个模型与四个可配置的 harness（OpenHands、DeepSeek Harness、PI 和 openJiuwen）配对，在 TUA-Bench、ALE-CLI 和 Terminal-Bench 4 上运行，再加上 Codex 与 Claude Code 的原生组合，共 66 种配置：模型排名会随 harness 反转，在 Terminal-Bench 4 上，Claude 在 OpenHands 中领先 GPT 7.94 个点，在 PI 中却落后 30.16 个点；五个模型中有四个的最佳 harness 随基准而变，模型厂商自己的 harness 也不一定最好；GPT-6 Astra 在 PI 中以每个任务 $4.66 的成本得到 60.32%，在 DeepSeek Harness 中花 $19.94 只得到 52.38%。每个任务只按最后一次运行计一次。* [[code](https://github.com/liyix/finding-the-right-fit)]
-- **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *将 2D 网格寻路变成逐步决策任务的 Gymnasium 环境；最佳模型解出 16.0%，人类为 98.0%。* [[code](https://github.com/lkaesberg/Spatial-Gym)]
+- **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *把带有七类相互作用的规则格的 2D 网格寻路变成一个 Gymnasium 任务，智能体从给出的合法走法中一步一步画出路径，可选择回退，并用 500 个谜题测试八个开放权重模型：最好的 GPT-OSS 120B 只解出 16.0%，人类为 98.0%，不顾规则、只找最短路径的智能体为 6.4%；逐步作答的形式消除了格式错误，让较弱的模型比一次性作答最多高 5.4 个点，却让较强的模型最多低 5.6 个点；允许回退后，GPT-OSS 的完成率从 85% 升到 94%，解题率却下降 5.8 个点；以图像形式拿到谜题的 Qwen3-VL-32B 只解出 2.8%，用文本时为 10.2%。没有测试任何专有模型。* [[code](https://github.com/lkaesberg/Spatial-Gym)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -862,10 +862,11 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
 
 <details>
-<summary><b>展开 16 位贡献者</b></summary>
+<summary><b>展开 17 位贡献者</b></summary>
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | Voting or Consensus?：辩论中的决策协议；Stay Focused：辩论中的 problem drift；MALLM：这两篇论文所用的辩论框架，三篇都收入多智能体系统；Spatial-Gym：检验智能体的逐步空间推理，收入评估与基准（[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。由作者之一提交 |
 | <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | SELF：不用奖励、凭环境反馈训练智能体，收入规划与推理；EFRE：为冻结 LLM 的持续学习维护一组提示，收入记忆（[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)） |
 | <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | TraceDance：用真实智能体部署 trace 构建基准，收入评估与基准（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。由第一作者本人提交 |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | Jev in the Wild：分析公开 GitHub 项目如何使用 Jev，收入综述与立场论文（[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)） |
@@ -894,6 +895,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-10-15**: 新增 Voting or Consensus?、Stay Focused 和 MALLM，收入多智能体系统，另有 Spatial-Gym 收入评估与基准，均由作者之一提交（[@lkaesberg](https://github.com/lkaesberg)，[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。在 Spatial-Gym 中，八个开放权重模型里最好的一个解出 16.0% 的网格谜题，人类为 98.0%。从 566 篇增至 570 篇。
 - **2026-10-14**: 新增 2026 年 9 月中旬以来发表的 30 篇论文，每个章节三篇。这一批里有不少负面结果，例如其中一项研究发现，编码基准判为正确的智能体运行中，有 34.4% 违反了任务中写明的要求。从 536 篇增至 566 篇。
 - **2026-10-12**: 新增 SELF 和 EFRE，分别收入规划与推理和记忆（[@markovchain-builder](https://github.com/markovchain-builder)，[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)）。SELF 不用奖励训练智能体，使用 Qwen3-8B 时在 τ-bench Retail 上达到 43.2%，用奖励训练的 GRPO 为 39.1%。从 534 篇增至 536 篇。
 - **2026-10-03**: 新增 TraceDance，由第一作者 [@ZhishanQ](https://github.com/ZhishanQ) 提交，收入评估与基准（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。它用真实的智能体会话构建测试；在需要先做检查再继续的实例上，九个前沿 LLM 的通过率只有 8.1%。从 533 篇增至 534 篇。

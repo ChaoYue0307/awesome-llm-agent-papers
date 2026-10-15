@@ -96,12 +96,12 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - [🔥 注目の10本 (2026)](#to-watch)
 - **🧭 背景**
   - [📚 サーベイとポジションペーパー (61)](#surveys)
-  - [🏗️ エージェントのアーキテクチャとフレームワーク (55)](#architectures)
+  - [🏗️ エージェントのアーキテクチャとフレームワーク (54)](#architectures)
 - **🧱 第1部：中核となる構成要素**
   - [🧠 計画と推論 (55)](#planning)
   - [💾 メモリ (60)](#memory)
   - [🔧 ツール利用 (49)](#tools)
-  - [🤝 マルチエージェントシステム (56)](#multi-agent)
+  - [🤝 マルチエージェントシステム (57)](#multi-agent)
 - **🌍 第2部：環境と応用のなかのエージェント**
   - [🌐 インタラクティブ環境 (60)](#environments)
   - [🚀 応用分野 (57)](#applications)
@@ -185,11 +185,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ エージェントのアーキテクチャとフレームワーク (55)
+### 🏗️ エージェントのアーキテクチャとフレームワーク (54)
 *サーベイの§2（背景）と、全体を通して使う例に対応します。*
 
 <details>
-<summary><b>55本の論文を表示</b></summary>
+<summary><b>54本の論文を表示</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *影響力は大きいのに論文のなかったAutoGPT型の自律エージェントの設計パターンを、査読に近い水準で実証的に調べた唯一の研究。* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *種類の異なる環境にまたがって、単一エージェントの汎用的な能力を測るための標準的なベンチマーク。* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -246,7 +246,6 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[What Does a Harness Buy? Tokens, Mostly](https://arxiv.org/abs/2610.04433)** (Liu and Han, arXiv 2026) - *五つのモデルをClaude Code、mini-SWE-agent、OpenCodeでそれぞれ動かしてSWE-bench Verifiedを解かせ、同じ設定を再実行して実行ごとのノイズの大きさを測る。447 件のタスクでは、ここで動かした二つのQwenモデルのどちらでも、Claude Codeとmini-SWE-agentは 5 ポイント以内で同等だった。最も難しい 45 件では、harnessを替えるとタスクの 13% で結果が入れ替わり、これは再実行したときと同じ割合である。ノイズを上回った効果は、OpenCodeが最大 9 ポイント下回ったことだけだった。一方、タスクあたりのコストは最大で三倍違い、その差は固定の前置きプロンプトの大きさで決まる。Claude Codeでは 16k トークン、mini-SWE-agentでは千トークン未満である。ベンチマークは一つだけである。* [[code](https://github.com/YangzeLiu/what-does-a-harness-buy)]
 - **[When Sub-Agents Work in Parallel: The Promises and Pitfalls of Dynamic Concurrency in Long-Horizon Coding Tasks](https://arxiv.org/abs/2610.10263)** (Li et al., arXiv 2026) - *Codex（GPT-5.4）、Claude Code（Claude Opus 5）、Kimi Code（Kimi K3）に組み込まれた動的な並行実行、つまりメインのエージェントが実行中に並列のサブエージェントを起動するかどうかを自分で決める機能を、354 件のコーディングタスクでオンとオフに切り替えて比べる。合格率は 11.9 ポイントの低下から 2.3 ポイントの上昇までの幅で動き、トークン使用量は 1.41 倍から 3.31 倍に増えた。Claude CodeはSWE-bench Verifiedで 83.0% から 59.0% に下がったが、long-horizonのLoopsBenchでは 7.1% から 21.4% に上がった。注釈をつけた 804 件の失敗のうち 33.2% は、共有状態とマージの問題だった。各設定はタスクごとに一回しか実行していない。*
 - **[Ask Your Advisor: Learning When to Consult Stronger Models in Agentic Systems](https://arxiv.org/abs/2610.13870)** (Sowietzki et al., arXiv 2026) - *安い実行モデルがいつ強い助言モデルに相談すべきかを学習する。workflowの各接点で、簡潔な状態抽象をもとに黙るか相談するかを選び、コストを差し引いた結果に対するMonte Carlo制御で学習する。Magentic-Oneでgemini-3-flash-previewが実行し、gemini-3.1-pro-previewが助言する設定では、SWE-bench Verified-Miniで $22.09 をかけて 48.0% に達し、実行モデルだけでは 18.0%、助言モデルだけでは $45.90 で 62.0% だった。RouteLLM（$25.03 で 30.0%）や、同程度の回数で無作為に相談する方法（28.0%）を上回ったが、Terminal-Benchではヒューリスティックと同じ 34.7% にとどまった。モデルの組は一つ、フレームワークも一つで、テストセットは 50 タスクである。* [[code](https://github.com/Pasl4/ARIA)]
-- **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *persona、応答生成器、議論のパラダイム、意思決定プロトコルを組み合わせた 144 通り以上の構成と評価パイプラインを備えた、オープンソースのマルチエージェント討論フレームワーク。* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -454,11 +453,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 マルチエージェントシステム (56)
+### 🤝 マルチエージェントシステム (57)
 *サーベイの§7（マルチエージェントシステム）に対応します。*
 
 <details>
-<summary><b>56本の論文を表示</b></summary>
+<summary><b>57本の論文を表示</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *ロールプレイを通じたエージェント同士の自律的な協力を確立した、最も早く、最も引用されているフレームワークの一つである。* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *「society of minds」風の討論をテスト時の手法として広めた、マルチエージェント討論の先駆的な論文。* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -491,7 +490,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Who Broke the System? Failure Localization in LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2607.07989)** (Xia et al., arXiv 2026) - *マルチエージェントの実行をどのエージェントが壊したのかを特定する。全体の成功率には表れない、デバッグの前提となる情報である。*
 - **[When is Routing Meaningful? Diversity and Robustness in Language Model Societies](https://arxiv.org/abs/2607.09197)** (Huot et al., arXiv 2026) - *モデルの集団のなかでのルーティングがいつ意味を持つのか、多様性がノイズではなく頑健性をもたらすのはいつなのかを問う。*
 - **[What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates](https://arxiv.org/abs/2607.02507)** (Ghaffarizadeh et al., arXiv 2026) - *聞き手がいないときにエージェントが何を話すかを観察し、タスクの指標では見落とされる潜在的な目的と社会構造を明らかにする。*
-- **[Decision Protocols in Multi-Agent Large Language Model Conversations](https://arxiv.org/abs/2607.05477)** (Kaesberg et al., arXiv 2026) - *マルチエージェントの会話における意思決定プロトコルを比較し、投票や合意のルールを設計変数として扱う。*
+- **[Decision Protocols in Multi-Agent Large Language Model Conversations](https://arxiv.org/abs/2607.05477)** (Kaesberg, arXiv 2026) - *マルチエージェントの会話における意思決定プロトコルを比較し、投票や合意のルールを設計変数として扱う。*
 - **[The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break](https://arxiv.org/abs/2604.11978)** (Wang et al., arXiv 2026) - *エージェントシステムがlong-horizonなタスクのどこで、なぜ破綻するのかを診断し、long-horizonなタスクでの能力とされるものの多くは見かけにすぎないと論じる。*
 - **[GoAgent: Group-of-Agents Communication Topology Generation for LLM-based Multi-Agent Systems](https://arxiv.org/abs/2603.19677)** (Chen et al., arXiv 2026) - *マルチエージェントシステムのcommunication topologyを手で固定するのではなく、エージェントのグループからなるグラフとして生成する。*
 - **[Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces](https://arxiv.org/abs/2605.02801)** (Zhang et al., arXiv 2026) - *Orchestrationのトレースを使い、強化学習でマルチエージェントシステムをend-to-endに学習する。*
@@ -515,8 +514,9 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Scaling Inference-Time Compute with Teams of Coding Agents](https://arxiv.org/abs/2610.17471)** (Samway et al., arXiv 2026) - *コーディングエージェントのチーム設計を計算資源の配分として扱い、リーダーが任せる段階、作業者のモデル、チームの規模を変えながら、ProgramBenchの 200 タスクでGPT-5.6 Sol、Terra、Lunaを使って調べる。チームは単独のエージェントより成績が良いが、コストは三倍から七倍かかる。計画だけを任せると、三つの段階すべてを任せたときと同じ報酬を半分のコストで得られた。SolのリーダーのもとでLunaの安いplannerを使うと、全員Solのチームが得る向上の 47.5% を、その追加コストの 13.9% で得られたが、実装を安いモデルに任せると報酬は下がった。メンバー同士でメッセージをやり取りさせても報酬は上がらなかった。コードの骨組みがすでに作業を分けているCommit0-Liteでは、任せる価値があるのは実装の段階だった。*
 - **[Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://arxiv.org/abs/2610.00583)** (Paliskara et al., arXiv 2026) - *すべてのユーザーを一つの調整エージェントが受け持つ方式と、ユーザーごとにエージェントを置くチーム方式を、五つの最先端モデルと、資源を共有する四つの環境の 77 シナリオで比べると、チームはどの環境でも劣っていた。共有のAPI予算の環境では、互いに直接やり取りするClaude Opus 5のチームは最適値の 30% にとどまり、調整エージェントは 64%、互いの通信路がない場合は 7% だった。チームがエージェント四体から十六体に増えると、一度でも行動したSonnet 5エージェントの割合は 66% から 10% に下がった。明示的な指示などの緩和策は効果があったが、それを書いた環境でしか効かなかった。*
 - **[Scaling Discovery through Test-Time Communication](https://arxiv.org/abs/2609.21032)** (Park et al., arXiv 2026) - *同じCopilot CLIエージェントを複数動かして共有のワークスペースで発見を共有させ、エージェントあたりの予算をそろえたうえで、k 体のチームを、独立した k 体のエージェントの最良の結果と比べる。Claude Sonnet 4.6で公開されたARC-AGI-3の 25 ゲームを解くと、三体のチームは独立した 13 体の最良と、五体のチームは 33 体の最良と並んだ。GPT-5.6 Solの四体のチームはMNIST分類器を 1,957 バイトに圧縮し、独立した四体の最良の 3,160 バイトや、人間の最良の解の 2,461 バイトより小さかった。ただしこの利得には検証器のフィードバックと十分な計算量が必要で、予算が少ないときやTerminal-Bench 2.0では、チームのほうが下回った（60.67% 対 62.36%）。* [[code](https://github.com/jerryjonghopark/test-time-communication)]
-- **[Voting or Consensus? Decision-Making in Multi-Agent Debate](https://arxiv.org/abs/2502.19130)** (Kaesberg et al., ACL Findings 2025) - *マルチエージェント討論で意思決定プロトコルだけを変えて比べる。投票は推論タスクで（+13.2%）、合意は知識タスクで（+2.8%）効果がある。* [[code](https://github.com/lkaesberg/decision-protocols)]
-- **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *討論がターンを重ねるうちに課題から離れていくproblem driftを定義し、それを検出するDRIFTJudgeと、31% のケースを緩和するDRIFTPolicyを提案する。*
+- **[Voting or Consensus? Decision-Making in Multi-Agent Debate](https://arxiv.org/abs/2502.19130)** (Kaesberg et al., ACL Findings 2025) - *Llama 3 8Bのエージェント三体による討論で意思決定プロトコルだけを変え、投票の規則四つと合意の規則三つを、知識タスク三つと推論タスク三つで比べる。推論タスクでは投票が合意を平均 13.2 ポイント上回ったが、差の大半はMuSRとSQuAD 2.0によるもので、StrategyQAでは 0.2 だった。知識タスクでは合意が 2.8 ポイント上回り、決定までのラウンド数も平均 1.42 で、投票の 3.38 より少なかった。承認投票は 59% のケースで決定に至らず、StrategyQAではエージェントを増やすと効果があったが、投票前のラウンドを増やすと逆効果だった。エージェントに互いの直前の解だけを見せる手法Collective Improvementを提案し、StrategyQAで 7.4 ポイント上積みした。ただし結果はすべてデータセットの一部で得たもので、討論にはchain-of-thoughtの回答一つの五倍から十倍の計算量がかかる。* [[code](https://github.com/lkaesberg/decision-protocols)]
+- **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *Llama-3.1-70Bのエージェント三体に十のタスクで七ターン討論させ、ターンごとに答えを採点して、答えが前のターンより悪くなった討論をproblem driftとして数える。生成タスク三つでは討論の 74.6% から 88.6% でdriftが起き、知識・推論タスクでは 6.6% から 15.5% だった。driftした討論のうち回復したのは 8.5% から 45.4% である。driftした討論の抜粋 170 件を読んだ専門家八人が最も多く挙げたのは、進展のなさ（60 件）だった。正解ラベルを使わない検出器DRIFTJudgeは、MMLU-Proで特異度 0.92 を得たが、適合率は 0.15 にとどまった。DRIFTJudgeが示したターンでフィードバック用のエージェントDRIFTPolicyを呼ぶと、投票で決めるQwen2-7Bのエージェントでは、七ターン後の精度の低下が 3.66 ポイントから 0.08 ポイントに縮んだ。一方、合意方式では効果がなく、Llama-3.1-70Bはこれを使うと 4.08 ポイント、使わないと 2.23 ポイント下がった。* [[code](https://github.com/jonas-becker/problem-drift)]
+- **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *テキストのタスク向けのオープンソースのマルチエージェント討論フレームワークで、エージェントのpersona（なし、専門家、Big Five）、応答の仕方（シンプル、批判的、推論）、討論のパラダイム（memory、relay、report、debate）、意思決定プロトコル（投票、合意、評価者）を、一つの設定ファイルでそれぞれ独立に決める。公開デモでは 144 通りの組み合わせを選べる。OpenAI互換のエンドポイントならどのモデルでも動かせ、Hugging Faceのテキストデータセットを何でも読み込み、実行を繰り返して標準偏差を出す。Voting or Consensus?とStay Focusedはこのフレームワークで実験しており、論文中の結果は著者らの以前の研究からの再掲である。たとえばStrategyQAでは、すべてのメッセージが見えるmemoryパラダイムは平均 1.75 ターンで合意し、relayは 2.61 ターンかかった。* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -728,7 +728,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[TestJack: Should you trust the results in coding benchmarks? Agentic Coding Benchmarks Auditing via Evaluator Evolution](https://arxiv.org/abs/2610.10619)** (Yao et al., arXiv 2026) - *コーディングベンチマークで公式テストに合格した試行を監査し直す。GPT-5.5の監査モデルが、パッチが破っているかもしれないプロンプト内の要件を狙ったテストを試行ごとに書き、参照パッチが通るテストだけを残す。そのため、反証のたびに再実行できるテストが残る。6 種類のモデルバックエンドと 5 つのベンチマークで、正解と判定された試行の 34.4% を反証し、解決率を 50.6% から 33.2% に下げた。反証率はSWE-bench Verifiedの 7.6% からSWE-Marathonの 53.6% までである。ただし、監査モデルもレビューモデルもLLMなので、反証の確かさは、それらがプロンプトをどれだけ正しく読んだかに左右される。*
 - **[AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks](https://arxiv.org/abs/2610.11050)** (Lù et al., arXiv 2026) - *長いcomputer useタスクを判定するLLMの判定モデルを、三つのOSで人が録画した 166 時間分から作った指示文とtrajectoryの組 1,373 件で試す。負例は、録画を、よく似た別のタスクの指示文と組み合わせて作る。十一の判定モデルを、完全なtrajectoryを直接読ませる方法と、五つのharnessの中でコーディングエージェントとして使う方法の両方で動かした。Codex内のGPT-5.5がバランス精度 80.9% で最も高く、直接プロンプトで尋ねたときは 68.6% だった。一方、Qwen 3.6 27BはOpenCodeの中で使うと、使わない場合より 7.2 ポイント低く、指示文なしで見せるとtrajectoryの 98.9% を成功と判定した。負例は、エージェントの実際の失敗ではなく、近い指示文と入れ替えたものである。* [[code](https://github.com/ServiceNow/agenthorizon)]
 - **[Finding the Right Fit: Model-Harness Interactions across Agent Tasks](https://arxiv.org/abs/2610.00917)** (Li et al., arXiv 2026) - *五つのモデルを、設定可能な四つのharness（OpenHands、DeepSeek Harness、PI、openJiuwen）と組み合わせてTUA-Bench、ALE-CLI、Terminal-Bench 4で動かし、CodexとClaude Codeの純正の組み合わせを加えて、計 66 の設定を比べる。モデルの順位はharnessによって入れ替わり、Terminal-Bench 4では、ClaudeはOpenHandsではGPTを 7.94 ポイント上回ったが、PIでは 30.16 ポイント下回った。五つのモデルのうち四つは、ベンチマークごとに最良のharnessが変わり、モデルの開発元のharnessが常に最良とは限らなかった。GPT-6 AstraはPIでタスクあたり $4.66 で 60.32% を得たが、DeepSeek Harnessでは $19.94 で 52.38% だった。各タスクは最後の実行一回分だけを数える。* [[code](https://github.com/liyix/finding-the-right-fit)]
-- **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *2次元グリッドの経路探索を一手ずつの意思決定タスクにしたGymnasium環境。最良のモデルが解けるのは 16.0% で、人間は 98.0%。* [[code](https://github.com/lkaesberg/Spatial-Gym)]
+- **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *相互に絡む七種類のルールマスを持つ2Dグリッドの経路探索をGymnasiumのタスクにし、エージェントは提示された合法な手から一手ずつ経路を描く（手を戻す操作は任意）。open-weightモデル八つを 500 問のパズルで試すと、最良のGPT-OSS 120Bでも解けたのは 16.0% で、人間は 98.0%、ルールを無視して最短経路だけを探すエージェントは 6.4% だった。一手ずつの形式は書式の誤りをなくすため、弱いモデルでは一度に答える場合より最大 5.4 ポイント上がったが、強いモデルでは最大 5.6 ポイント下がった。手を戻せるようにするとGPT-OSSの完走率は 85% から 94% に上がったが、正解率は 5.8 ポイント下がった。パズルを画像で受け取ったQwen3-VL-32Bの正解率は 2.8% で、テキストで受け取った場合の 10.2% を下回った。プロプライエタリなモデルは試していない。* [[code](https://github.com/lkaesberg/Spatial-Gym)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -862,10 +862,11 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 このリストはコミュニティの手で保守されています。論文の提案、確認、説明文の執筆に協力してくださったすべての方に感謝します。
 
 <details>
-<summary><b>16人のコントリビューターを表示</b></summary>
+<summary><b>17人のコントリビューターを表示</b></summary>
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | 「マルチエージェントシステム」に、討論の意思決定プロトコルを扱うVoting or Consensus?、討論のproblem driftを扱うStay Focused、この二本が実験に使った討論フレームワークMALLM、「評価とベンチマーク」に、エージェントの一手ずつの空間推論を試すSpatial-Gym（[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。著者の一人による投稿 |
 | <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | 「計画と推論」に、報酬なしで環境からのフィードバックだけでエージェントを学習させるSELF、「メモリ」に、重みを固定したLLMの継続学習のために複数のプロンプトを持つEFRE（[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)） |
 | <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | 「評価とベンチマーク」に、実運用のエージェントのtraceからベンチマークを作るTraceDance（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。第一著者本人による投稿 |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | 「サーベイとポジションペーパー」に、公開GitHubプロジェクトでのJevの使われ方を分析したJev in the Wild（[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)） |
@@ -894,6 +895,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-10-15**: 著者の一人である[@lkaesberg](https://github.com/lkaesberg)が送ってくれたVoting or Consensus?、Stay Focused、MALLMを「マルチエージェントシステム」に、Spatial-Gymを「評価とベンチマーク」に追加しました（[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。Spatial-Gymでは、八つのopen-weightモデルのうち最良のものでもグリッドパズルの 16.0% しか解けず、人間は 98.0% を解きました。566 本から 570 本になりました。
 - **2026-10-14**: 2026 年 9 月中旬以降に出た論文を、セクションごとに三本ずつ計 30 本追加しました。否定的な結果を報告した論文がいくつかあり、そのうちの一本では、コーディングベンチマークが正解と判定したエージェントの実行の 34.4% が、タスクに書かれた要件を破っていました。536 本から 566 本になりました。
 - **2026-10-12**: SELFを「計画と推論」に、EFREを「メモリ」に追加しました（[@markovchain-builder](https://github.com/markovchain-builder)、[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)）。SELFは報酬なしでエージェントを学習させる手法で、Qwen3-8Bではτ-bench Retailで 43.2% に達し、報酬で学習したGRPOは 39.1% でした。534 本から 536 本になりました。
 - **2026-10-03**: 第一著者の[@ZhishanQ](https://github.com/ZhishanQ)が送ってくれたTraceDanceを「評価とベンチマーク」に追加しました（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。実際のエージェントのセッションからテストを作る論文で、先に進む前に確認が必要な事例では、九つのフロンティアLLMの合格率は 8.1% でした。533 本から 534 本になりました。
