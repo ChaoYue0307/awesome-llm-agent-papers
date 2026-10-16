@@ -106,7 +106,7 @@ Fresh 2026 work that is already drawing attention.
   - [🌐 Interactive Environments (60)](#environments)
   - [🚀 Applications (57)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
-  - [📊 Evaluation & Benchmarks (55)](#evaluation)
+  - [📊 Evaluation & Benchmarks (56)](#evaluation)
   - [🛡️ Safety & Alignment (62)](#safety)
 
 ## 🧭 Background
@@ -257,7 +257,7 @@ Fresh 2026 work that is already drawing attention.
 *Corresponds to §4 (Planning and Reasoning).*
 
 <details>
-<summary><b>Show 55 papers</b></summary>
+<summary><b>Show 56 papers</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *The foundational technique underlying virtually all LLM-agent reasoning/planning modules; the starting point for the whole CoT/ToT/ReAct lineage.*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *Standard inference-time ensembling/verification strategy widely reused inside agent reasoning and planning pipelines.*
@@ -667,7 +667,7 @@ Fresh 2026 work that is already drawing attention.
 ## ⚖️ Part III: Cross-Cutting Concerns
 
 <a id="evaluation"></a>
-### 📊 Evaluation & Benchmarks (55)
+### 📊 Evaluation & Benchmarks (56)
 *Corresponds to §9 (Evaluation and Benchmarks).*
 
 <details>
@@ -729,6 +729,7 @@ Fresh 2026 work that is already drawing attention.
 - **[AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks](https://arxiv.org/abs/2610.11050)** (Lù et al., arXiv 2026) - *Tests LLM judges of long computer-use tasks on 1,373 instruction and trajectory pairs from 166 hours of human recordings on three operating systems, where each negative pairs a recording with the instruction written for a closely related task, and runs eleven judges both on the full trajectory and as coding agents in five harnesses: GPT-5.5 in Codex is best at 80.9% balanced accuracy against 68.6% when prompted directly, while Qwen 3.6 27B scores 7.2 points lower inside OpenCode than without it and, given no instruction, calls 98.9% of trajectories successful; the negatives are near-miss swaps rather than real agent failures.* [[code](https://github.com/ServiceNow/agenthorizon)]
 - **[Finding the Right Fit: Model-Harness Interactions across Agent Tasks](https://arxiv.org/abs/2610.00917)** (Li et al., arXiv 2026) - *Pairs five models with four configurable harnesses, OpenHands, DeepSeek Harness, PI and openJiuwen, on TUA-Bench, ALE-CLI and Terminal-Bench 4, and adds the native Codex and Claude Code pairings, for 66 configurations: model rankings reverse across harnesses, with Claude 7.94 points ahead of GPT in OpenHands on Terminal-Bench 4 but 30.16 points behind in PI, the best harness changes between benchmarks for four of the five models, a model's own vendor harness is not reliably its best, and GPT-6 Astra scores 60.32% in PI at $4.66 per task against 52.38% in DeepSeek Harness at $19.94; each task counts once, from its last run.* [[code](https://github.com/liyix/finding-the-right-fit)]
 - **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *Turns 2D grid pathfinding with seven kinds of interacting rule cells into a Gymnasium task in which the agent draws the path one move at a time from the legal moves it is offered, optionally with backtracking, and tests eight open-weight models on 500 puzzles: the best, GPT-OSS 120B, solves 16.0% against 98.0% for people and 6.4% for a shortest-path agent that ignores the rules, the step-by-step format adds up to 5.4 points over one-shot answers for weaker models by removing formatting errors but costs stronger ones up to 5.6, backtracking raises GPT-OSS's completion rate from 85% to 94% while its solve rate falls 5.8 points, and Qwen3-VL-32B given the puzzle as an image solves 2.8% against 10.2% from text; no proprietary model is tested.* [[code](https://github.com/lkaesberg/Spatial-Gym)]
+- **[Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research](https://arxiv.org/abs/2603.00582)** (Dong et al., arXiv 2026) - *Pairs 300 expert-written research questions with graph-anchored report auditing to probe evidence breadth, depth of investigation, and cross-source synthesis; the public benchmark includes 3,600 reports from 12 systems.* [[code](https://github.com/cnsdqd-dyb/Super-Research-Benchmark)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
