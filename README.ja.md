@@ -106,7 +106,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
   - [🌐 インタラクティブ環境 (60)](#environments)
   - [🚀 応用分野 (57)](#applications)
 - **⚖️ 第3部：横断的な課題**
-  - [📊 評価とベンチマーク (55)](#evaluation)
+  - [📊 評価とベンチマーク (56)](#evaluation)
   - [🛡️ 安全性とアライメント (62)](#safety)
 
 ## 🧭 背景
@@ -667,11 +667,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 ## ⚖️ 第3部：横断的な課題
 
 <a id="evaluation"></a>
-### 📊 評価とベンチマーク (55)
+### 📊 評価とベンチマーク (56)
 *サーベイの§9（評価とベンチマーク）に対応します。*
 
 <details>
-<summary><b>55本の論文を表示</b></summary>
+<summary><b>56本の論文を表示</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *ツールを使う汎用エージェントアシスタントの基準となるベンチマーク。フロンティアエージェントの進歩を追う、人気の公開リーダーボードの土台になっている。*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *コーディング／ソフトウェア工学エージェントの事実上の標準ベンチマーク。SWE-bench Verified/Lite/Live/Multimodalといった派生版を生んだ。* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -729,6 +729,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks](https://arxiv.org/abs/2610.11050)** (Lù et al., arXiv 2026) - *長いcomputer useタスクを判定するLLMの判定モデルを、三つのOSで人が録画した 166 時間分から作った指示文とtrajectoryの組 1,373 件で試す。負例は、録画を、よく似た別のタスクの指示文と組み合わせて作る。十一の判定モデルを、完全なtrajectoryを直接読ませる方法と、五つのharnessの中でコーディングエージェントとして使う方法の両方で動かした。Codex内のGPT-5.5がバランス精度 80.9% で最も高く、直接プロンプトで尋ねたときは 68.6% だった。一方、Qwen 3.6 27BはOpenCodeの中で使うと、使わない場合より 7.2 ポイント低く、指示文なしで見せるとtrajectoryの 98.9% を成功と判定した。負例は、エージェントの実際の失敗ではなく、近い指示文と入れ替えたものである。* [[code](https://github.com/ServiceNow/agenthorizon)]
 - **[Finding the Right Fit: Model-Harness Interactions across Agent Tasks](https://arxiv.org/abs/2610.00917)** (Li et al., arXiv 2026) - *五つのモデルを、設定可能な四つのharness（OpenHands、DeepSeek Harness、PI、openJiuwen）と組み合わせてTUA-Bench、ALE-CLI、Terminal-Bench 4で動かし、CodexとClaude Codeの純正の組み合わせを加えて、計 66 の設定を比べる。モデルの順位はharnessによって入れ替わり、Terminal-Bench 4では、ClaudeはOpenHandsではGPTを 7.94 ポイント上回ったが、PIでは 30.16 ポイント下回った。五つのモデルのうち四つは、ベンチマークごとに最良のharnessが変わり、モデルの開発元のharnessが常に最良とは限らなかった。GPT-6 AstraはPIでタスクあたり $4.66 で 60.32% を得たが、DeepSeek Harnessでは $19.94 で 52.38% だった。各タスクは最後の実行一回分だけを数える。* [[code](https://github.com/liyix/finding-the-right-fit)]
 - **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *相互に絡む七種類のルールマスを持つ2Dグリッドの経路探索をGymnasiumのタスクにし、エージェントは提示された合法な手から一手ずつ経路を描く（手を戻す操作は任意）。open-weightモデル八つを 500 問のパズルで試すと、最良のGPT-OSS 120Bでも解けたのは 16.0% で、人間は 98.0%、ルールを無視して最短経路だけを探すエージェントは 6.4% だった。一手ずつの形式は書式の誤りをなくすため、弱いモデルでは一度に答える場合より最大 5.4 ポイント上がったが、強いモデルでは最大 5.6 ポイント下がった。手を戻せるようにするとGPT-OSSの完走率は 85% から 94% に上がったが、正解率は 5.8 ポイント下がった。パズルを画像で受け取ったQwen3-VL-32Bの正解率は 2.8% で、テキストで受け取った場合の 10.2% を下回った。プロプライエタリなモデルは試していない。* [[code](https://github.com/lkaesberg/Spatial-Gym)]
+- **[Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research](https://arxiv.org/abs/2603.00582)** (Dong et al., arXiv 2026) - *十の分野にわたる 300 の開かれた研究課題を、GPT-4oとGemini Deep Researchで下書きしたうえで分野の専門家が精査して用意し、各レポートを、エージェントが作り専門家が手直しした事実と洞察の参照グラフに照らして、カバー率、論理的一貫性、LLMがレポートだけを見て答える設問、客観性、引用の分散で採点する。12 のシステムのうち総合で最も高いのはGemini Deep Researchの 28.62 で、内蔵の検索で答えたKimi-k2（26.16）がo3 Deep Research（22.04）を上回った。レポートから事実を 1 から 3 個削ったり加えたりすると、グラフに基づくスコアは 57.4% から 79.6% のケースで正しい方向に動いたが、LLMの評価者では 14.8% から 22.2% にとどまった。公開物には課題と 3,600 本のレポートがあるが、参照グラフと採点器はないため、新しいエージェントを論文と同じ方法で採点することはまだできない。* [[code](https://github.com/cnsdqd-dyb/Super-Research-Benchmark)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -862,10 +863,11 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 このリストはコミュニティの手で保守されています。論文の提案、確認、説明文の執筆に協力してくださったすべての方に感謝します。
 
 <details>
-<summary><b>17人のコントリビューターを表示</b></summary>
+<summary><b>18人のコントリビューターを表示</b></summary>
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | 「評価とベンチマーク」に、300 の開かれた研究課題と 12 のシステムのレポートからなるベンチマークSuper Research（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。第一著者本人による投稿 |
 | <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | 「マルチエージェントシステム」に、討論の意思決定プロトコルを扱うVoting or Consensus?、討論のproblem driftを扱うStay Focused、この二本が実験に使った討論フレームワークMALLM、「評価とベンチマーク」に、エージェントの一手ずつの空間推論を試すSpatial-Gym（[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。著者の一人による投稿 |
 | <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | 「計画と推論」に、報酬なしで環境からのフィードバックだけでエージェントを学習させるSELF、「メモリ」に、重みを固定したLLMの継続学習のために複数のプロンプトを持つEFRE（[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)） |
 | <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | 「評価とベンチマーク」に、実運用のエージェントのtraceからベンチマークを作るTraceDance（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。第一著者本人による投稿 |
@@ -895,6 +897,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-10-16**: 第一著者の[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)が送ってくれたSuper Researchを「評価とベンチマーク」に追加しました（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。300 の研究課題で、12 のシステムのうち最も高いGemini Deep Researchでも 100 点満点中 28.62 点でした。570 本から 571 本になりました。
 - **2026-10-15**: 著者の一人である[@lkaesberg](https://github.com/lkaesberg)が送ってくれたVoting or Consensus?、Stay Focused、MALLMを「マルチエージェントシステム」に、Spatial-Gymを「評価とベンチマーク」に追加しました（[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。Spatial-Gymでは、八つのopen-weightモデルのうち最良のものでもグリッドパズルの 16.0% しか解けず、人間は 98.0% を解きました。566 本から 570 本になりました。
 - **2026-10-14**: 2026 年 9 月中旬以降に出た論文を、セクションごとに三本ずつ計 30 本追加しました。否定的な結果を報告した論文がいくつかあり、そのうちの一本では、コーディングベンチマークが正解と判定したエージェントの実行の 34.4% が、タスクに書かれた要件を破っていました。536 本から 566 本になりました。
 - **2026-10-12**: SELFを「計画と推論」に、EFREを「メモリ」に追加しました（[@markovchain-builder](https://github.com/markovchain-builder)、[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)）。SELFは報酬なしでエージェントを学習させる手法で、Qwen3-8Bではτ-bench Retailで 43.2% に達し、報酬で学習したGRPOは 39.1% でした。534 本から 536 本になりました。

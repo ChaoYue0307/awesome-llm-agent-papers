@@ -106,7 +106,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
   - [🌐 상호작용 환경 (60)](#environments)
   - [🚀 응용 분야 (57)](#applications)
 - **⚖️ 제3부: 전반에 걸친 과제**
-  - [📊 평가와 벤치마크 (55)](#evaluation)
+  - [📊 평가와 벤치마크 (56)](#evaluation)
   - [🛡️ 안전과 정렬 (62)](#safety)
 
 ## 🧭 배경
@@ -667,11 +667,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 ## ⚖️ 제3부: 전반에 걸친 과제
 
 <a id="evaluation"></a>
-### 📊 평가와 벤치마크 (55)
+### 📊 평가와 벤치마크 (56)
 *서베이 §9(평가와 벤치마크)에 해당합니다.*
 
 <details>
-<summary><b>논문 55편 보기</b></summary>
+<summary><b>논문 56편 보기</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *도구를 쓰는 범용 에이전트 어시스턴트의 기준 벤치마크다. 널리 쓰이는 공개 순위표들이 이를 바탕으로 frontier 에이전트의 발전을 추적한다.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *코딩·소프트웨어 공학 에이전트의 사실상 표준 벤치마크이며, 여기서 SWE-bench Verified/Lite/Live/Multimodal 계열이 파생되었다.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -729,6 +729,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks](https://arxiv.org/abs/2610.11050)** (Lù et al., arXiv 2026) - *긴 computer use 과제를 판정하는 LLM 심사 모델을, 세 운영체제에서 사람이 녹화한 166시간 분량으로 만든 지시문과 trajectory 쌍 1,373개로 시험한다. 오답 예시는 녹화 하나를 아주 비슷한 다른 과제의 지시문과 짝지어 만든다. 심사 모델 11개를 전체 trajectory를 직접 보여 주는 방식과, harness 다섯 개 안에서 코딩 에이전트로 쓰는 방식 모두로 돌렸다. Codex 안의 GPT-5.5가 균형 정확도 80.9%로 가장 높았고, 직접 프롬프트로 물었을 때는 68.6%였다. 반면 Qwen 3.6 27B는 OpenCode 안에서 쓸 때가 쓰지 않을 때보다 7.2포인트 낮았고, 지시문 없이 보여 주면 trajectory의 98.9%를 성공으로 판정했다. 오답 예시는 실제 에이전트의 실패가 아니라 비슷한 지시문으로 바꿔 끼운 것이다.* [[code](https://github.com/ServiceNow/agenthorizon)]
 - **[Finding the Right Fit: Model-Harness Interactions across Agent Tasks](https://arxiv.org/abs/2610.00917)** (Li et al., arXiv 2026) - *모델 다섯 개를 설정 가능한 harness 네 개(OpenHands, DeepSeek Harness, PI, openJiuwen)와 짝지어 TUA-Bench, ALE-CLI, Terminal-Bench 4에서 돌리고, Codex와 Claude Code의 기본 조합을 더해 모두 66개 설정을 비교한다. 모델 순위는 harness에 따라 뒤집혔다. Terminal-Bench 4에서 Claude는 OpenHands에서는 GPT보다 7.94포인트 앞섰지만 PI에서는 30.16포인트 뒤졌다. 모델 다섯 개 중 네 개는 벤치마크마다 가장 좋은 harness가 달랐고, 모델 회사가 직접 만든 harness가 늘 가장 좋은 것도 아니었다. GPT-6 Astra는 PI에서 과제당 $4.66로 60.32%를 얻었고, DeepSeek Harness에서는 $19.94로 52.38%였다. 과제마다 마지막 실행 한 번만 집계했다.* [[code](https://github.com/liyix/finding-the-right-fit)]
 - **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *서로 얽힌 규칙 칸 일곱 종류가 있는 2D 격자 경로 찾기를 Gymnasium 과제로 바꿔, 에이전트가 주어진 합법적인 이동 중에서 한 번에 한 칸씩 경로를 그리게 하고(되돌리기는 선택), open-weight 모델 여덟 개를 퍼즐 500개로 시험한다. 가장 좋은 GPT-OSS 120B도 16.0%만 풀어 사람의 98.0%에 크게 못 미쳤고, 규칙을 무시하고 최단 경로만 찾는 에이전트는 6.4%였다. 단계별 형식은 형식 오류를 없애 약한 모델의 정답률을 한 번에 답할 때보다 최대 5.4포인트 올렸지만, 강한 모델은 최대 5.6포인트 떨어뜨렸다. 되돌리기를 허용하면 GPT-OSS의 완주율은 85%에서 94%로 올랐지만 정답률은 5.8포인트 떨어졌다. 퍼즐을 이미지로 받은 Qwen3-VL-32B는 2.8%를 풀어, 텍스트로 받았을 때의 10.2%보다 낮았다. 상용 모델은 시험하지 않았다.* [[code](https://github.com/lkaesberg/Spatial-Gym)]
+- **[Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research](https://arxiv.org/abs/2603.00582)** (Dong et al., arXiv 2026) - *열 개 분야의 열린 연구 질문 300개를 GPT-4o와 Gemini Deep Research로 초안을 잡은 뒤 분야 전문가가 검토해 마련하고, 각 보고서를 에이전트가 만들고 전문가가 다듬은 사실·통찰 기준 그래프에 대어 커버리지, 논리적 일관성, LLM이 보고서만 보고 푸는 문항, 객관성, 인용 분산을 채점한다. 12개 시스템 중 Gemini Deep Research가 종합 28.62로 가장 높았고, 자체 검색으로 답한 Kimi-k2(26.16)가 o3 Deep Research(22.04)를 앞섰다. 보고서에서 사실을 1~3개 빼거나 더했을 때 그래프 기반 점수는 57.4~79.6%의 경우 올바른 방향으로 움직였지만, LLM 심판은 14.8~22.2%에 그쳤다. 공개본에는 질문과 보고서 3,600개가 있지만 기준 그래프와 채점기는 없어서, 새 에이전트를 논문과 같은 방식으로 채점할 수는 아직 없다.* [[code](https://github.com/cnsdqd-dyb/Super-Research-Benchmark)]
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -862,10 +863,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 17명 보기</b></summary>
+<summary><b>기여자 18명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | 평가와 벤치마크 절에 열린 연구 질문 300개와 시스템 12개의 보고서로 이루어진 벤치마크 Super Research 추가([#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)). 제1저자가 직접 제출 |
 | <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | 다중 에이전트 시스템 절에 토론의 결정 프로토콜을 다룬 Voting or Consensus?, 토론의 problem drift를 다룬 Stay Focused, 두 논문이 실험에 쓴 토론 프레임워크 MALLM, 평가와 벤치마크 절에 에이전트의 단계별 공간 추론을 시험하는 Spatial-Gym 추가([#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). 저자 중 한 명이 직접 제출 |
 | <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | 계획과 추론 절에 보상 없이 환경 피드백으로 에이전트를 학습시키는 SELF, 메모리 절에 고정된 LLM의 지속 학습을 위해 프롬프트 여러 개를 두는 EFRE 추가([#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)) |
 | <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | 평가와 벤치마크 절에 실제 에이전트 배포 trace로 벤치마크를 만드는 TraceDance 추가([#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)). 제1저자가 직접 제출 |
@@ -895,6 +897,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-10-16**: 제1저자 [@cnsdqd-dyb](https://github.com/cnsdqd-dyb)가 보내 준 Super Research를 평가와 벤치마크 절에 추가했습니다([#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)). 연구 질문 300개에서 시스템 12개 중 가장 높은 Gemini Deep Research도 100점 만점에 28.62점이었습니다. 570편에서 571편으로 늘었습니다.
 - **2026-10-15**: 저자 중 한 명인 [@lkaesberg](https://github.com/lkaesberg)가 보내 준 Voting or Consensus?, Stay Focused, MALLM을 다중 에이전트 시스템 절에, Spatial-Gym을 평가와 벤치마크 절에 추가했습니다([#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). Spatial-Gym에서 open-weight 모델 여덟 개 중 가장 좋은 모델은 격자 퍼즐의 16.0%를 풀었고, 사람은 98.0%를 풀었습니다. 566편에서 570편으로 늘었습니다.
 - **2026-10-14**: 2026년 9월 중순 이후 나온 논문 30편을 절마다 세 편씩 추가했습니다. 부정적인 결과를 보고한 논문이 여럿인데, 그중 하나에서는 코딩 벤치마크가 정답으로 판정한 에이전트 실행의 34.4%가 과제에 적힌 요구 사항을 어겼습니다. 536편에서 566편으로 늘었습니다.
 - **2026-10-12**: SELF를 계획과 추론 절에, EFRE를 메모리 절에 추가했습니다([@markovchain-builder](https://github.com/markovchain-builder), [#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)). SELF는 보상 없이 에이전트를 학습시키는 방법으로, Qwen3-8B에서 τ-bench Retail 성공률이 43.2%이고 보상으로 학습한 GRPO는 39.1%입니다. 534편에서 536편으로 늘었습니다.

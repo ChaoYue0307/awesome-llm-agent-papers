@@ -106,7 +106,7 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
   - [🌐 Ambientes interativos (60)](#environments)
   - [🚀 Aplicações (57)](#applications)
 - **⚖️ Parte III: Questões transversais**
-  - [📊 Avaliação e benchmarks (55)](#evaluation)
+  - [📊 Avaliação e benchmarks (56)](#evaluation)
   - [🛡️ Segurança e alinhamento (62)](#safety)
 
 ## 🧭 Fundamentos
@@ -667,11 +667,11 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
 ## ⚖️ Parte III: Questões transversais
 
 <a id="evaluation"></a>
-### 📊 Avaliação e benchmarks (55)
+### 📊 Avaliação e benchmarks (56)
 *No survey: §9 (Avaliação e benchmarks).*
 
 <details>
-<summary><b>Mostrar 55 artigos</b></summary>
+<summary><b>Mostrar 56 artigos</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Benchmark de referência para assistentes generalistas baseados em agentes que usam ferramentas; está por trás de rankings públicos populares que acompanham o progresso dos agentes de fronteira.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *Benchmark padrão de fato para agentes de programação e de engenharia de software; deu origem à família SWE-bench Verified/Lite/Live/Multimodal.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -729,6 +729,7 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
 - **[AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks](https://arxiv.org/abs/2610.11050)** (Lù et al., arXiv 2026) - *Testa juízes LLM de tarefas longas de computer use em 1.373 pares de instrução e trajectory tirados de 166 horas de gravações humanas em três sistemas operacionais, em que cada negativo junta uma gravação à instrução escrita para uma tarefa muito parecida, e roda onze juízes tanto sobre a trajectory completa quanto como agentes de programação em cinco harnesses: o GPT-5.5 no Codex é o melhor, com 80,9% de acurácia balanceada, contra 68,6% com prompt direto, enquanto o Qwen 3.6 27B pontua 7,2 pontos a menos dentro do OpenCode do que fora dele e, sem a instrução, considera bem-sucedidas 98,9% das trajectories; os negativos são trocas por instruções parecidas, e não falhas reais de agentes.* [[code](https://github.com/ServiceNow/agenthorizon)]
 - **[Finding the Right Fit: Model-Harness Interactions across Agent Tasks](https://arxiv.org/abs/2610.00917)** (Li et al., arXiv 2026) - *Combina cinco modelos com quatro harnesses configuráveis, OpenHands, DeepSeek Harness, PI e openJiuwen, no TUA-Bench, no ALE-CLI e no Terminal-Bench 4, e acrescenta as combinações nativas do Codex e do Claude Code, num total de 66 configurações: a ordem dos modelos se inverte entre harnesses, com o Claude 7,94 pontos à frente do GPT no OpenHands no Terminal-Bench 4, mas 30,16 pontos atrás no PI, o melhor harness muda de um benchmark para outro em quatro dos cinco modelos, o harness do próprio fornecedor do modelo nem sempre é o melhor, e o GPT-6 Astra marca 60,32% no PI a $4,66 por tarefa, contra 52,38% no DeepSeek Harness a $19,94; cada tarefa conta uma vez, pela sua última execução.* [[code](https://github.com/liyix/finding-the-right-fit)]
 - **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *Transforma a busca de caminhos em grades 2D com sete tipos de células de regra que interagem numa tarefa do Gymnasium em que o agente traça o caminho um movimento por vez, escolhendo entre os movimentos válidos que recebe, com a opção de desfazer passos, e testa oito modelos open-weight em 500 quebra-cabeças: o melhor, o GPT-OSS 120B, resolve 16,0%, contra 98,0% das pessoas e 6,4% de um agente que só busca o caminho mais curto e ignora as regras, o formato passo a passo acrescenta até 5,4 pontos em relação à resposta de uma só vez nos modelos mais fracos, por eliminar erros de formatação, mas tira até 5,6 dos mais fortes, poder desfazer passos eleva a taxa de conclusão do GPT-OSS de 85% para 94% enquanto sua taxa de acerto cai 5,8 pontos, e o Qwen3-VL-32B, quando recebe o quebra-cabeça como imagem, resolve 2,8%, contra 10,2% com texto; nenhum modelo proprietário é testado.* [[code](https://github.com/lkaesberg/Spatial-Gym)]
+- **[Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research](https://arxiv.org/abs/2603.00582)** (Dong et al., arXiv 2026) - *Faz 300 perguntas de pesquisa abertas em dez áreas, redigidas com o GPT-4o e o Gemini Deep Research e depois revisadas por especialistas de cada área, e avalia cada relatório contra um grafo de referência de fatos e conclusões montado por agentes e refinado por especialistas, em cobertura, consistência lógica, um questionário que um LLM responde só com o relatório, objetividade e diversidade de citações: o Gemini Deep Research lidera os 12 sistemas com 28,62 no total, o Kimi-k2 respondendo com a busca embutida (26,16) supera o o3 Deep Research (22,04), e quando se removem ou acrescentam de 1 a 3 fatos num relatório as pontuações baseadas no grafo mudam na direção certa em 57,4% a 79,6% dos casos, contra 14,8% a 22,2% de um juiz LLM; a versão pública traz as perguntas e 3.600 relatórios, mas nem os grafos de referência nem um avaliador automático, então um agente novo ainda não pode ser pontuado como no artigo.* [[code](https://github.com/cnsdqd-dyb/Super-Research-Benchmark)]
 </details>
 
 <sub><a href="#contents">↑ Voltar ao sumário</a></sub>
@@ -862,10 +863,11 @@ A maioria dos idiomas para os quais esta lista foi traduzida não é minha líng
 Esta lista é mantida pela comunidade. Um agradecimento a todos que sugeriram, conferiram ou anotaram um artigo:
 
 <details>
-<summary><b>Mostrar 17 colaboradores</b></summary>
+<summary><b>Mostrar 18 colaboradores</b></summary>
 
 | | Colaborador | Contribuição |
 |---|---|---|
+| <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | Super Research, um benchmark de 300 perguntas de pesquisa abertas com relatórios de 12 sistemas, enviado pelo primeiro autor, em Avaliação e benchmarks ([#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)) |
 | <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | Voting or Consensus? (protocolos de decisão em debates), Stay Focused (problem drift em debates) e MALLM, o framework de debate usado pelos dois, em Sistemas multiagente; Spatial-Gym, raciocínio espacial passo a passo para agentes, em Avaliação e benchmarks ([#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). Enviados por um de seus autores |
 | <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | SELF, treinamento de agentes com o feedback do ambiente e sem recompensas, em Planejamento e raciocínio; EFRE, um repertório de prompts para aprendizado contínuo com um LLM congelado, em Memória ([#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)) |
 | <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | TraceDance, benchmarks montados a partir de traces reais de agentes em produção, enviado pelo primeiro autor, em Avaliação e benchmarks ([#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)) |
@@ -895,6 +897,7 @@ Distribuído sob a [licença MIT](LICENSE).
 
 ## 🗓️ Atualizações
 
+- **2026-10-16**: Super Research entrou em Avaliação e benchmarks, enviado pelo primeiro autor ([@cnsdqd-dyb](https://github.com/cnsdqd-dyb), [#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)). Nas suas 300 perguntas de pesquisa, o melhor de 12 sistemas, o Gemini Deep Research, marca 28,62 de 100. De 570 para 571.
 - **2026-10-15**: Voting or Consensus?, Stay Focused e MALLM entraram em Sistemas multiagente e Spatial-Gym em Avaliação e benchmarks, enviados por um de seus autores ([@lkaesberg](https://github.com/lkaesberg), [#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). No Spatial-Gym, o melhor de oito modelos open-weight resolve 16,0% dos quebra-cabeças em grade, contra 98,0% das pessoas. De 566 para 570.
 - **2026-10-14**: +30 artigos publicados desde meados de setembro de 2026, três por seção. Vários são resultados negativos; em um deles, 34,4% das execuções de agentes de programação que os benchmarks julgam corretas violam um requisito escrito na tarefa. De 536 para 566.
 - **2026-10-12**: SELF entrou em Planejamento e raciocínio e EFRE em Memória ([@markovchain-builder](https://github.com/markovchain-builder), [#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)). O SELF treina agentes sem recompensas e, com o Qwen3-8B, chega a 43,2% no τ-bench Retail, contra 39,1% do GRPO treinado com recompensas. De 534 para 536.
