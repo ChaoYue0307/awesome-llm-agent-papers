@@ -106,7 +106,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
   - [🌐 상호작용 환경 (60)](#environments)
   - [🚀 응용 분야 (57)](#applications)
 - **⚖️ 제3부: 전반에 걸친 과제**
-  - [📊 평가와 벤치마크 (56)](#evaluation)
+  - [📊 평가와 벤치마크 (57)](#evaluation)
   - [🛡️ 안전과 정렬 (62)](#safety)
 
 ## 🧭 배경
@@ -667,11 +667,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 ## ⚖️ 제3부: 전반에 걸친 과제
 
 <a id="evaluation"></a>
-### 📊 평가와 벤치마크 (56)
+### 📊 평가와 벤치마크 (57)
 *서베이 §9(평가와 벤치마크)에 해당합니다.*
 
 <details>
-<summary><b>논문 56편 보기</b></summary>
+<summary><b>논문 57편 보기</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *도구를 쓰는 범용 에이전트 어시스턴트의 기준 벤치마크다. 널리 쓰이는 공개 순위표들이 이를 바탕으로 frontier 에이전트의 발전을 추적한다.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *코딩·소프트웨어 공학 에이전트의 사실상 표준 벤치마크이며, 여기서 SWE-bench Verified/Lite/Live/Multimodal 계열이 파생되었다.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -705,6 +705,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[CUBE: A Standard for Unifying Agent Benchmarks](https://arxiv.org/abs/2603.15798)** (Lacoste et al., arXiv 2026) - *제각각인 에이전트 벤치마크를 하나의 인터페이스로 묶는 표준을 제안한다.* [[code](https://github.com/The-AI-Alliance/cube-standard)]
 - **[UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](https://arxiv.org/abs/2607.08768)** (Chen et al., arXiv 2026) - *능력 중심의 이중 언어 벤치마크 UniClawBench를 내놓는다. 과제 400개는 실제로 돌아가는 Docker 환경에서 단계별 체크포인트를 두고 실행된다. 능동형 LLM 에이전트를 skill 활용, 탐색, 긴 컨텍스트 추론, multimodal 이해, 여러 플랫폼 간 조율에 걸쳐 평가하며, 숨겨진 감독 에이전트를 두어 다중 턴 피드백으로 채점 기준이 새어 나가지 않게 한다.* [[code](https://github.com/HKU-MMLab/UniClawBench)]
 - **[PolyWorkBench: Benchmarking LLM Agents for Cross-Lingual Long-Horizon Workflows](https://arxiv.org/abs/2607.06008)** (Li et al., arXiv 2026) - *상거래, 지식 업무, 법률 분석, 현지화, 제조를 아우르는 과제 67개로, 다국어 long-horizon 업무 workflow에서 LLM 에이전트를 평가하는 벤치마크 PolyWorkBench를 내놓는다. Rubric 기반 구조 채점, 실행 가능한 상태 검사, LLM 심판을 섞어 채점한다. 언어에 따라 성능 편차가 크고, 더 어려운 교차 언어 과제에서는 성능이 급격히 떨어진다.*
+- **[MerchantBench: Benchmarking LLM Agents for Long-Term Coherence in E-Commerce Operations](https://arxiv.org/abs/2607.28956)** (Shi et al., arXiv 2026) - *1688 도매 시장의 실제 상품 기록 98,843개로 만든 온라인 상점을 시뮬레이션상 365일 동안 에이전트에게 맡기고, 도구 26개를 주며, 환불과 나쁜 리뷰는 주문 며칠 뒤에야 드러나게 한 다음 최종 순자산으로 점수를 매긴다. 여덟 개 LLM을 최소한의 ReAct 루프와 Hermes 에이전트 프레임워크에서 돌린 48회 실행에서, 가장 좋은 설정인 Hermes 위의 Qwen3.7-Max도 전자상거래 경험이 없는 참가자 세 명의 평균 순자산의 27.3%에 그쳤고, 하루 한 번 상점을 점검하는 규칙 기반 스크립트가 16개 설정 중 6개를 앞섰다. Hermes 위의 Kimi K2.6은 104일째에 상점을 되살릴 수 없다고 판단한 뒤 남은 결정 구간 523개 중 355개에서 상점에 아무 조치도 하지 않았다. 공개된 코드는 상품 1,000개짜리 합성 카탈로그로 돌아가는데, 실제 상품 기록과 일일 시장 보고서는 재배포되지 않기 때문이다. 그래서 공개본만으로는 논문의 수치를 재현할 수 없다.* [[code](https://github.com/KhanCold/merchantbench)]
 - **[EvoAgentBench: Benchmarking Agent Self-Evolution via Ability Transfer](https://arxiv.org/abs/2607.05202)** (Gao et al., arXiv 2026) - *LLM 에이전트의 자기 진화를 절차 지식의 전이로 보고 평가하는 벤치마크를 내놓는다. 에이전트 실행 trace에 근거한 'Ability'를 뽑아 웹 조사, 알고리즘 추론, 소프트웨어 공학, 지식 업무에 걸친 도메인별 Ability Graph로 조직한다. 선별해 다듬은 Ability는 모델 계열을 넘어 안정적으로 전이되지만, 모든 설정에서 이득을 내는 자동 방법은 없다.*
 - **[Act As a Real Researcher: A Suite of Benchmarks Evaluating Frontier LLMs and Agentic Harnesses in Research Lifecycle](https://arxiv.org/abs/2606.07462)** (Wang et al., arXiv 2026) - *Frontier LLM과 agentic harness가 연구 전 과정에 걸쳐 초급 연구 인턴 수준의 과제를 해낼 수 있는지 평가하는 컨테이너 기반 벤치마크 모음 AARRI-Bench를 소개한다.* [[code](https://github.com/AARR-bench/AARRI-bench)]
 - **[ReplicatorBench: Benchmarking LLM Agents for Replicability in Social and Behavioral Sciences](https://arxiv.org/abs/2602.11354)** (Nguyen et al., arXiv 2026) - *사람이 검증한 재현 가능 주장과 재현 불가능 주장으로 이루어진 벤치마크 ReplicatorBench를 내놓고, 데이터 수집, 실험 설계와 실행, 결과 해석에 걸쳐 LLM 에이전트가 사회·행동과학 연구를 재현하는 능력을 평가한다. 에이전트는 실험을 설계하고 돌리는 일은 잘하지만, 재현에 필요한 새 데이터를 찾아오는 데서 막힌다.* [[code](https://github.com/CenterForOpenScience/llm-benchmarking)]
@@ -863,10 +864,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 18명 보기</b></summary>
+<summary><b>기여자 19명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | 평가와 벤치마크 절에 에이전트가 온라인 상점을 시뮬레이션상 365일 동안 운영하는 벤치마크 MerchantBench 추가([#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)). 제1저자가 직접 제출 |
 | <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | 평가와 벤치마크 절에 열린 연구 질문 300개와 시스템 12개의 보고서로 이루어진 벤치마크 Super Research 추가([#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)). 제1저자가 직접 제출 |
 | <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | 다중 에이전트 시스템 절에 토론의 결정 프로토콜을 다룬 Voting or Consensus?, 토론의 problem drift를 다룬 Stay Focused, 두 논문이 실험에 쓴 토론 프레임워크 MALLM, 평가와 벤치마크 절에 에이전트의 단계별 공간 추론을 시험하는 Spatial-Gym 추가([#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). 저자 중 한 명이 직접 제출 |
 | <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | 계획과 추론 절에 보상 없이 환경 피드백으로 에이전트를 학습시키는 SELF, 메모리 절에 고정된 LLM의 지속 학습을 위해 프롬프트 여러 개를 두는 EFRE 추가([#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)) |
@@ -897,6 +899,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-10-17**: 제1저자 [@KhanCold](https://github.com/KhanCold)가 보내 준 MerchantBench를 평가와 벤치마크 절에 추가했습니다([#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)). 온라인 상점을 시뮬레이션상 365일 동안 운영한 뒤, LLM 설정 16개 중 가장 좋은 것도 사람 참가자 평균 순자산의 27.3%에 그쳤습니다. 571편에서 572편으로 늘었습니다.
 - **2026-10-16**: 제1저자 [@cnsdqd-dyb](https://github.com/cnsdqd-dyb)가 보내 준 Super Research를 평가와 벤치마크 절에 추가했습니다([#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)). 연구 질문 300개에서 시스템 12개 중 가장 높은 Gemini Deep Research도 100점 만점에 28.62점이었습니다. 570편에서 571편으로 늘었습니다.
 - **2026-10-15**: 저자 중 한 명인 [@lkaesberg](https://github.com/lkaesberg)가 보내 준 Voting or Consensus?, Stay Focused, MALLM을 다중 에이전트 시스템 절에, Spatial-Gym을 평가와 벤치마크 절에 추가했습니다([#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). Spatial-Gym에서 open-weight 모델 여덟 개 중 가장 좋은 모델은 격자 퍼즐의 16.0%를 풀었고, 사람은 98.0%를 풀었습니다. 566편에서 570편으로 늘었습니다.
 - **2026-10-14**: 2026년 9월 중순 이후 나온 논문 30편을 절마다 세 편씩 추가했습니다. 부정적인 결과를 보고한 논문이 여럿인데, 그중 하나에서는 코딩 벤치마크가 정답으로 판정한 에이전트 실행의 34.4%가 과제에 적힌 요구 사항을 어겼습니다. 536편에서 566편으로 늘었습니다.

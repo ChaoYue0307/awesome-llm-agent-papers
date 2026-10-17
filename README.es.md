@@ -106,7 +106,7 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
   - [🌐 Entornos interactivos (60)](#environments)
   - [🚀 Aplicaciones (57)](#applications)
 - **⚖️ Parte III: Cuestiones transversales**
-  - [📊 Evaluación y benchmarks (56)](#evaluation)
+  - [📊 Evaluación y benchmarks (57)](#evaluation)
   - [🛡️ Seguridad y alineación (62)](#safety)
 
 ## 🧭 Fundamentos
@@ -667,11 +667,11 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 ## ⚖️ Parte III: Cuestiones transversales
 
 <a id="evaluation"></a>
-### 📊 Evaluación y benchmarks (56)
+### 📊 Evaluación y benchmarks (57)
 *En la revisión: §9 (Evaluación y benchmarks).*
 
 <details>
-<summary><b>Mostrar 56 artículos</b></summary>
+<summary><b>Mostrar 57 artículos</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Benchmark de referencia para asistentes generalistas basados en agentes que usan herramientas; es la base de tablas de clasificación públicas muy seguidas que registran el progreso de los agentes de frontera.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *Benchmark estándar de facto para agentes de programación e ingeniería de software; dio origen a la familia SWE-bench Verified/Lite/Live/Multimodal.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -705,6 +705,7 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 - **[CUBE: A Standard for Unifying Agent Benchmarks](https://arxiv.org/abs/2603.15798)** (Lacoste et al., arXiv 2026) - *Propone un estándar para unificar benchmarks de agentes heterogéneos bajo una sola interfaz.* [[code](https://github.com/The-AI-Alliance/cube-standard)]
 - **[UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](https://arxiv.org/abs/2607.08768)** (Chen et al., arXiv 2026) - *Introduce UniClawBench, un benchmark bilingüe organizado por capacidades, con 400 tareas que se ejecutan en entornos Docker reales con puntos de control por paso; evalúa agentes LLM proactivos en uso de skills, exploración, razonamiento con contexto largo, comprensión multimodal y coordinación entre plataformas, y usa un agente supervisor oculto para que la retroalimentación de varios turnos nunca revele los criterios de calificación.* [[code](https://github.com/HKU-MMLab/UniClawBench)]
 - **[PolyWorkBench: Benchmarking LLM Agents for Cross-Lingual Long-Horizon Workflows](https://arxiv.org/abs/2607.06008)** (Li et al., arXiv 2026) - *Introduce PolyWorkBench, un benchmark de 67 tareas de comercio, trabajo del conocimiento, análisis jurídico, localización y fabricación que evalúa a agentes LLM en workflows laborales multilingües long-horizon, con una combinación de puntuación estructural basada en rubrics, comprobaciones ejecutables del estado y un juez LLM; el rendimiento varía mucho entre idiomas y cae con fuerza en las tareas interlingüísticas más difíciles.*
+- **[MerchantBench: Benchmarking LLM Agents for Long-Term Coherence in E-Commerce Operations](https://arxiv.org/abs/2607.28956)** (Shi et al., arXiv 2026) - *Pone a un agente al frente de una tienda en línea durante 365 días simulados, construida sobre 98.843 registros reales de productos del mercado mayorista 1688, con 26 herramientas, reembolsos y reseñas negativas que aparecen días después del pedido, y el patrimonio neto final como puntuación: en 48 ejecuciones de ocho LLM, con un bucle ReAct mínimo y con el framework de agentes Hermes, la mejor configuración, Qwen3.7-Max con Hermes, termina con el 27,3% del patrimonio neto medio de tres participantes humanos sin experiencia en comercio electrónico, un script basado en reglas que revisa la tienda una vez al día supera a 6 de las 16 configuraciones, y Kimi K2.6 con Hermes concluye el día 104 que la tienda no tiene remedio y después no hace nada en la tienda en 355 de sus 523 ventanas de decisión restantes; el código público funciona con un catálogo sintético de 1000 productos, porque los registros reales y los informes diarios de mercado no se redistribuyen, así que las cifras del artículo no se pueden reproducir solo con la versión pública.* [[code](https://github.com/KhanCold/merchantbench)]
 - **[EvoAgentBench: Benchmarking Agent Self-Evolution via Ability Transfer](https://arxiv.org/abs/2607.05202)** (Gao et al., arXiv 2026) - *Introduce un benchmark que evalúa la autoevolución de agentes LLM como transferencia de conocimiento procedimental: extrae de las ejecuciones de los agentes "Abilities" fundamentadas en las trazas y las organiza en Ability Graphs específicos de cada dominio (investigación web, razonamiento algorítmico, ingeniería de software y trabajo del conocimiento); las Abilities curadas se transfieren de forma fiable entre familias de modelos, pero ningún método automático mejora en todos los escenarios.*
 - **[Act As a Real Researcher: A Suite of Benchmarks Evaluating Frontier LLMs and Agentic Harnesses in Research Lifecycle](https://arxiv.org/abs/2606.07462)** (Wang et al., arXiv 2026) - *Introduce AARRI-Bench, un conjunto de benchmarks en contenedores que evalúa si los LLM de frontera y los harnesses agénticos pueden hacer las tareas de un asistente de investigación junior a lo largo de todo el ciclo de investigación.* [[code](https://github.com/AARR-bench/AARRI-bench)]
 - **[ReplicatorBench: Benchmarking LLM Agents for Replicability in Social and Behavioral Sciences](https://arxiv.org/abs/2602.11354)** (Nguyen et al., arXiv 2026) - *Introduce ReplicatorBench, un benchmark de afirmaciones replicables y no replicables verificadas por personas para evaluar agentes LLM en la replicación de investigaciones de ciencias sociales y del comportamiento, en la obtención de datos, el diseño y la ejecución de experimentos y la interpretación de resultados; los agentes diseñan y ejecutan bien los experimentos, pero les cuesta obtener los datos nuevos que requiere una replicación.* [[code](https://github.com/CenterForOpenScience/llm-benchmarking)]
@@ -863,10 +864,11 @@ La mayoría de los idiomas a los que está traducida esta lista no son mi lengua
 Esta lista la mantiene la comunidad. Gracias a todas las personas que han sugerido, verificado o anotado un artículo:
 
 <details>
-<summary><b>Mostrar 18 colaboradores</b></summary>
+<summary><b>Mostrar 19 colaboradores</b></summary>
 
 | | Colaborador | Contribución |
 |---|---|---|
+| <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | MerchantBench, un benchmark en el que un agente gestiona una tienda en línea durante 365 días simulados, enviado por su primer autor, en Evaluación y benchmarks ([#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)) |
 | <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | Super Research, un benchmark de 300 preguntas de investigación abiertas con informes de 12 sistemas, enviado por su primer autor, en Evaluación y benchmarks ([#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)) |
 | <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | Voting or Consensus? (protocolos de decisión en debates), Stay Focused (problem drift en debates) y MALLM, el framework de debate que usan ambos, en Sistemas multiagente; Spatial-Gym, razonamiento espacial paso a paso para agentes, en Evaluación y benchmarks ([#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). Enviados por uno de sus autores |
 | <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | SELF, entrenamiento de agentes con la respuesta del entorno y sin recompensas, en Planificación y razonamiento; EFRE, un repertorio de prompts para el aprendizaje continuo con un LLM congelado, en Memoria ([#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)) |
@@ -897,6 +899,7 @@ Publicado bajo la [licencia MIT](LICENSE).
 
 ## 🗓️ Actualizaciones
 
+- **2026-10-17**: MerchantBench se añadió a Evaluación y benchmarks, enviado por su primer autor ([@KhanCold](https://github.com/KhanCold), [#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)). Tras 365 días simulados al frente de una tienda en línea, la mejor de 16 configuraciones de LLM termina con el 27,3% del patrimonio neto medio de los participantes humanos. De 571 a 572.
 - **2026-10-16**: Super Research se añadió a Evaluación y benchmarks, enviado por su primer autor ([@cnsdqd-dyb](https://github.com/cnsdqd-dyb), [#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)). En sus 300 preguntas de investigación, el mejor de 12 sistemas, Gemini Deep Research, obtiene 28,62 sobre 100. De 570 a 571.
 - **2026-10-15**: Voting or Consensus?, Stay Focused y MALLM se añadieron a Sistemas multiagente y Spatial-Gym a Evaluación y benchmarks, enviados por uno de sus autores ([@lkaesberg](https://github.com/lkaesberg), [#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). En Spatial-Gym, el mejor de ocho modelos de pesos abiertos resuelve el 16,0% de los rompecabezas en cuadrícula, frente al 98,0% de las personas. De 566 a 570.
 - **2026-10-14**: +30 artículos publicados desde mediados de septiembre de 2026, tres por sección. Varios son resultados negativos; en uno, el 34,4% de las ejecuciones de agentes de programación que los benchmarks dan por correctas incumplen un requisito escrito en la tarea. De 536 a 566.

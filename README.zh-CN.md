@@ -106,7 +106,7 @@
   - [🌐 交互环境 (60)](#environments)
   - [🚀 应用领域 (57)](#applications)
 - **⚖️ 第三部分：贯穿全局的问题**
-  - [📊 评估与基准 (56)](#evaluation)
+  - [📊 评估与基准 (57)](#evaluation)
   - [🛡️ 安全与对齐 (62)](#safety)
 
 ## 🧭 背景
@@ -667,11 +667,11 @@
 ## ⚖️ 第三部分：贯穿全局的问题
 
 <a id="evaluation"></a>
-### 📊 评估与基准 (56)
+### 📊 评估与基准 (57)
 *对应综述 §9（评估与基准）。*
 
 <details>
-<summary><b>展开 56 篇论文</b></summary>
+<summary><b>展开 57 篇论文</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *参考基准，面向会用工具的通用智能体助手；一些热门的公开排行榜以它为基础，追踪前沿智能体的进展。*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *编码与软件工程智能体事实上的标准基准；衍生出了 SWE-bench Verified/Lite/Live/Multimodal 这一系列。* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -705,6 +705,7 @@
 - **[CUBE: A Standard for Unifying Agent Benchmarks](https://arxiv.org/abs/2603.15798)** (Lacoste et al., arXiv 2026) - *提出一项标准，用同一个接口统一各不相同的智能体基准。* [[code](https://github.com/The-AI-Alliance/cube-standard)]
 - **[UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](https://arxiv.org/abs/2607.08768)** (Chen et al., arXiv 2026) - *提出 UniClawBench：一个以能力为导向的双语基准，包含 400 个在实时 Docker 环境中执行、设有逐步检查点的任务，从 skill 使用、探索、长上下文推理、multimodal 理解和跨平台协调几方面评估主动型 LLM 智能体；还设了一个隐藏的监督智能体，确保多轮反馈不会泄露评分依据。* [[code](https://github.com/HKU-MMLab/UniClawBench)]
 - **[PolyWorkBench: Benchmarking LLM Agents for Cross-Lingual Long-Horizon Workflows](https://arxiv.org/abs/2607.06008)** (Li et al., arXiv 2026) - *提出 PolyWorkBench：包含 67 个任务的基准，覆盖商业、知识工作、法律分析、本地化和制造，结合基于 rubric 的结构评分、可执行的状态检查和 LLM 评估者，评估 LLM 智能体在多语言、long-horizon 职场 workflow 上的表现；不同语言之间表现差异很大，到了更难的跨语言任务上更是大幅下滑。*
+- **[MerchantBench: Benchmarking LLM Agents for Long-Term Coherence in E-Commerce Operations](https://arxiv.org/abs/2607.28956)** (Shi et al., arXiv 2026) - *让智能体在模拟的 365 天里经营一家网店，店铺建立在 1688 批发平台的 98,843 条真实商品记录之上，提供 26 个工具，退款和差评要在下单几天后才显现，最后以净资产计分：八个 LLM 分别在极简的 ReAct 循环和 Hermes 智能体框架下共运行 48 次，最好的配置 Hermes 上的 Qwen3.7-Max 最终净资产也只有三位没有电商经验的人类参与者平均值的 27.3%，每天检查一次店铺的规则脚本胜过 16 个配置中的 6 个；Hermes 上的 Kimi K2.6 在第 104 天判断店铺已无法挽回，之后在剩下的 523 个决策窗口中有 355 个没有对店铺做任何操作。公开代码运行在一个 1,000 件商品的合成目录上，因为真实商品记录和每日市场报告没有再分发，所以仅凭公开内容无法复现论文的数字。* [[code](https://github.com/KhanCold/merchantbench)]
 - **[EvoAgentBench: Benchmarking Agent Self-Evolution via Ability Transfer](https://arxiv.org/abs/2607.05202)** (Gao et al., arXiv 2026) - *提出一个基准，把 LLM 智能体的自我进化当作程序性知识的迁移来评估：从智能体的执行过程中提取以 trace 为依据的“Abilities”，并在 Web 研究、算法推理、软件工程和知识工作这些领域把它们组织成各领域专属的 Ability Graph；精选的 Abilities 能在不同模型家族之间稳定迁移，但没有哪种自动方法能在所有设置下都带来提升。*
 - **[Act As a Real Researcher: A Suite of Benchmarks Evaluating Frontier LLMs and Agentic Harnesses in Research Lifecycle](https://arxiv.org/abs/2606.07462)** (Wang et al., arXiv 2026) - *提出 AARRI-Bench：一套容器化的基准，评估前沿 LLM 和智能体 harness 能否在整个研究周期里完成入门级研究实习生的任务。* [[code](https://github.com/AARR-bench/AARRI-bench)]
 - **[ReplicatorBench: Benchmarking LLM Agents for Replicability in Social and Behavioral Sciences](https://arxiv.org/abs/2602.11354)** (Nguyen et al., arXiv 2026) - *提出 ReplicatorBench：由经人工核实、可复现与不可复现的论断组成的基准，评估 LLM 智能体在数据获取、实验设计与执行、结果解读这些环节复现社会与行为科学研究的能力；智能体能把实验设计好、跑起来，却很难找到复现所需的新数据。* [[code](https://github.com/CenterForOpenScience/llm-benchmarking)]
@@ -863,10 +864,11 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
 
 <details>
-<summary><b>展开 18 位贡献者</b></summary>
+<summary><b>展开 19 位贡献者</b></summary>
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | MerchantBench：让智能体在模拟的 365 天里经营网店的基准，收入评估与基准（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。由第一作者本人提交 |
 | <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | Super Research：由 300 个开放式研究问题和 12 个系统的报告组成的基准，收入评估与基准（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。由第一作者本人提交 |
 | <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | Voting or Consensus?：辩论中的决策协议；Stay Focused：辩论中的 problem drift；MALLM：这两篇论文所用的辩论框架，三篇都收入多智能体系统；Spatial-Gym：检验智能体的逐步空间推理，收入评估与基准（[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。由作者之一提交 |
 | <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | SELF：不用奖励、凭环境反馈训练智能体，收入规划与推理；EFRE：为冻结 LLM 的持续学习维护一组提示，收入记忆（[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)） |
@@ -897,6 +899,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-10-17**: 新增 MerchantBench，由第一作者 [@KhanCold](https://github.com/KhanCold) 提交，收入评估与基准（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。在模拟经营网店 365 天之后，16 个 LLM 配置中最好的一个，最终净资产也只有人类参与者平均值的 27.3%。从 571 篇增至 572 篇。
 - **2026-10-16**: 新增 Super Research，由第一作者 [@cnsdqd-dyb](https://github.com/cnsdqd-dyb) 提交，收入评估与基准（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。在它的 300 个研究问题上，12 个系统中得分最高的 Gemini Deep Research 也只有 28.62 分（满分 100）。从 570 篇增至 571 篇。
 - **2026-10-15**: 新增 Voting or Consensus?、Stay Focused 和 MALLM，收入多智能体系统，另有 Spatial-Gym 收入评估与基准，均由作者之一提交（[@lkaesberg](https://github.com/lkaesberg)，[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。在 Spatial-Gym 中，八个开放权重模型里最好的一个解出 16.0% 的网格谜题，人类为 98.0%。从 566 篇增至 570 篇。
 - **2026-10-14**: 新增 2026 年 9 月中旬以来发表的 30 篇论文，每个章节三篇。这一批里有不少负面结果，例如其中一项研究发现，编码基准判为正确的智能体运行中，有 34.4% 违反了任务中写明的要求。从 536 篇增至 566 篇。

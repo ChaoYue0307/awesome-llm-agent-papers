@@ -106,7 +106,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
   - [🌐 インタラクティブ環境 (60)](#environments)
   - [🚀 応用分野 (57)](#applications)
 - **⚖️ 第3部：横断的な課題**
-  - [📊 評価とベンチマーク (56)](#evaluation)
+  - [📊 評価とベンチマーク (57)](#evaluation)
   - [🛡️ 安全性とアライメント (62)](#safety)
 
 ## 🧭 背景
@@ -667,11 +667,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 ## ⚖️ 第3部：横断的な課題
 
 <a id="evaluation"></a>
-### 📊 評価とベンチマーク (56)
+### 📊 評価とベンチマーク (57)
 *サーベイの§9（評価とベンチマーク）に対応します。*
 
 <details>
-<summary><b>56本の論文を表示</b></summary>
+<summary><b>57本の論文を表示</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *ツールを使う汎用エージェントアシスタントの基準となるベンチマーク。フロンティアエージェントの進歩を追う、人気の公開リーダーボードの土台になっている。*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *コーディング／ソフトウェア工学エージェントの事実上の標準ベンチマーク。SWE-bench Verified/Lite/Live/Multimodalといった派生版を生んだ。* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -705,6 +705,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[CUBE: A Standard for Unifying Agent Benchmarks](https://arxiv.org/abs/2603.15798)** (Lacoste et al., arXiv 2026) - *ばらばらなエージェントベンチマークを一つのインターフェースにまとめる標準を提案する。* [[code](https://github.com/The-AI-Alliance/cube-standard)]
 - **[UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](https://arxiv.org/abs/2607.08768)** (Chen et al., arXiv 2026) - *実際に動くDocker環境で実行する 400 タスクからなる、能力を軸に設計した二言語のベンチマークUniClawBenchを提案する。ステップごとのチェックポイントを備え、skillの利用、探索、長いコンテキストでの推論、multimodalな理解、プラットフォームをまたいだ連携にわたって、能動的なLLMエージェントを評価する。隠れた監督役のエージェントを置くことで、複数ターンのフィードバックから採点基準が漏れないようにしている。* [[code](https://github.com/HKU-MMLab/UniClawBench)]
 - **[PolyWorkBench: Benchmarking LLM Agents for Cross-Lingual Long-Horizon Workflows](https://arxiv.org/abs/2607.06008)** (Li et al., arXiv 2026) - *商取引、知識労働、法務分析、ローカライズ、製造にまたがる 67 タスクのベンチマークPolyWorkBenchを提案する。多言語でlong-horizonな職場のworkflowについて、rubricにもとづく構造の採点、実行可能な状態チェック、LLM評価者を組み合わせたハイブリッドな方式でLLMエージェントを評価する。性能は言語ごとに大きくばらつき、難度の高い言語横断タスクでは急激に下がる。*
+- **[MerchantBench: Benchmarking LLM Agents for Long-Term Coherence in E-Commerce Operations](https://arxiv.org/abs/2607.28956)** (Shi et al., arXiv 2026) - *1688 の卸売マーケットにある実在の商品記録 98,843 件をもとにしたオンラインストアを、シミュレーション上の 365 日間エージェントに運営させ、26 のツールを与え、返金や低評価レビューは注文の数日後に表れるようにして、最終的な純資産で採点する。八つのLLMを最小限のReActループとHermesエージェントフレームワークでそれぞれ動かした 48 回の実行で、最も良い設定であるHermes上のQwen3.7-Maxでも、EC運営の経験がない参加者三人の平均純資産の 27.3% にとどまり、一日に一度ストアを点検するルールベースのスクリプトが 16 の設定のうち 6 つを上回った。Hermes上のKimi K2.6は 104 日目にストアは立て直せないと判断し、その後は残る 523 の意思決定ウィンドウのうち 355 でストアに何の操作もしなかった。公開コードは商品 1,000 点の合成カタログで動く。実在の商品記録と日次の市場レポートは再配布されていないため、公開物だけでは論文の数値を再現できない。* [[code](https://github.com/KhanCold/merchantbench)]
 - **[EvoAgentBench: Benchmarking Agent Self-Evolution via Ability Transfer](https://arxiv.org/abs/2607.05202)** (Gao et al., arXiv 2026) - *LLMエージェントの自己進化を手続き的知識の転移として評価するベンチマークを提案する。エージェントの実行からトレースに裏づけられた「Ability」を抽出し、Webリサーチ、アルゴリズム的推論、ソフトウェアエンジニアリング、知識労働にわたる領域別のAbility Graphに整理する。精選したAbilityはモデルファミリーをまたいで安定して転移するが、どの設定でも性能が上がる自動手法は一つもない。*
 - **[Act As a Real Researcher: A Suite of Benchmarks Evaluating Frontier LLMs and Agentic Harnesses in Research Lifecycle](https://arxiv.org/abs/2606.07462)** (Wang et al., arXiv 2026) - *コンテナ化されたベンチマーク群AARRI-Benchを提案し、フロンティアLLMとエージェントのharnessが、研究のライフサイクル全体にわたって研究インターンの入門レベルのタスクをこなせるかを評価する。* [[code](https://github.com/AARR-bench/AARRI-bench)]
 - **[ReplicatorBench: Benchmarking LLM Agents for Replicability in Social and Behavioral Sciences](https://arxiv.org/abs/2602.11354)** (Nguyen et al., arXiv 2026) - *再現できる主張とできない主張を人手で確かめて集めたベンチマークReplicatorBenchを提案する。社会科学・行動科学の研究をLLMエージェントが再現できるかを、データの取得、実験の設計と実行、結果の解釈にわたって評価する。エージェントは実験の設計と実行はうまくこなすが、再現に必要な新しいデータの取得には苦戦する。* [[code](https://github.com/CenterForOpenScience/llm-benchmarking)]
@@ -863,10 +864,11 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 このリストはコミュニティの手で保守されています。論文の提案、確認、説明文の執筆に協力してくださったすべての方に感謝します。
 
 <details>
-<summary><b>18人のコントリビューターを表示</b></summary>
+<summary><b>19人のコントリビューターを表示</b></summary>
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | 「評価とベンチマーク」に、シミュレーション上の 365 日間エージェントにオンラインストアを運営させるベンチマークMerchantBench（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。第一著者本人による投稿 |
 | <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | 「評価とベンチマーク」に、300 の開かれた研究課題と 12 のシステムのレポートからなるベンチマークSuper Research（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。第一著者本人による投稿 |
 | <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | 「マルチエージェントシステム」に、討論の意思決定プロトコルを扱うVoting or Consensus?、討論のproblem driftを扱うStay Focused、この二本が実験に使った討論フレームワークMALLM、「評価とベンチマーク」に、エージェントの一手ずつの空間推論を試すSpatial-Gym（[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。著者の一人による投稿 |
 | <a href="https://github.com/markovchain-builder"><img src="https://github.com/markovchain-builder.png?size=48" width="48" height="48" alt="@markovchain-builder"></a> | **[@markovchain-builder](https://github.com/markovchain-builder)** | 「計画と推論」に、報酬なしで環境からのフィードバックだけでエージェントを学習させるSELF、「メモリ」に、重みを固定したLLMの継続学習のために複数のプロンプトを持つEFRE（[#21](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/21)） |
@@ -897,6 +899,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-10-17**: 第一著者の[@KhanCold](https://github.com/KhanCold)が送ってくれたMerchantBenchを「評価とベンチマーク」に追加しました（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。シミュレーション上の 365 日間オンラインストアを運営した結果、16 のLLM設定のうち最も良いものでも、人間の参加者の平均純資産の 27.3% にとどまりました。571 本から 572 本になりました。
 - **2026-10-16**: 第一著者の[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)が送ってくれたSuper Researchを「評価とベンチマーク」に追加しました（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。300 の研究課題で、12 のシステムのうち最も高いGemini Deep Researchでも 100 点満点中 28.62 点でした。570 本から 571 本になりました。
 - **2026-10-15**: 著者の一人である[@lkaesberg](https://github.com/lkaesberg)が送ってくれたVoting or Consensus?、Stay Focused、MALLMを「マルチエージェントシステム」に、Spatial-Gymを「評価とベンチマーク」に追加しました（[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。Spatial-Gymでは、八つのopen-weightモデルのうち最良のものでもグリッドパズルの 16.0% しか解けず、人間は 98.0% を解きました。566 本から 570 本になりました。
 - **2026-10-14**: 2026 年 9 月中旬以降に出た論文を、セクションごとに三本ずつ計 30 本追加しました。否定的な結果を報告した論文がいくつかあり、そのうちの一本では、コーディングベンチマークが正解と判定したエージェントの実行の 34.4% が、タスクに書かれた要件を破っていました。536 本から 566 本になりました。
