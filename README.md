@@ -106,7 +106,7 @@ Fresh 2026 work that is already drawing attention.
   - [🌐 Interactive Environments (60)](#environments)
   - [🚀 Applications (57)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
-  - [📊 Evaluation & Benchmarks (56)](#evaluation)
+  - [📊 Evaluation & Benchmarks (57)](#evaluation)
   - [🛡️ Safety & Alignment (62)](#safety)
 
 ## 🧭 Background
@@ -667,11 +667,11 @@ Fresh 2026 work that is already drawing attention.
 ## ⚖️ Part III: Cross-Cutting Concerns
 
 <a id="evaluation"></a>
-### 📊 Evaluation & Benchmarks (56)
+### 📊 Evaluation & Benchmarks (57)
 *Corresponds to §9 (Evaluation and Benchmarks).*
 
 <details>
-<summary><b>Show 56 papers</b></summary>
+<summary><b>Show 57 papers</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Reference benchmark for generalist, tool-using agent assistants; underlies popular public leaderboards tracking frontier agent progress.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *De facto standard benchmark for coding/software-engineering agents; spawned the SWE-bench Verified/Lite/Live/Multimodal family.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -705,6 +705,7 @@ Fresh 2026 work that is already drawing attention.
 - **[CUBE: A Standard for Unifying Agent Benchmarks](https://arxiv.org/abs/2603.15798)** (Lacoste et al., arXiv 2026) - *Proposes a standard for unifying heterogeneous agent benchmarks under one interface.* [[code](https://github.com/The-AI-Alliance/cube-standard)]
 - **[UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](https://arxiv.org/abs/2607.08768)** (Chen et al., arXiv 2026) - *Introduces UniClawBench, a capability-driven bilingual benchmark of 400 tasks executed in live Docker environments with step-wise checkpoints, evaluating proactive LLM agents across skill usage, exploration, long-context reasoning, multimodal understanding and cross-platform coordination, with a hidden supervisor agent so that multi-turn feedback never leaks the grading criteria.* [[code](https://github.com/HKU-MMLab/UniClawBench)]
 - **[PolyWorkBench: Benchmarking LLM Agents for Cross-Lingual Long-Horizon Workflows](https://arxiv.org/abs/2607.06008)** (Li et al., arXiv 2026) - *Introduces PolyWorkBench, a benchmark of 67 tasks spanning commerce, knowledge work, legal analysis, localization, and manufacturing that evaluates LLM agents on multilingual long-horizon workplace workflows via a hybrid of rubric-based structural scoring, executable state checks and an LLM judge; performance varies widely across languages and drops sharply on the harder cross-lingual tasks.*
+- **[MerchantBench: Benchmarking LLM Agents for Long-Term Coherence in E-Commerce Operations](https://arxiv.org/abs/2607.28956)** (Shi et al., arXiv 2026) - *Tests long-term coherence in a 365-day, order-level e-commerce simulation with delayed business outcomes and 26 agent tools.* [[code](https://github.com/KhanCold/merchantbench)]
 - **[EvoAgentBench: Benchmarking Agent Self-Evolution via Ability Transfer](https://arxiv.org/abs/2607.05202)** (Gao et al., arXiv 2026) - *Introduces a benchmark that evaluates LLM agent self-evolution as procedural-knowledge transfer, extracting trace-grounded "Abilities" from agent executions and organizing them into domain-specific Ability Graphs across web research, algorithmic reasoning, software engineering and knowledge work; curated Abilities transfer reliably across model families, but no automatic method gains in every setting.*
 - **[Act As a Real Researcher: A Suite of Benchmarks Evaluating Frontier LLMs and Agentic Harnesses in Research Lifecycle](https://arxiv.org/abs/2606.07462)** (Wang et al., arXiv 2026) - *Introduces AARRI-Bench, a containerized benchmark suite evaluating whether frontier LLMs and agentic harnesses can perform entry-level research-intern tasks across the research lifecycle.* [[code](https://github.com/AARR-bench/AARRI-bench)]
 - **[ReplicatorBench: Benchmarking LLM Agents for Replicability in Social and Behavioral Sciences](https://arxiv.org/abs/2602.11354)** (Nguyen et al., arXiv 2026) - *Introduces ReplicatorBench, a benchmark of human-verified replicable and non-replicable claims for evaluating LLM agents on replicating social and behavioral science research across data retrieval, experiment design/execution, and interpretation of results; agents design and run the experiments well but struggle to retrieve the new data a replication needs.* [[code](https://github.com/CenterForOpenScience/llm-benchmarking)]
