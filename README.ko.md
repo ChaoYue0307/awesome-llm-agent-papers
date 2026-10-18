@@ -104,7 +104,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
   - [🤝 다중 에이전트 시스템 (57)](#multi-agent)
 - **🌍 제2부: 환경과 응용 속의 에이전트**
   - [🌐 상호작용 환경 (60)](#environments)
-  - [🚀 응용 분야 (57)](#applications)
+  - [🚀 응용 분야 (58)](#applications)
 - **⚖️ 제3부: 전반에 걸친 과제**
   - [📊 평가와 벤치마크 (57)](#evaluation)
   - [🛡️ 안전과 정렬 (62)](#safety)
@@ -596,11 +596,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
 
 <a id="applications"></a>
-### 🚀 응용 분야 (57)
+### 🚀 응용 분야 (58)
 *서베이 §10(응용 분야)에 해당합니다.*
 
 <details>
-<summary><b>논문 57편 보기</b></summary>
+<summary><b>논문 58편 보기</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *구조화된 코드 검색에 기반해 비용 효율적으로 프로그램을 자율 수정하는 초기 에이전트 중 하나다.* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *에이전트 구조 없이 짠 단순한 파이프라인도 복잡한 에이전트에 견줄 수 있음을 보인, 영향력 있는 반론이다.* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -660,6 +660,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale](https://arxiv.org/abs/2610.07289)** (Ziftci et al., ASE 2026) - *제출 전 테스트가 실패하면 ReAct 방식으로 수정안을 만들고 검증하는 수리 에이전트를 Google 내부 개발 도구에 넣었다. 실행마다 도구 호출 100번과 30분으로 제한하고, 실행 전후에는 수정을 포기할 경우를 가려내는 필터를 둔다. 내부 Gemini 2.5 Pro로는 실패 195건 중 67.18%에서 수정이 옳다고 판정됐다. 실제 배포에서는 변경 295,508건에 수정을 제안했고 개발자가 그중 28,554건을 적용했다. 성공한 수정에 걸린 시간의 중앙값은 9.85분으로, 개발자가 다음 편집을 하기까지 걸린 27.48분보다 짧았다. 다만 변경 자체를 되돌리거나 실패한 테스트를 주석 처리하자고 제안하는 경우도 있다.*
 - **[From Benchmark to Bench: Can Agents Survive Real-World Drug Discovery?](https://arxiv.org/abs/2610.06411)** (Llompart et al., arXiv 2026) - *Claude Sonnet 4.6이 MCP 도구 24개로 선도물질 최적화를 직접 진행하게 한다. 프로젝트의 목표를 쓰고 고치며, 분자를 스스로 제안하거나 생성을 REINVENT 4에 맡긴다. GSK, Sanofi, AstraZeneca의 지난 캠페인 아홉 개를 시점을 고정해 재현했을 때, GSK 시리즈 네 개 중 세 개와 AstraZeneca 캠페인은 목표를 달성했지만 Sanofi 프로젝트는 네 개 중 두 개만 달성했다. 화학자 네 명은 제안된 분자와 held-out 화합물을 구별하지 못했고, 성공 여부는 생성 방식보다 점수 모델의 정확도를 따라갔다. 모든 평가 지표는 실측이 아닌 예측값이다.*
 - **[Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](https://arxiv.org/abs/2610.00609)** (Drozdov et al., arXiv 2026) - *법률 리서치 에이전트를 전문가가 쓴 미국 법 문제 413개로 부분 점수 없이 채점한다. 답은 rubric의 모든 기준을 충족하고 인용한 판례와 법령이 실제로 맞아야만 인정된다. 웹 검색, 판례 검색, 문서 검색 도구를 갖춘 프런티어 모델 13개 중 가장 나은 Claude Opus 4.8도 완전히 맞힌 비율은 42.9%였고, 가중 통과율은 68%에서 86% 사이였다. Kimi K2.6은 평균 112번 도구를 호출하고도 15.5%에 그쳤고, 도구를 빼면 평균 22.5포인트가 떨어졌다. 문제마다 한 번씩 실행했고 채점은 LLM 심사 모델이 했다.* [[code](https://github.com/vals-ai/legal-research-bench)]
+- **[From Benchmarks to Business Impact: Deploying IBM Generalist Agent in Enterprise Production](https://arxiv.org/abs/2510.23856)** (Shlomov et al., IAAI 2026) - *IBM이 공개한 CUGA 에이전트를 인재 채용 아웃소싱 사업에 시범 투입한 보고다. CUGA는 WebArena 61.7%, AppWorld 챌린지 분할 시나리오 완료율 48.2%를 기록한 planner-executor 구조의 시스템으로, 이번 시범에서는 웹 브라우징을 끈 채 읽기 전용 분석 API 13개로 채용 담당자의 질문에 답한다. 새로 만든 BPO-TA의 과제 26개에서 정확도 87%를 냈고, 첫 시도에 유효한 답을 낸 비율을 일반 ReAct 에이전트의 62%에서 79%로 올렸으며, reflection 기반 재시도를 빼면 11포인트 떨어졌다. 다만 아직 정식 운영 단계는 아니고, 보고된 절감 효과(답변 시간 약 20분에서 2~5분으로, 개발 기간 최대 90% 단축)는 통제된 시험과 제한된 분석가 피드백에서 나온 추정치이며 유의성 검정도 하지 않았다. 논문에는 BPO-TA의 과제 26개가 실려 있지만, 그 뒤의 API와 데이터는 코드 공개본에 없다.* [[code](https://github.com/cuga-project/cuga-agent)]
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -864,10 +865,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 19명 보기</b></summary>
+<summary><b>기여자 20명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/segevshlomovIBM"><img src="https://github.com/segevshlomovIBM.png?size=48" width="48" height="48" alt="@segevshlomovIBM"></a> | **[@segevshlomovIBM](https://github.com/segevshlomovIBM)** | 응용 분야 절에 IBM의 CUGA 에이전트를 채용 업무에 시범 투입한 보고 From Benchmarks to Business Impact 추가([#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)). 제1저자가 직접 제출 |
 | <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | 평가와 벤치마크 절에 에이전트가 온라인 상점을 시뮬레이션상 365일 동안 운영하는 벤치마크 MerchantBench 추가([#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)). 제1저자가 직접 제출 |
 | <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | 평가와 벤치마크 절에 열린 연구 질문 300개와 시스템 12개의 보고서로 이루어진 벤치마크 Super Research 추가([#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)). 제1저자가 직접 제출 |
 | <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | 다중 에이전트 시스템 절에 토론의 결정 프로토콜을 다룬 Voting or Consensus?, 토론의 problem drift를 다룬 Stay Focused, 두 논문이 실험에 쓴 토론 프레임워크 MALLM, 평가와 벤치마크 절에 에이전트의 단계별 공간 추론을 시험하는 Spatial-Gym 추가([#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). 저자 중 한 명이 직접 제출 |
@@ -899,6 +901,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-10-19**: 제1저자 [@segevshlomovIBM](https://github.com/segevshlomovIBM)가 보내 준 From Benchmarks to Business Impact를 응용 분야 절에 추가했습니다([#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)). 아직 정식 운영 전인 채용 업무 시범에서 IBM의 CUGA 에이전트는 새 BPO-TA의 과제 26개에 정확도 87%를 냈습니다. 572편에서 573편으로 늘었습니다.
 - **2026-10-17**: 제1저자 [@KhanCold](https://github.com/KhanCold)가 보내 준 MerchantBench를 평가와 벤치마크 절에 추가했습니다([#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)). 온라인 상점을 시뮬레이션상 365일 동안 운영한 뒤, LLM 설정 16개 중 가장 좋은 것도 사람 참가자 평균 순자산의 27.3%에 그쳤습니다. 571편에서 572편으로 늘었습니다.
 - **2026-10-16**: 제1저자 [@cnsdqd-dyb](https://github.com/cnsdqd-dyb)가 보내 준 Super Research를 평가와 벤치마크 절에 추가했습니다([#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)). 연구 질문 300개에서 시스템 12개 중 가장 높은 Gemini Deep Research도 100점 만점에 28.62점이었습니다. 570편에서 571편으로 늘었습니다.
 - **2026-10-15**: 저자 중 한 명인 [@lkaesberg](https://github.com/lkaesberg)가 보내 준 Voting or Consensus?, Stay Focused, MALLM을 다중 에이전트 시스템 절에, Spatial-Gym을 평가와 벤치마크 절에 추가했습니다([#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). Spatial-Gym에서 open-weight 모델 여덟 개 중 가장 좋은 모델은 격자 퍼즐의 16.0%를 풀었고, 사람은 98.0%를 풀었습니다. 566편에서 570편으로 늘었습니다.

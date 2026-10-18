@@ -104,7 +104,7 @@
   - [🤝 多智能体系统 (57)](#multi-agent)
 - **🌍 第二部分：环境与应用中的智能体**
   - [🌐 交互环境 (60)](#environments)
-  - [🚀 应用领域 (57)](#applications)
+  - [🚀 应用领域 (58)](#applications)
 - **⚖️ 第三部分：贯穿全局的问题**
   - [📊 评估与基准 (57)](#evaluation)
   - [🛡️ 安全与对齐 (62)](#safety)
@@ -596,11 +596,11 @@
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="applications"></a>
-### 🚀 应用领域 (57)
+### 🚀 应用领域 (58)
 *对应综述 §10（应用领域）。*
 
 <details>
-<summary><b>展开 57 篇论文</b></summary>
+<summary><b>展开 58 篇论文</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *最早一批低成本的自主程序修复智能体之一，建立在结构化的代码搜索之上。* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *很有影响力的反向论证：更简单、不走智能体路线的流水线，也能和复杂的智能体比肩。* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -660,6 +660,7 @@
 - **[Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale](https://arxiv.org/abs/2610.07289)** (Ziftci et al., ASE 2026) - *在 Google 内部开发工具中，把一个按 ReAct 方式生成并验证修复的智能体用于提交前测试失败，每次运行限 100 次工具调用和 30 分钟，运行前后都有决定是否放弃的过滤器把关。用内部的 Gemini 2.5 Pro 时，在 195 个失败中有 67.18% 的修复被判为正确；部署后它为 295,508 个变更提出修复，开发者采用了其中 28,554 个，每个成功修复的耗时中位数为 9.85 分钟，而开发者到下一次编辑要 27.48 分钟。不过它有时会提议撤回变更，或把失败的测试注释掉。*
 - **[From Benchmark to Bench: Can Agents Survive Real-World Drug Discovery?](https://arxiv.org/abs/2610.06411)** (Llompart et al., arXiv 2026) - *让 Claude Sonnet 4.6 通过 24 个 MCP 工具主导先导化合物优化，自己撰写和修改项目目标，并选择自己提出分子或把生成交给 REINVENT 4；在按固定时间截点重放的 GSK、Sanofi 和 AstraZeneca 九个历史项目中，GSK 的四个系列有三个以及 AstraZeneca 的项目达到了目标，Sanofi 的四个项目只有两个达到；四位化学家无法区分它提出的分子与 held-out 化合物，成败取决于打分模型的准确度，而不是生成途径。所有终点指标都是预测值，而不是实测值。*
 - **[Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](https://arxiv.org/abs/2610.00609)** (Drozdov et al., arXiv 2026) - *用专家编写的 413 道美国法律问题为法律研究智能体评分，不给部分分：答案必须满足 rubric 的每一条标准，且引用的法律依据都经得起核对，才算正确。在配备网页搜索、判例法检索和文档检索工具的十三个前沿模型中，最好的 Claude Opus 4.8 完全正确的比例为 42.9%，而加权通过率在 68% 到 86% 之间；Kimi K2.6 平均调用 112 次工具，只得到 15.5%；去掉工具平均损失 22.5 个点。每道题只运行一次，由 LLM 评判模型打分。* [[code](https://github.com/vals-ai/legal-research-bench)]
+- **[From Benchmarks to Business Impact: Deploying IBM Generalist Agent in Enterprise Production](https://arxiv.org/abs/2510.23856)** (Shlomov et al., IAAI 2026) - *报告 IBM 把开源的 CUGA 智能体试点用于招聘外包业务。CUGA 是planner-executor 结构的系统，在 WebArena 上达到 61.7%，在 AppWorld 挑战集上的场景完成率为 48.2%；试点中它关闭了网页浏览，只通过 13 个只读分析 API 回答招聘人员的问题：在新建的 BPO-TA 的 26 个任务上准确率为 87%，首次尝试即有效的比例从普通 ReAct 智能体的 62% 提高到 79%，去掉基于 reflection 的重试后下降 11 个点。不过它尚未进入正式生产，报告的节省（回答时间从约 20 分钟降到 2 到 5 分钟，开发时间最多减少 90%）是来自受控测试和有限分析师反馈的估计，也没有做显著性检验；论文列出了 BPO-TA 的 26 个任务，但背后的 API 和数据不在代码发布中。* [[code](https://github.com/cuga-project/cuga-agent)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -864,10 +865,11 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
 
 <details>
-<summary><b>展开 19 位贡献者</b></summary>
+<summary><b>展开 20 位贡献者</b></summary>
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/segevshlomovIBM"><img src="https://github.com/segevshlomovIBM.png?size=48" width="48" height="48" alt="@segevshlomovIBM"></a> | **[@segevshlomovIBM](https://github.com/segevshlomovIBM)** | From Benchmarks to Business Impact：IBM 在招聘业务中试点 CUGA 智能体的报告，收入应用领域（[#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)）。由第一作者本人提交 |
 | <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | MerchantBench：让智能体在模拟的 365 天里经营网店的基准，收入评估与基准（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。由第一作者本人提交 |
 | <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | Super Research：由 300 个开放式研究问题和 12 个系统的报告组成的基准，收入评估与基准（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。由第一作者本人提交 |
 | <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | Voting or Consensus?：辩论中的决策协议；Stay Focused：辩论中的 problem drift；MALLM：这两篇论文所用的辩论框架，三篇都收入多智能体系统；Spatial-Gym：检验智能体的逐步空间推理，收入评估与基准（[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。由作者之一提交 |
@@ -899,6 +901,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-10-19**: 新增 From Benchmarks to Business Impact，由第一作者 [@segevshlomovIBM](https://github.com/segevshlomovIBM) 提交，收入应用领域（[#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)）。在尚未正式投产的招聘业务试点中，IBM 的 CUGA 智能体在新建 BPO-TA 的 26 个任务上准确率为 87%。从 572 篇增至 573 篇。
 - **2026-10-17**: 新增 MerchantBench，由第一作者 [@KhanCold](https://github.com/KhanCold) 提交，收入评估与基准（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。在模拟经营网店 365 天之后，16 个 LLM 配置中最好的一个，最终净资产也只有人类参与者平均值的 27.3%。从 571 篇增至 572 篇。
 - **2026-10-16**: 新增 Super Research，由第一作者 [@cnsdqd-dyb](https://github.com/cnsdqd-dyb) 提交，收入评估与基准（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。在它的 300 个研究问题上，12 个系统中得分最高的 Gemini Deep Research 也只有 28.62 分（满分 100）。从 570 篇增至 571 篇。
 - **2026-10-15**: 新增 Voting or Consensus?、Stay Focused 和 MALLM，收入多智能体系统，另有 Spatial-Gym 收入评估与基准，均由作者之一提交（[@lkaesberg](https://github.com/lkaesberg)，[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。在 Spatial-Gym 中，八个开放权重模型里最好的一个解出 16.0% 的网格谜题，人类为 98.0%。从 566 篇增至 570 篇。

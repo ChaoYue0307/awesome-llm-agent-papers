@@ -104,7 +104,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
   - [🤝 マルチエージェントシステム (57)](#multi-agent)
 - **🌍 第2部：環境と応用のなかのエージェント**
   - [🌐 インタラクティブ環境 (60)](#environments)
-  - [🚀 応用分野 (57)](#applications)
+  - [🚀 応用分野 (58)](#applications)
 - **⚖️ 第3部：横断的な課題**
   - [📊 評価とベンチマーク (57)](#evaluation)
   - [🛡️ 安全性とアライメント (62)](#safety)
@@ -596,11 +596,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="applications"></a>
-### 🚀 応用分野 (57)
+### 🚀 応用分野 (58)
 *サーベイの§10（応用分野）に対応します。*
 
 <details>
-<summary><b>57本の論文を表示</b></summary>
+<summary><b>58本の論文を表示</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *構造化されたコード検索に基づく、低コストな自律型プログラム修復エージェントの最初期の一つ。* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *エージェントを使わない単純なパイプラインでも複雑なエージェントに匹敵しうることを示した、主流の見方に対する影響力のある反論。* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -660,6 +660,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale](https://arxiv.org/abs/2610.07289)** (Ziftci et al., ASE 2026) - *提出前テストの失敗に対し、ReActで修正を生成して検証する修復エージェントを、Google社内の開発ツールに組み込んだ。一回の実行はツール呼び出し 100 回と 30 分までに制限し、実行の前後に、修正を見送るべき場合を除くフィルタを置く。社内版のGemini 2.5 Proでは、失敗 195 件のうち 67.18% で修正が正しいと判定された。本番では 295,508 件の変更に修正を提案し、開発者はそのうち 28,554 件を適用した。成功した修正にかかった時間の中央値は 9.85 分で、開発者が次に編集するまでの 27.48 分より短い。ただし、変更そのものを元に戻すことや、失敗したテストをコメントアウトすることを提案する場合もある。*
 - **[From Benchmark to Bench: Can Agents Survive Real-World Drug Discovery?](https://arxiv.org/abs/2610.06411)** (Llompart et al., arXiv 2026) - *Claude Sonnet 4.6に、24 のMCPツールを通じてリード最適化を進めさせる。プロジェクトの目標を書いて改め、分子を自分で提案するか、生成をREINVENT 4に任せる。GSK、Sanofi、AstraZenecaの過去のキャンペーン九件を、時点を固定して再現したところ、GSKの四系列のうち三つとAstraZenecaのキャンペーンは目標を達成したが、Sanofiのプロジェクトは四件中二件だけだった。四人の化学者は、提案された分子とheld-outの化合物を見分けられなかった。成否は生成の経路よりも、スコアリングモデルの精度に左右された。評価項目はすべて実測ではなく予測値である。*
 - **[Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](https://arxiv.org/abs/2610.00609)** (Drozdov et al., arXiv 2026) - *法律リサーチのエージェントを、専門家が書いた米国法の問題 413 問で、部分点なしで採点する。答えが正解になるのは、rubricのすべての基準を満たし、引用した判例や法令が確かめられた場合だけである。ウェブ検索、判例検索、文書検索のツールを持つ十三の最先端モデルのうち、最も良いClaude Opus 4.8でも完全に正しかったのは 42.9% で、重み付きの合格率は 68% から 86% だった。Kimi K2.6は平均 112 回ツールを呼び出して 15.5% にとどまり、ツールを外すと平均 22.5 ポイント下がった。各問題の実行は一回で、採点はLLMの判定モデルによる。* [[code](https://github.com/vals-ai/legal-research-bench)]
+- **[From Benchmarks to Business Impact: Deploying IBM Generalist Agent in Enterprise Production](https://arxiv.org/abs/2510.23856)** (Shlomov et al., IAAI 2026) - *IBMが公開したCUGAエージェントを、人材採用のアウトソーシング事業で試験導入した報告である。CUGAはWebArenaで 61.7%、AppWorldのチャレンジ分割でシナリオ完了率 48.2% を記録したplanner-executor型のシステムで、この試験ではウェブ閲覧を切り、読み取り専用の分析API 13 本を通じて採用担当者の質問に答える。新たに作ったBPO-TAの 26 タスクで正解率 87% を出し、最初の試行で有効な結果を出す割合を素のReActエージェントの 62% から 79% に上げ、reflectionによる再試行を外すと 11 ポイント下がった。ただし本番運用にはまだ至っておらず、報告された削減効果（回答時間が約 20 分から 2 から 5 分に、開発期間が最大 90% 短縮）は管理された試験と限られたアナリストの意見に基づく推定で、有意性の検定もしていない。論文にはBPO-TAの 26 タスクが載っているが、その裏にあるAPIとデータはコード公開物に含まれていない。* [[code](https://github.com/cuga-project/cuga-agent)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -864,10 +865,11 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 このリストはコミュニティの手で保守されています。論文の提案、確認、説明文の執筆に協力してくださったすべての方に感謝します。
 
 <details>
-<summary><b>19人のコントリビューターを表示</b></summary>
+<summary><b>20人のコントリビューターを表示</b></summary>
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/segevshlomovIBM"><img src="https://github.com/segevshlomovIBM.png?size=48" width="48" height="48" alt="@segevshlomovIBM"></a> | **[@segevshlomovIBM](https://github.com/segevshlomovIBM)** | 「応用分野」に、IBMのCUGAエージェントを採用業務で試験導入した報告From Benchmarks to Business Impact（[#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)）。第一著者本人による投稿 |
 | <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | 「評価とベンチマーク」に、シミュレーション上の 365 日間エージェントにオンラインストアを運営させるベンチマークMerchantBench（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。第一著者本人による投稿 |
 | <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | 「評価とベンチマーク」に、300 の開かれた研究課題と 12 のシステムのレポートからなるベンチマークSuper Research（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。第一著者本人による投稿 |
 | <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | 「マルチエージェントシステム」に、討論の意思決定プロトコルを扱うVoting or Consensus?、討論のproblem driftを扱うStay Focused、この二本が実験に使った討論フレームワークMALLM、「評価とベンチマーク」に、エージェントの一手ずつの空間推論を試すSpatial-Gym（[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。著者の一人による投稿 |
@@ -899,6 +901,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-10-19**: 第一著者の[@segevshlomovIBM](https://github.com/segevshlomovIBM)が送ってくれたFrom Benchmarks to Business Impactを「応用分野」に追加しました（[#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)）。まだ本番運用前の採用業務の試験で、IBMのCUGAエージェントは新しいBPO-TAの 26 タスクで正解率 87% でした。572 本から 573 本になりました。
 - **2026-10-17**: 第一著者の[@KhanCold](https://github.com/KhanCold)が送ってくれたMerchantBenchを「評価とベンチマーク」に追加しました（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。シミュレーション上の 365 日間オンラインストアを運営した結果、16 のLLM設定のうち最も良いものでも、人間の参加者の平均純資産の 27.3% にとどまりました。571 本から 572 本になりました。
 - **2026-10-16**: 第一著者の[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)が送ってくれたSuper Researchを「評価とベンチマーク」に追加しました（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。300 の研究課題で、12 のシステムのうち最も高いGemini Deep Researchでも 100 点満点中 28.62 点でした。570 本から 571 本になりました。
 - **2026-10-15**: 著者の一人である[@lkaesberg](https://github.com/lkaesberg)が送ってくれたVoting or Consensus?、Stay Focused、MALLMを「マルチエージェントシステム」に、Spatial-Gymを「評価とベンチマーク」に追加しました（[#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)）。Spatial-Gymでは、八つのopen-weightモデルのうち最良のものでもグリッドパズルの 16.0% しか解けず、人間は 98.0% を解きました。566 本から 570 本になりました。

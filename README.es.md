@@ -104,7 +104,7 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
   - [🤝 Sistemas multiagente (57)](#multi-agent)
 - **🌍 Parte II: Agentes en entornos y aplicaciones**
   - [🌐 Entornos interactivos (60)](#environments)
-  - [🚀 Aplicaciones (57)](#applications)
+  - [🚀 Aplicaciones (58)](#applications)
 - **⚖️ Parte III: Cuestiones transversales**
   - [📊 Evaluación y benchmarks (57)](#evaluation)
   - [🛡️ Seguridad y alineación (62)](#safety)
@@ -596,11 +596,11 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 <sub><a href="#contents">↑ Volver al índice</a></sub>
 
 <a id="applications"></a>
-### 🚀 Aplicaciones (57)
+### 🚀 Aplicaciones (58)
 *En la revisión: §10 (Aplicaciones).*
 
 <details>
-<summary><b>Mostrar 57 artículos</b></summary>
+<summary><b>Mostrar 58 artículos</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *Uno de los primeros agentes autónomos de reparación de programas que resultan baratos de ejecutar, apoyado en una búsqueda estructurada en el código.* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *Contrapunto influyente que muestra que pipelines más simples, sin agentes, pueden competir con agentes complejos.* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -660,6 +660,7 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 - **[Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale](https://arxiv.org/abs/2610.07289)** (Ziftci et al., ASE 2026) - *Pone un agente de reparación ReAct, que genera y valida correcciones, sobre los fallos de pruebas previos al envío dentro de las herramientas internas de desarrollo de Google, con un límite de 100 llamadas a herramientas y 30 minutos y con filtros de abstención antes y después de cada ejecución; con un Gemini 2.5 Pro interno, sus correcciones se juzgaron correctas en el 67,18% de 195 fallos, y en producción sugirió correcciones en 295.508 cambios, de los que los desarrolladores aplicaron 28.554, con una mediana de 9,85 minutos por corrección exitosa frente a 27,48 minutos hasta la siguiente edición de un desarrollador, aunque a veces propone revertir el cambio o comentar las pruebas que fallan.*
 - **[From Benchmark to Bench: Can Agents Survive Real-World Drug Discovery?](https://arxiv.org/abs/2610.06411)** (Llompart et al., arXiv 2026) - *Deja que Claude Sonnet 4.6 dirija la optimización de compuestos líder mediante 24 herramientas MCP, escribiendo y revisando los objetivos del proyecto y proponiendo moléculas por sí mismo o pasando la generación a REINVENT 4, en nueve campañas pasadas de GSK, Sanofi y AstraZeneca reproducidas con cortes temporales fijos: tres de cuatro series de GSK y la campaña de AstraZeneca alcanzaron su objetivo, solo dos de cuatro proyectos de Sanofi lo hicieron, cuatro químicos no pudieron distinguir las propuestas de compuestos held-out, y el éxito siguió a la exactitud de los modelos de puntuación y no a la vía de generación; todos los endpoints son predicciones, no mediciones.*
 - **[Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](https://arxiv.org/abs/2610.00609)** (Drozdov et al., arXiv 2026) - *Califica agentes de investigación jurídica sin crédito parcial en 413 preguntas de derecho estadounidense escritas por expertos, de modo que una respuesta solo cuenta si cumple todos los criterios de la rubric y las fuentes jurídicas que cita se confirman; en trece modelos punteros con búsqueda web, búsqueda de jurisprudencia y herramientas de recuperación, el mejor, Claude Opus 4.8, acierta por completo el 42,9%, mientras que las tasas de aprobación ponderadas van del 68% al 86%, Kimi K2.6 hace de media 112 llamadas a herramientas para un 15,5%, y quitar las herramientas cuesta 22,5 puntos de media, con una ejecución por pregunta calificada por un juez LLM.* [[code](https://github.com/vals-ai/legal-research-bench)]
+- **[From Benchmarks to Business Impact: Deploying IBM Generalist Agent in Enterprise Production](https://arxiv.org/abs/2510.23856)** (Shlomov et al., IAAI 2026) - *Describe el piloto del agente de código abierto CUGA, de IBM, un sistema planner-executor con un 61,7% en WebArena y un 48,2% de escenarios completados en la partición de desafío de AppWorld, en un negocio de externalización de selección de personal, donde responde a preguntas de los reclutadores a través de 13 API analíticas de solo lectura y con la navegación web desactivada: alcanza un 87% de exactitud en las 26 tareas del nuevo conjunto BPO-TA, sube la tasa de primeros intentos válidos del 62% de un agente ReAct simple al 79% y pierde 11 puntos sin los reintentos con reflection; el agente todavía no está en producción plena, los ahorros que se citan (respuestas en 2 a 5 minutos en lugar de unos 20, hasta un 90% menos de tiempo de desarrollo) son estimaciones de pruebas controladas y de comentarios limitados de analistas, sin prueba de significación, y el artículo enumera las 26 tareas de BPO-TA, pero las API y los datos que hay detrás no están en el código publicado.* [[code](https://github.com/cuga-project/cuga-agent)]
 </details>
 
 <sub><a href="#contents">↑ Volver al índice</a></sub>
@@ -864,10 +865,11 @@ La mayoría de los idiomas a los que está traducida esta lista no son mi lengua
 Esta lista la mantiene la comunidad. Gracias a todas las personas que han sugerido, verificado o anotado un artículo:
 
 <details>
-<summary><b>Mostrar 19 colaboradores</b></summary>
+<summary><b>Mostrar 20 colaboradores</b></summary>
 
 | | Colaborador | Contribución |
 |---|---|---|
+| <a href="https://github.com/segevshlomovIBM"><img src="https://github.com/segevshlomovIBM.png?size=48" width="48" height="48" alt="@segevshlomovIBM"></a> | **[@segevshlomovIBM](https://github.com/segevshlomovIBM)** | From Benchmarks to Business Impact, el piloto del agente CUGA de IBM en selección de personal, enviado por su primer autor, en Aplicaciones ([#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)) |
 | <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | MerchantBench, un benchmark en el que un agente gestiona una tienda en línea durante 365 días simulados, enviado por su primer autor, en Evaluación y benchmarks ([#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)) |
 | <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | Super Research, un benchmark de 300 preguntas de investigación abiertas con informes de 12 sistemas, enviado por su primer autor, en Evaluación y benchmarks ([#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)) |
 | <a href="https://github.com/lkaesberg"><img src="https://github.com/lkaesberg.png?size=48" width="48" height="48" alt="@lkaesberg"></a> | **[@lkaesberg](https://github.com/lkaesberg)** | Voting or Consensus? (protocolos de decisión en debates), Stay Focused (problem drift en debates) y MALLM, el framework de debate que usan ambos, en Sistemas multiagente; Spatial-Gym, razonamiento espacial paso a paso para agentes, en Evaluación y benchmarks ([#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). Enviados por uno de sus autores |
@@ -899,6 +901,7 @@ Publicado bajo la [licencia MIT](LICENSE).
 
 ## 🗓️ Actualizaciones
 
+- **2026-10-19**: From Benchmarks to Business Impact se añadió a Aplicaciones, enviado por su primer autor ([@segevshlomovIBM](https://github.com/segevshlomovIBM), [#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)). En un piloto de selección de personal que aún no está en producción plena, el agente CUGA de IBM alcanza un 87% en las 26 tareas del nuevo conjunto BPO-TA. De 572 a 573.
 - **2026-10-17**: MerchantBench se añadió a Evaluación y benchmarks, enviado por su primer autor ([@KhanCold](https://github.com/KhanCold), [#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)). Tras 365 días simulados al frente de una tienda en línea, la mejor de 16 configuraciones de LLM termina con el 27,3% del patrimonio neto medio de los participantes humanos. De 571 a 572.
 - **2026-10-16**: Super Research se añadió a Evaluación y benchmarks, enviado por su primer autor ([@cnsdqd-dyb](https://github.com/cnsdqd-dyb), [#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)). En sus 300 preguntas de investigación, el mejor de 12 sistemas, Gemini Deep Research, obtiene 28,62 sobre 100. De 570 a 571.
 - **2026-10-15**: Voting or Consensus?, Stay Focused y MALLM se añadieron a Sistemas multiagente y Spatial-Gym a Evaluación y benchmarks, enviados por uno de sus autores ([@lkaesberg](https://github.com/lkaesberg), [#22](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/22)). En Spatial-Gym, el mejor de ocho modelos de pesos abiertos resuelve el 16,0% de los rompecabezas en cuadrícula, frente al 98,0% de las personas. De 566 a 570.
