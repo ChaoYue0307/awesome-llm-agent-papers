@@ -104,7 +104,7 @@ Fresh 2026 work that is already drawing attention.
   - [🤝 Multi-Agent Systems (57)](#multi-agent)
 - **🌍 Part II: Agents in Context**
   - [🌐 Interactive Environments (60)](#environments)
-  - [🚀 Applications (57)](#applications)
+  - [🚀 Applications (58)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
   - [📊 Evaluation & Benchmarks (57)](#evaluation)
   - [🛡️ Safety & Alignment (62)](#safety)
@@ -596,11 +596,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="applications"></a>
-### 🚀 Applications (57)
+### 🚀 Applications (58)
 *Corresponds to §10 (Applications).*
 
 <details>
-<summary><b>Show 57 papers</b></summary>
+<summary><b>Show 58 papers</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *One of the first cost-efficient autonomous program-repair agents grounded in structured code search.* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *Influential counter-narrative showing simpler non-agentic pipelines can rival complex agents.* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -660,6 +660,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale](https://arxiv.org/abs/2610.07289)** (Ziftci et al., ASE 2026) - *Puts a ReAct generate-and-validate repair agent on pre-submit test failures inside Google's internal developer tools, capped at 100 tool calls and 30 minutes and gated by abstention filters before and after each run; with an internal Gemini 2.5 Pro its fixes were judged correct on 67.18% of 195 failures, and in deployment it suggested fixes on 295,508 changes, of which developers applied 28,554, taking a median 9.85 minutes per successful fix against 27.48 minutes before a developer's next edit, though it sometimes proposes reverting the change or commenting out the failing tests.*
 - **[From Benchmark to Bench: Can Agents Survive Real-World Drug Discovery?](https://arxiv.org/abs/2610.06411)** (Llompart et al., arXiv 2026) - *Lets Claude Sonnet 4.6 run lead optimization through 24 MCP tools, writing and revising the project's objectives and either proposing molecules itself or handing generation to REINVENT 4, on nine past campaigns from GSK, Sanofi and AstraZeneca replayed with fixed temporal cutoffs: three of four GSK series and the AstraZeneca campaign met their objective, only two of four Sanofi projects did, four chemists could not tell the proposals from held-out compounds, and success followed the accuracy of the scoring models rather than the generation route; every endpoint is a prediction, not a measurement.*
 - **[Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](https://arxiv.org/abs/2610.00609)** (Drozdov et al., arXiv 2026) - *Grades legal research agents without partial credit on 413 U.S. questions written by experts, so an answer counts only if it meets every rubric criterion and the authorities it cites check out; across thirteen frontier models with web search, case-law search and retrieval tools, the best, Claude Opus 4.8, is fully correct on 42.9% while weighted pass rates run from 68% to 86%, Kimi K2.6 averages 112 tool calls for 15.5%, and removing the tools costs 22.5 points on average, with one run per question scored by an LLM judge.* [[code](https://github.com/vals-ai/legal-research-bench)]
+- **[From Benchmarks to Business Impact: Deploying IBM Generalist Agent in Enterprise Production](https://arxiv.org/abs/2510.23856)** (Shlomov et al., arXiv 2025) - *Reports deploying IBM's open-source CUGA agent in a talent-acquisition pilot, introduces the 26-task BPO-TA evaluation set, and lists what generalist agents still need for enterprise production.* [[code](https://github.com/cuga-project/cuga-agent)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
