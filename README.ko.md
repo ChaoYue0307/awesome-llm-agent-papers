@@ -23,7 +23,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 </p>
 
 <p align="center">
-📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">서베이 읽기 → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; 📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/ko/">GitBook 온라인 책</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">이 저장소의 PDF</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">10편짜리 스타터 키트부터 시작하기</a></b>
+📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">서베이 읽기 → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">이 저장소의 PDF</a><br>📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/ko/">GitBook 온라인 책</a></b> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">스타터 키트부터 시작하기</a></b>
 </p>
 
 <p align="center"><sub><i> LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>

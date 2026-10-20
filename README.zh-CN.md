@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">阅读综述 → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; 📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/zh/">GitBook 在线电子书</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">本仓库中的 PDF</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">从 10 篇入门必读开始</a></b>
+📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">阅读综述 → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">本仓库中的 PDF</a><br>📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/zh/">GitBook 在线电子书</a></b> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">从入门必读开始</a></b>
 </p>
 
 <p align="center"><sub><i> LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>

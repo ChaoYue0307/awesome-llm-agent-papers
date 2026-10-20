@@ -23,7 +23,7 @@ agentes basados en LLM que planifican, recuerdan, usan herramientas y cooperan. 
 </p>
 
 <p align="center">
-📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">Lee la revisión → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; 📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/es/">Libro en línea en GitBook</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">PDF en este repositorio</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">Empieza por el Kit de inicio de 10 artículos</a></b>
+📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">Lee la revisión → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">PDF en este repositorio</a><br>📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/es/">Libro en línea en GitBook</a></b> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">Empieza por el Kit de inicio</a></b>
 </p>
 
 <p align="center"><sub><i> LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>
